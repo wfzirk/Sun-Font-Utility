@@ -4,8 +4,10 @@ from os.path import dirname, isdir, join
 import re
 from subprocess import CalledProcessError, check_output
 
+print('test')
 
-PREFIX = ''
+
+PREFIX = 'v'
 
 tag_re = re.compile(r'\btag: %s([0-9][^,]*)\b' % PREFIX)
 version_re = re.compile('^Version: (.+)$', re.M)
@@ -14,6 +16,7 @@ version_re = re.compile('^Version: (.+)$', re.M)
 def get_version():
     # Return the version if it has been injected into the file by git-archive
     version = tag_re.search('$Format:%D$')
+    print('version =', version)
     if version:
         return version.group(1)
 
@@ -37,9 +40,10 @@ def get_version():
         # Extract the version from the PKG-INFO file.
         with open(join(d, 'PKG-INFO')) as f:
             version = version_re.search(f.read()).group(1)
-
+    print('version',version)
     return version
 
 
 if __name__ == '__main__':
+    print('in setup version')
     print(get_version())
