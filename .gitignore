@@ -1,0 +1,8 @@
+
+*.pyc
+config.json
+doEnv.bat
+Log/bfmain2.dbg
+Log/bfmain2.err
+*.log
+doEnv.bat
