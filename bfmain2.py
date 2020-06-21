@@ -1,5 +1,5 @@
 import datetime
-import queue
+#import queue
 import logging
 import signal
 import time
@@ -10,12 +10,12 @@ from tkinter import filedialog
 from tkinter.scrolledtext import ScrolledText
 from tkinter import ttk, VERTICAL, HORIZONTAL, N, S, E, W
 import subprocess
-from queue import Queue, Empty
+#from queue import Queue, Empty
 
+from bfLogger import logger, setLogFile, closeLogFile, CustomFormatter  #, chgLogLevel
 
-#from bfLogger import logger, setLogFile, closeLogFile
-from bfLogger import logger, setLogFile, closeLogFile, CustomFormatter, chgLogLevel
 from bfConfig import *
+
 from sfd2csv  import main as sfd2csvMain
 from kmn2csv  import main as kmn2csvMain  
 from langpri  import main as langpriMain  
@@ -35,28 +35,7 @@ def lineno():
 
 cfg = readCfg()
 cfg["eFilter"] = ""
-'''
-def RunFF(cmd, parent):  #This works pretty good
- 
-    #logger.info('starting process %s', self.ffcmd)
-    process = subprocess.Popen(cmd,
-                        stdout=subprocess.PIPE,
-                        #stderr=subprocess.PIPE,
-                        stderr=subprocess.STDOUT,
-                        text=True,
-                        bufsize=1)
-    print('executed ', process.poll())                    
-    while process.poll() == None:
-        line = process.stdout.readline()
-        print(line, end='')
-        ConsoleUi.displayText(line)
-        parent.update()
-        
-    print('poll', process.poll())
-    print('**** dibe****')          
-    logger.info('finished process %s', process.returncode)  #, ready.isSet())
-    return process.returncode
-'''
+print('v ',cfg["bfVersion"])
 
 class FFcmdThrd(threading.Thread):
 
@@ -138,7 +117,7 @@ class ConsoleUi(logging.Handler):
     def emit(self, record):
         msg = self.format(record)
         self.scrolled_text.configure(state='normal')
-        self.scrolled_text.insert(tk.END, 'em: '+msg + '\n', record.levelname)
+        self.scrolled_text.insert(tk.END, msg + '\n', record.levelname)
         self.scrolled_text.configure(state='disabled')
         # Autoscroll to the bottom
         self.scrolled_text.yview(tk.END)
@@ -609,7 +588,7 @@ class App:
 
     def __init__(self, root):
         self.root = root
-        root.title('SUN Font Utility '+sys.argv[0])
+        root.title('SUN Font Utility '+sys.argv[0]+'      '+cfg["bfVersion"])
         root.columnconfigure(0, weight=1)
         root.rowconfigure(0, weight=1)
         
@@ -650,7 +629,7 @@ class App:
         guiHandler.setFormatter(CustomFormatter())
         logger.addHandler(guiHandler)
         logger.setLevel(logging.DEBUG)
-        logger.info("from main")    
+        logger.info('version %s', cfg["bfVersion"])    
         
 
         self.root.protocol('WM_DELETE_WINDOW', self.quit)

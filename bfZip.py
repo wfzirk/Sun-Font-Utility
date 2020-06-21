@@ -2,7 +2,7 @@ import sys
 from zipfile import ZipFile 
 import os 
 import csv
-from bfConfig import *
+from bfConfig import readCfg, bfVersion
 from util import convert2text, convert2odt
 from bfLogger import logger, setLogFile, closeLogFile
 
@@ -82,7 +82,7 @@ def createReadMe(cfg, fileList):
 def writeZip(cfg,fileList):
     zf = os.path.basename(cfg["zipFile"])
     #zf = cfg["zipFile"]
-    logger.info('writeZip %s',zf)
+    logger.info('version %s', bfVersion)
     try:
         with ZipFile(zf,'w') as zip: 
             # writing each file one by one 
@@ -101,9 +101,9 @@ def writeZip(cfg,fileList):
 
 def main(*ffargs):
     #print('file',__file__)
-    base=os.path.basename(__file__)
-    lgh = setLogFile('Log/bfZip.log') 
-    logger.info('start %s',base)
+    #base=os.path.basename(__file__)
+    lgh = setLogFile('Log/'+__file__[:-3]+'.log') 
+    logger.info('version %s', bfVersion)
 
     rc = 0
     curdir = os.getcwd()
@@ -143,7 +143,8 @@ def main(*ffargs):
 
 
 if __name__ == "__main__": 
-    logger.info('name main %s',sys.argv)
+    #logger.info('main %s',sys.argv)
+    logger.info(': '.join(sys.argv))
     rc = main() 
     sys.exit(rc)
    

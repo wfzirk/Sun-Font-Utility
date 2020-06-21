@@ -7,7 +7,7 @@ import csv
 #import traceback
 from util import getUnicode
 from bfLogger import logger, setLogFile, closeLogFile
-from bfConfig import readCfg  
+from bfConfig import readCfg, bfVersion  
  
 def read_csv(namelist, outfile):
     try:
@@ -36,9 +36,8 @@ def read_csv(namelist, outfile):
         return(1)
  
 def main(*ffargs):  
-    base=os.path.basename(ffargs[0][0])
-    lgh = setLogFile('Log/'+base[:-3]+'.log') 
-    logger.info('start %s',base)
+    lgh = setLogFile('Log/'+__file__[:-3]+'.log') 
+    logger.info('version %s', bfVersion)
     args = []
     for a in ffargs[0]:
         logger.debug(a)

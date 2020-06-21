@@ -21,7 +21,7 @@ import fontforge
 import os
 import sys
 import csv
-from bfConfig import readCfg 
+from bfConfig import readCfg, bfVersion
 from bfLogger import logger, setLogFile, closeLogFile
 
 def get_header(name):
@@ -99,9 +99,8 @@ def write_kmn(hdr, data, outfile):
 
     
 def main(*ffargs):
-    base=os.path.basename(ffargs[0][0])
-    lgh = setLogFile('Log/'+base[:-3]+'.log') 
-    logger.info('start %s',base)
+    lgh = setLogFile('Log/'+__file__[:-3]+'.log') 
+    logger.info('version %s', bfVersion)
     rc = 0 
     
     args = []

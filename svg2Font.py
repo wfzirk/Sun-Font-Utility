@@ -16,7 +16,7 @@ import os.path
 #from os import walk
 #import time
 from bfLogger import logger, setLogFile, closeLogFile
-from bfConfig import readCfg 
+from bfConfig import readCfg, bfVersion
  
 
 ffMetrics = {}  # font metrics taken from font
@@ -221,9 +221,8 @@ def getMetrics(ttfFile, ttfFont):
 
 
 def main(*ffargs):
-    base=os.path.basename(ffargs[0][0])
-    lgh = setLogFile('Log/'+base[:-3]+'.log') 
-    logger.info('start %s',base)
+    lgh = setLogFile('Log/'+__file__[:-3]+'.log') 
+    logger.info('version %s', bfVersion)
     args = []
     for a in ffargs[0]:
         logger.debug(a)
@@ -263,14 +262,14 @@ def main(*ffargs):
                 logger.info('status = %s',status)
 
                 logger.info('Generating %s.ttf',backFont)
-                if not namelist:
-                    status = font.generate(backFont+".ttf")
-                    logger.info('status = %s',status)
+                #if not namelist:
+                status = font.generate(backFont+".ttf")
+                logger.info('status = %s',status)
                 
                 logger.info('Generating %s.woff',backFont)
-                if not namelist:
-                    status = font.generate(backFont+".woff")
-                    logger.info('status = %s', status)
+                #if not namelist:
+                status = font.generate(backFont+".woff")
+                logger.info('status = %s', status)
 
         except Exception as e:
             logger.exception('exception %s',e)

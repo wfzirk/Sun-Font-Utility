@@ -22,7 +22,7 @@ import csv
 import xlsxwriter
 from bfLogger import logger, setLogFile, closeLogFile
 from util import  convert2ods, convert2pdf
-from bfConfig import readCfg 
+from bfConfig import readCfg, bfVersion
 
 cfg = readCfg()
 if cfg["alias"] == "EN":
@@ -175,9 +175,8 @@ def arry2xlsx(ary, outFile):
     
     
 def main(*ffargs):  
-    base=os.path.basename(ffargs[0][0])
-    lgh = setLogFile('Log/'+base[:-3]+'.log') 
-    logger.info('start %s',base)
+    lgh = setLogFile('Log/'+__file__[:-3]+'.log') 
+    logger.info('version %s', bfVersion)
     args = []
     rc = 0
     for a in ffargs[0]:

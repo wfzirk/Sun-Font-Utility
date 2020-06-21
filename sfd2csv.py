@@ -17,7 +17,7 @@ import logging
 from tkinter import *
 import time
 
-from bfConfig import readCfg
+from bfConfig import readCfg, bfVersion
 from array2xlsx import array2xlsx
 from bfLogger import logger, setLogFile, closeLogFile
 
@@ -89,9 +89,8 @@ def writeGlyphs(glyphs, outfile):
     return 0
 
 def main(*ffargs):
-    base=os.path.basename(ffargs[0][0])
-    lgh = setLogFile('Log/'+base[:-3]+'.log') 
-    logger.info('start %s',base)
+    lgh = setLogFile('Log/'+__file__[:-3]+'.log') 
+    logger.info('version %s', bfVersion)
     args = [] 
     for a in ffargs[0]:
         logger.debug('input ffargs %s',a)
@@ -133,6 +132,6 @@ def main(*ffargs):
     
 if __name__ == "__main__":
 
-    logger.info('name main %s',sys.argv)
+    logger.info(': '.join(sys.argv))
     rc = main(sys.argv) 
     sys.exit(rc)

@@ -3,9 +3,13 @@ import os
 import sys
 
 import json
+import version
 
-   
+bfVersion = version.get_version()
+print(bfVersion)
+
 cfg = { 
+    "bfVersion": bfVersion,
     "filePath": "dist/",
     "version": "",
     "alias": "",
@@ -84,11 +88,18 @@ def saveCfg(cfg):
     
 def readCfg():  
     #global cfg
+    dumpit = False
     cfgFile = os.path.isfile('config.json')
     if cfgFile:
         rdcfg = json.load(open('config.json'))
+        for k in cfg:
+            if k not in rdcfg:
+                print(k,'not in rdcfg')
+                dumpit = True
+                break
+        
         #print('config loaded')
-    else:
+    if dumpit:
         json.dump(cfg, open('config.json', 'w'),  indent=4)
         rdcfg = cfg
         #cfg = json.load(open('config.json'))

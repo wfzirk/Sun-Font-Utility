@@ -6,7 +6,7 @@ import sys
 import csv
 
 from util import getUnicode
-from bfConfig import readCfg 
+from bfConfig import readCfg, bfVersion 
 from bfLogger import logger, setLogFile, closeLogFile
 from array2xlsx import array2xlsx
 
@@ -80,9 +80,8 @@ def write_kmn(arry, outfile):
 
 
 def main(*ffargs):
-    base=os.path.basename(ffargs[0][0])
-    lgh = setLogFile('Log/'+base[:-3]+'.log') 
-    logger.info('start %s',base)
+    lgh = setLogFile('Log/'+__file__[:-3]+'.log') 
+    logger.info('version %s', bfVersion)
     rc = 0
 
     args = []
@@ -119,6 +118,6 @@ def main(*ffargs):
 
 if __name__ == "__main__":
    
-    logger.info('name main %s',sys.argv)
+    logger.info(': '.join(sys.argv))
     rc = main(sys.argv)    
     sys.exit(rc)

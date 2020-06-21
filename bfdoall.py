@@ -12,7 +12,7 @@ from bfConfig import *
 
 root = tk.Tk()
 
-root.title("SUN Font Utility")
+root.title("SUN Font Utility    "+bfVersion)
 root.resizable(width=False, height=False)
 #root.geometry('{}x{}+{}+{}'.format(300, 200, 100, 150))
  
@@ -33,24 +33,6 @@ default_font = tkFont.nametofont("TkDefaultFont")
 default_font.configure(size=11)
 root.option_add("*Font", default_font)
 
-'''
-class  bfClass():
-    filePath = "dist/"
-    version = StringVar()
-    alias = StringVar()
-    language = StringVar()
-    sfdFile = ""
-    kmnFile = "" 
-    trlangFile = ""
-    ttf = "times.ttf"
-    pwFile = StringVar()
-    pwLangFile = StringVar()
-    backFont = StringVar()
-    kmncsv = StringVar()
-    back2doc = StringVar()
-    compactFile = StringVar()
-    testMode = 0
-'''
 cfg = readCfg()
 cfg["eFilter"] = "" 
 #updateVars()
@@ -59,7 +41,7 @@ cfg["eFilter"] = ""
 
 def updateVars():
     print('update vars',cfg["alias"], 'vars updated')
-    cfg["sunFontName"] = os.path.basename(cfg["sfdFile"]).split('.')[0]
+    #cfg["sunFontName"] = os.path.basename(cfg["sfdFile"]).split('.')[0]
     updateCfg(cfg)
     CB.setState()
     e0.delete(0,tk.END)
@@ -154,21 +136,7 @@ def trlClicked(e):
     updateVars()
     
 
-#def runCmd(e):
-#    for i in chkbs:
-#        print(i,i.state())
-'''
-class CB(tk.Frame):
-   def __init__(self, parent=None, cheater=""):
-      tk.Frame.__init__(self, parent)
-      self.var = tk.BooleanVar()
-      rawr = ttk.Checkbutton(self, text=cheater,\
-            variable=self.var, onvalue=1,\
-            offvalue=0, command=runCmd)
-      rawr.pack()
-      chkbs.append(rawr)
-      self.grid(sticky='w', columnspan=2)
-'''
+
 class TextIO:
     def __init__(self, text):
         self.text = text
@@ -262,43 +230,7 @@ class CB(tk.Frame):
                 textBox.update_idletasks()
             print('returncode',p.returncode)
   
-'''               
-def xrunCmd(self):
-        updateCfg(cfg)
-        for i in CB.chkbs:
-            #print(i.state())
-            cmd = bfCmds(cfg, i.cget("text"))[1]
-            lge = bfCmds(cfg, i.cget("text"))[0]   #" language"
-            sel = i.instate(['selected','!disabled'])
-            #ena = i.instate(['!disabled'])
-            print('rncmd', lge, i.cget("text"), sel, cmd)
-            if not sel:
-                continue
 
-            ffcmd = ['cmd', '/c', 'fontforge', '-quiet', '-script']
-         
-            for c in cmd:
-                ffcmd.append(c)
-  
-            
-            process = subprocess.Popen(ffcmd, shell=True, bufsize=1
-                    stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-            while True:
-                out = process.stdout.readline()
-                if out == '' and process.poll() is not None:
-                    break
-                #print out
-                textBox.insert(tk.END, out)
-                textBox.see(tk.END)
-                textBox.update_idletasks()
-                    
-            print('status',status)
-            if status.returncode == 0:
-                print('\ncommand completed successfully = ',ffcmd, '\n')
-            else:    
-                print('Error processing ',status.returncode, cmd)
-                return(status)
-'''
 top_frame = tk.Frame(root, bg='cyan', width=300, height=25, pady=1)
 center = tk.Frame(root, bg='lightblue', width=295, height=150, padx=5, pady=5)
 ctr_btm = tk.Frame(root, bg='lightblue', width=295, height=200, padx=5, pady=5)
@@ -374,48 +306,6 @@ trl.grid(column=1, row=row, sticky=tk.W, columnspan=4 )
 #trl.insert(0, bfClass.trlangFile)
 trl.bind("<1>", trlClicked)
 
-'''
-# populate ctr_btm
-textBox = scrolledtext.ScrolledText(\
-    ctr_btm,\
-    bg='pale turquoise', fg='blue',\
-    width=46, height=10,\
-    padx=5, pady=5)
-textBox.pack(side=tk.BOTTOM, fill=tk.BOTH, expand = tk.YES)
-
-
-# populate right column
-cb1 = CB(right, 'sfd2csv')  
-cb2 = CB(right, 'kmn2csv')  
-cb3 = CB(right, 'langpri')  
-cb4 = CB(right, 'csv2kmn')  
-cb5 = CB(right, 'csv2svg')  
-cb6 = CB(right, 'svg2font') 
-cb7 = CB(right, 'back2doc') 
-cb8 = CB(right, 'compact')  
-cb9 = CB(right, 'bfzip')      
-
-cBtn1 = tk.Button(right, text="set All",width=5, padx=3)
-cBtn1.grid(row=9,column=0,sticky=tk.W)
-cBtn1.bind("<1>", CB.setAll)
-cBtn2 = tk.Button(right, text="clr All", width=5, padx=3)
-cBtn2.grid(row=9,column=1, sticky=tk.W)
-cBtn2.bind("<1>", CB.clrAll)
-
-
-lfltr = tk.Button(btm_frame,\
-        text="Filter X",
-        command = lambda: efltr.delete(0, tk.END)
-    )
-lfltr.pack(side=tk.LEFT)
-efltr = tk.Entry(btm_frame,width=20)
-efltr.pack(side=tk.LEFT)
-efltr.bind('<KeyRelease>', efltrClicked)
-
-runBtn = tk.Button(btm_frame, text = "Run") 
-runBtn.pack(side=tk.LEFT)
-runBtn.bind("<1>", CB.runCmd)
-'''
 cncl = tk.Button(btm_frame, text = "Cancel") 
 cncl.pack(side=tk.RIGHT)
 cncl.bind("<1>", bfCancel)

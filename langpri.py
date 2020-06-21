@@ -5,7 +5,7 @@ import csv
 #import traceback
 from util import convert2csv, unicode2hex
 from array2xlsx import array2xlsx
-from bfConfig import readCfg
+from bfConfig import readCfg, bfVersion
 from bfLogger import logger, setLogFile, closeLogFile
 
 
@@ -174,9 +174,8 @@ def readENPri(pwfile):
     return nameList
 
 def main(*ffargs):
-    base=os.path.basename(ffargs[0][0])
-    lgh = setLogFile('Log/'+base[:-3]+'.log') 
-    logger.info('start %s',base)
+    lgh = setLogFile('Log/'+__file__[:-3]+'.log') 
+    logger.info('version %s', bfVersion)
     rc = 0
     
     args = []
