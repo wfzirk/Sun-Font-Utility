@@ -5,6 +5,8 @@ doEnv.bat
 Log/*
 Dist/*
 Svg/*
-
+*.log
+*.dbg
+*.err
 tmp.pnm
 version.ini
