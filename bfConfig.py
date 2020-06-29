@@ -6,10 +6,10 @@ import json
 import version
 
 bfVersion = version.get_version()
-print('bf',bfVersion)
+print(bfVersion)
 
 cfg = { 
-    "bfVersion": "",
+    "bfVersion":"",
     "filePath": "dist/",
     "version": "",
     "alias": "",
@@ -46,7 +46,6 @@ langParms = {\
 
 def updateCfg(cfg):
     #print('updatecfg',cfg["alias"], cfg["version"])
-    cfg["bfVersion"] = bfVersion
     cfg["pwFile"] = cfg["filePath"]+"pw"+cfg["version"]+"_EN.csv"
     cfg["pwLangFile"] = cfg["filePath"]+"pw"+cfg["version"]+"_"+cfg["alias"]+".csv"
     cfg["backFont"] = cfg["filePath"]+"SUNBF"+cfg["version"]+"_"+cfg["alias"]      
@@ -93,19 +92,23 @@ def readCfg():
     cfgFile = os.path.isfile('config.json')
     if cfgFile:
         rdcfg = json.load(open('config.json'))
-        print('rd cfg',rdcfg["bfVersion"],bfVersion)
+        
+        if bfVersion != rdcfg["bfVersion"]:
+            #rdcfg["bfVersion"] = bfVersion
+            print('bfversion',bfVersion)
+            dumpit = True
         for k in cfg:
             if k not in rdcfg:
                 print(k,'not in rdcfg')
                 dumpit = True
                 break
-        if bfVersion != rdcfg["bfVersion"]:
-            dumpit = True
-        print('config loaded')
+
     if dumpit:
-        json.dump(cfg, open('config.json', 'w'),  indent=4)
+        print('dumpit')
+        cfg["bfVersion"]=bfVersion
+        json.dump(cfg, open('config.json', 'w'),  indent=4)     
         rdcfg = cfg
-        #cfg = json.load(open('config.json'))
+
     return rdcfg
 
 def writeBat(cfg):
@@ -123,4 +126,5 @@ def writeBat(cfg):
 
 if __name__ == "__main__":
    
-    cfg =rdCfg()
+    cfg = readCfg()
+   
