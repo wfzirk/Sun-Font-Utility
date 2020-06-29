@@ -6,7 +6,6 @@ import json
 import version
 
 bfVersion = version.get_version()
-print(bfVersion)
 
 cfg = { 
     "bfVersion":"",
@@ -95,7 +94,7 @@ def readCfg():
         
         if bfVersion != rdcfg["bfVersion"]:
             #rdcfg["bfVersion"] = bfVersion
-            print('bfversion',bfVersion)
+            #print('bfversion',bfVersion)
             dumpit = True
         for k in cfg:
             if k not in rdcfg:
@@ -104,7 +103,7 @@ def readCfg():
                 break
 
     if dumpit:
-        print('dumpit')
+        #print('dumpit')
         cfg["bfVersion"]=bfVersion
         json.dump(cfg, open('config.json', 'w'),  indent=4)     
         rdcfg = cfg

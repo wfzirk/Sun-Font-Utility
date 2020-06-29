@@ -335,7 +335,7 @@ class CBFrame: #(threading.Thread):
 class InputUi:
       
     def versionClicked(self, *args):
-        print('version clicked', self.e0.get())
+        #print('version clicked', self.e0.get())
         #sv = InputUi.e0.get()
         #b = sv
         cfg["version"] = self.e0.get()
@@ -359,7 +359,7 @@ class InputUi:
             if value == a:
                 found = True
                 break
-        print('aliasclicked',k,value, found)
+        #print('aliasclicked',k,value, found)
         if found:
             cfg["language"] = k
             cfg["alias"] = a
