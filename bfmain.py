@@ -35,7 +35,6 @@ def lineno():
 
 cfg = readCfg()
 cfg["eFilter"] = ""
-print('v ',cfg["bfVersion"])
 
 class FFcmdThrd(threading.Thread):
 

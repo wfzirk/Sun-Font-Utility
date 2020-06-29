@@ -13,8 +13,9 @@ version_re = re.compile('^Version: (.+)$', re.M)
 def get_version():
     # Return the version if it has been injected into the file by git-archive
     version = tag_re.search('$Format:%D$')
-    
+    print('v1',version)
     if version:
+        print('vg',version)
         return version.group(1)
 
     d = dirname(__file__)
@@ -39,8 +40,8 @@ def get_version():
     else:
          with open('version.ini') as f:
             version = f.read()
-            #print('r',version)
-
+            print('r',version)
+    print('ret',version)
     return version
 
 

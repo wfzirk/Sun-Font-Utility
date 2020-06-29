@@ -6,10 +6,10 @@ import json
 import version
 
 bfVersion = version.get_version()
-print(bfVersion)
+print('bf',bfVersion)
 
 cfg = { 
-    "bfVersion": bfVersion,
+    "bfVersion": "",
     "filePath": "dist/",
     "version": "",
     "alias": "",
@@ -46,6 +46,7 @@ langParms = {\
 
 def updateCfg(cfg):
     #print('updatecfg',cfg["alias"], cfg["version"])
+    cfg["bfVersion"] = bfVersion
     cfg["pwFile"] = cfg["filePath"]+"pw"+cfg["version"]+"_EN.csv"
     cfg["pwLangFile"] = cfg["filePath"]+"pw"+cfg["version"]+"_"+cfg["alias"]+".csv"
     cfg["backFont"] = cfg["filePath"]+"SUNBF"+cfg["version"]+"_"+cfg["alias"]      
@@ -92,13 +93,15 @@ def readCfg():
     cfgFile = os.path.isfile('config.json')
     if cfgFile:
         rdcfg = json.load(open('config.json'))
+        print('rd cfg',rdcfg["bfVersion"],bfVersion)
         for k in cfg:
             if k not in rdcfg:
                 print(k,'not in rdcfg')
                 dumpit = True
                 break
-        
-        #print('config loaded')
+        if bfVersion != rdcfg["bfVersion"]:
+            dumpit = True
+        print('config loaded')
     if dumpit:
         json.dump(cfg, open('config.json', 'w'),  indent=4)
         rdcfg = cfg
@@ -120,30 +123,4 @@ def writeBat(cfg):
 
 if __name__ == "__main__":
    
-    print('name main',type(sys.argv),sys.argv)
-    for a in sys.argv:
-        print(a)
-    #main(sys.argv)    
-    
-    cfgFile = os.path.isfile('config.json')
-    if cfgFile:
-        cfg = json.load(open('config.json'))
-        cfg["alias"] = sys.argv[1].upper().strip()
-        if sys.argv[1] == "EN":
-            cfg["sfdFile"] = sys.argv[2]
-            cfg["kmnFile"] = sys.argv[3]
-            cfg["version"] = sys.argv[4]
-            cfg["ttf"]     = sys.argv[5]
-    else:  
-            cfg["trlangFile"] = sys.argv[2]
-            cfg["version"]  = sys.argv[3]
-            cfg["ttf"]      = sys.argv[4]
-            cfg["pwLangFile"] = sys.argv[5]
-        
-    for x in langParms:
-        if langParms[x] == cfg["alias"]:
-            cfg["language"] = x
-            #print('match',cfg["language"])
-            break
-
-    updateCfg()
+    cfg =rdCfg()
