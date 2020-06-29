@@ -23,6 +23,8 @@ import xlsxwriter
 from bfLogger import logger, setLogFile, closeLogFile
 from util import  convert2ods, convert2pdf
 from bfConfig import readCfg, bfVersion
+import loadFont
+import time
 
 cfg = readCfg()
 if cfg["alias"] == "EN":
@@ -110,6 +112,11 @@ def arry2xlsx(ary, outFile):
     #fout = outFile.split('.')[0]
     fout = outFile[:-4]
     fxlsx = fout+'.xlsx'
+    print(cfg["sunFontName"])
+    lf = loadFont.loadFontThrd(cfg["sunFontName"]+".ttf")
+    lf.run()
+    time.sleep(1)
+    logger.info('started lf')
     workbook = xlsxwriter.Workbook(fxlsx)
     worksheet = workbook.add_worksheet()
     logger.info('arry2xlsx %s', fxlsx)
@@ -172,7 +179,8 @@ def arry2xlsx(ary, outFile):
     #if exists:
     #    log_info('delete existing file',fods)
     #    os.remove(fods)
-    
+    lf.stop()
+    del lf
     
 def main(*ffargs):  
     lgh = setLogFile('Log/'+__file__[:-3]+'.log') 
@@ -210,6 +218,7 @@ def main(*ffargs):
     else:
         logger.error("Error could not complete commands status = %d",rc)
     
+
     closeLogFile(lgh)
     return(rc)
 

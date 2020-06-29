@@ -8,12 +8,16 @@ import xlsxwriter
 from util import convert2ods, convert2pdf, convert2csv
 from bfLogger import logger
 from bfConfig import readCfg
+import loadFont
 
 # lang2xlsx formats and writes a spreadsheet for xlsx and ods files
 def array2xlsx(aryx, outFile, pdf=False, csv=False):
     # https://xlsxwriter.readthedocs.io
     cfg = readCfg()
     logger.info('array2xlsx outfile  %s', outFile)
+    lf = loadFont.loadFontThrd(cfg["sunFontName"]+".ttf")
+    lf.run()
+    
     if isinstance(aryx,dict):
         ary = list(aryx.values())
     elif isinstance(aryx, list):
@@ -77,4 +81,5 @@ def array2xlsx(aryx, outFile, pdf=False, csv=False):
         # Libreoffice needs ods file to generate pdf correctly
         convert2pdf(fods)
         
-    
+    lf.stop()
+    del lf

@@ -17,10 +17,11 @@ import logging
 from tkinter import *
 import time
 
-from bfConfig import readCfg, bfVersion
+from bfConfig import readCfg, bfVersion, saveCfg
 from array2xlsx import array2xlsx
 from bfLogger import logger, setLogFile, closeLogFile
 
+cfg = readCfg()
     
 def getUnicode(str):
     try:
@@ -31,7 +32,7 @@ def getUnicode(str):
         return 1
 
 def listGlyphs(font):
-    cfg = readCfg()
+    #cfg = readCfg()
     DEBUG = cfg["debug"] == "true"
     IMAGEPOS = cfg["enColumns"]["index_font"]
     #LANGNAMEPOS = cfg["langColumns"]["index_langName"]
@@ -102,6 +103,8 @@ def main(*ffargs):
         outfile = args[2]
         try:
             font = fontforge.open (fontName)
+            cfg["sunFontName"] = font.fontname
+            saveCfg(cfg)        #make font name
             rc,glyphs = listGlyphs(font)
             if rc == 0:
                 rc = writeGlyphs(glyphs, outfile)
