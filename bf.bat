@@ -1,3 +1,3 @@
 cls
 
-fontforge -script bfmain2.py
+fontforge -script bfmain.py
