@@ -174,9 +174,8 @@ class CBFrame: #(threading.Thread):
         #cbstyle = ttk.Style()
         # Create style used by default for all Frames
         
-        
-        cb1 = CBFrame.addCB(top_frame, 'sfd2csv') #, sfd2csvMain)  
-        cb2 = CBFrame.addCB(top_frame, 'kmn2csv') #, kmn2csvMain)  
+        cb1 = CBFrame.addCB(top_frame, 'kmn2csv') #, kmn2csvMain)  
+        cb2 = CBFrame.addCB(top_frame, 'sfd2csv') #, sfd2csvMain)  
         cb3 = CBFrame.addCB(top_frame, 'langpri') #, langpriMain)  
         cb4 = CBFrame.addCB(top_frame, 'csv2kmn') #, csv2kmnMain)  
         cb5 = CBFrame.addCB(top_frame, 'csv2svg') #, csv2svgMain)  
@@ -192,21 +191,7 @@ class CBFrame: #(threading.Thread):
         cBtn2 = tk.Button(bot_frame, text="clr All", width=5, padx=3)
         cBtn2.grid(row=0,column=1, sticky=tk.W)
         cBtn2.bind("<1>", CBFrame.clrAll)
-        
-        #cbtst = ttk.Checkbutton(bot_frame, text='test') 
-        #cbtst.grid(row=1, column=0)
-   
-        
-        '''
-        cBtn3 = tk.Button(bot_frame, text="Run", width=10, padx=3, pady=3)
-        cBtn3.grid(row=1,column=0, columnspan=2, sticky=tk.EW)
-        cBtn3.bind("<1>", self.runCmds)
-        
-        cBtn3 = tk.Button(bot_frame, text="Cancel", width=10, padx=3, pady=3)
-        cBtn3.grid(row=2,column=0, columnspan=2, sticky=tk.EW)
-        cBtn3.bind("<1>", self.clr)
-        '''
-        
+
     def addCB(frame, funcName, func=""):
         style = ttk.Style()
         style.configure('Green.TCheckbutton', foreground='green')
@@ -219,9 +204,7 @@ class CBFrame: #(threading.Thread):
         cbarry = [ckbtn, funcName, func] 
         CBFrame.chkbs.append(cbarry)
         CBFrame.cbState(cbarry[0])
-          
-        
-        
+                 
     def clr():
         ConsoleUi.clearDisplay()
         

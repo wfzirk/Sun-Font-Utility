@@ -49,21 +49,32 @@ def array2xlsx(aryx, outFile, pdf=False, csv=False):
     d_fmt.set_text_wrap()
     d_fmt.set_align('left')
     d_fmt.set_align('vcenter')
-    d_col_width = 25
+    l_col_width = 25    # language column width
+    n_col_width = 18    # english name column width
     u_col_width = 6     #unicode column width
+    r_col_width = 18    #reference column width
     
-    worksheet.set_column('A:A', s_col_width, s_fmt)
-    
-    #print('ary length', len(ary))
+    worksheet.set_column('A:A', s_col_width, s_fmt)     # symbol column
+    worksheet.set_column('B:B', n_col_width, d_fmt)     # EN name column
+    if cfg["alias"] == 'EN':
+        worksheet.set_column('C:C', u_col_width, d_fmt)
+        worksheet.set_column('D:D', r_col_width, d_fmt)
+    else:
+        worksheet.set_column('C:C', l_col_width, d_fmt)
+        worksheet.set_column('D:D', u_col_width, d_fmt)
+        worksheet.set_column('E:E', r_col_width, d_fmt)
+    '''    
+    #logger.debug('ary length', len(ary))
+    # ,Abilene,Ec4d,Luke 3:1    for kmn2csv
     #determine if 3 or 4 column array
-    if len(ary[2]) < 4:
+    if len(ary[2]) < 54:
        worksheet.set_column('B:B', d_col_width, d_fmt) 
        worksheet.set_column('C:C', u_col_width, d_fmt)
 
     else:
         worksheet.set_column('B:C', d_col_width, d_fmt)
         worksheet.set_column('D:D', u_col_width, d_fmt)
-
+    '''
     worksheet.center_vertically()
     worksheet.center_horizontally()
     

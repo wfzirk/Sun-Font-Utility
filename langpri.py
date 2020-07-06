@@ -14,101 +14,91 @@ pwSym = cfg["enColumns"]["index_font"]
 pwUec = cfg["enColumns"]["index_unicode"]
 pwName = cfg["enColumns"]["index_name"] 
 # "","brothers","e007","hermanos",,
-langSymCol = cfg["langColumns"]["index_font"]
-langUniCol = cfg["langColumns"]["index_unicode"]
+lSymCol = cfg["langColumns"]["index_font"]
+lUniCol = cfg["langColumns"]["index_unicode"]
 enNameCol =  cfg["langColumns"]["index_name"] 
-langNameCol = cfg["langColumns"]["index_langName"] 
+lNameCol = cfg["langColumns"]["index_langName"] 
+lRefCol = cfg["langColumns"]["index_ref"]
 
 def readLang(file, priList):
     # due to everyone using their own column order an attempt is
     # made to standardize file into sym, enname, langname, unicode
     # assume sym col is always 0
-    lsymcol=0
-    lencol=0
-    lunicol=0
-    langcol=0
+    #lsymcol=0
+    #lencol=1
+    #lunicol=3
+    #langcol=2
+    #lrefcol=4
     # spanish       ,sisters,e00f,hermanas,,
     # portuguese    ,abomination,abominação,e0a4
+    # French        ,Abidan,Abidan,e1f7,Num 1:11
+
 
 
     try:
         logger.info("readlang %s",file)
         f = open(file, 'r', encoding="utf-8")
         reader = csv.reader(f, delimiter=',', quotechar='"')
-        #sort by name
-        uic_sort = sorted(reader, key=lambda x: x[1].lower())
-
-        row = uic_sort[5]      # pick arbitrary 5th row  make sure not header
-        #print(len(uic_sort), len(row),row)
-        if len(row) > 3:
-            uic = row[lsymcol].strip()   # the first column should contain symbol
-            ux = unicode2hex(uic)
-            for i in range(len(row)):
-                u = '0x'+row[i]
-                if ux == u.lower():     # unicode matches symbol unicode
-                    #print('uec match',i,u, ux)
-                    lunicol = i
-                if row[i] in priList:   # english name column matches
-                    #print('ename match', i, row[i])
-                    lencol = i
-            if lunicol == 0 or lencol == 0:
-                logger.error(' could not determine unicode col %d en col %d len col %d',lunicol, lencol)
-                return(1)
-                
-            for i in range(len(row)):       # get column for language
-                if i == lsymcol or i==lunicol or i==lencol:
-                    continue
-                else:
-                    langcol = i
-                    break
+ 
+        name_sort = sorted(reader, key=lambda x: x[enNameCol].lower()) 
+        
+        langList = {}
+        for n in name_sort:
+            #logger.info('langtodict %s %s',n, n[lencol])
+            #logger.debug('langtodict %s %s', n[lencol], n[lunicol])
+            sym = n[lSymCol].strip()
+            eName = n[enNameCol].strip()
+            lName = n[lNameCol].strip()
+            uec = n[lUniCol].strip().lower()
+            ref = n[lRefCol].strip()
+            if eName in priList:
+                enuec = priList[eName][1].strip().lower()
+                logger.debug('%s %s',priList[eName], pwUec)
+                if enuec != uec:
+                    logger.warning('Uecs not the same %s->%s',enuec, uec)
+                langList[n[enNameCol]] = [sym,eName,lName,uec,ref]  #english word as key
+                logger.debug(langList[n[enNameCol]])
+            else:
+                logger.warning('%s:%s:%s not in primary synonym?',eName,lName,uec)
     except Exception as e:
         logger.exception('readLang file  error: %s',e)
-        #traceback.print_exc()
-        return(1)          
-    #logger.info('langList','cols = sym',lsymcol,'name', lencol,'lang', langcol,'unicode', lunicol) 
-    logger.info('langList  symcol %d namecol %d langcol %d unicode %d',lsymcol, lencol, langcol, lunicol) 
-    logger.info('langCols %d %d %d %d', langSymCol, enNameCol, langNameCol, langUniCol)
-    if lsymcol == langSymCol and lencol == enNameCol and langcol == langNameCol and lunicol == langUniCol:
-        logger.info("columns Match")
-    else:
-        logger.warning("columns don't match, reordering columns")
-  
-    name_sort = sorted(uic_sort, key=lambda x: x[lencol].lower()) 
+
+        return(1)       
     
-    langList = {}
-    for n in name_sort:
-        #logger.info('langtodict %s %s',n, n[lencol])
-        logger.debug('langtodict %s %s', n[lencol], n[lunicol])
-        sym = n[lsymcol].strip()
-        eName = n[lencol].strip()
-        lName = n[langcol].strip()
-        uec = n[lunicol].strip().lower()
-        langList[n[lencol]] = [sym,eName,lName,uec]  #english word as key
-        
     return langList  # lang file reordered columns and sorted by name
+    
 
 #
 def fixLangList(langList):
     logger.info('fixlanglist duplicate names')
     #cnt = 0;
-    ln = {}   # create dict with langName as key
+    ln = {}   # create dict with langname as key
     try:
         for i in langList:
-            lName = langList[i][langNameCol]
-            luec = langList[i][langUniCol]
+            lName = langList[i][lNameCol]
+            luec = langList[i][lUniCol]
             #print('fix %s', i, langList[i][langNameCol])
-            logger.debug('fix '+i+' '+langList[i][langNameCol]+':'+luec)
+            logger.debug('fix '+i+' '+langList[i][lNameCol]+':'+luec)
             if lName in ln:
                 #logger.warning('Duplicate names %s %s %s using first name',lName,langList[i][3],ln[lName][3])
                 #print('logger warning Duplicate names '+lName, end='')
-                logger.warning('Duplicate names '+lName+':'+luec+'->'+ln[lName][3])  #+' '+ %s %s %s using first name',lName,langList[i][3],ln[lName][3])
-                continue
+                #if not lName:
+                #    lName='____'
+                logger.warning('Duplicate names '+langList[i][lNameCol]+'->' +lName+':'+luec+'->'+ln[lName][3])  #+' '+ %s %s %s using first name',lName,langList[i][3],ln[lName][3])
+                #continue
+                
+            if ' ' in lName:
+                    logger.warning("---Name Error---, name contains spaces replace with '_', %s", lName)
+                    lName = lName.replace(' ','_')
             ln[lName] = langList[i]
+            
         ll = {}   
     except Exception as e:
         print('logger exception',e)
         logger.exception(e)
         return ''
+    
+    # dict with enName as key
     for i in ln:
         ename = ln[i][1]
         ll[ename] = ln[i]
@@ -125,12 +115,14 @@ def mergeLists(enList, langList):
         
             eUec = enList[eName][1].strip()
             eSym = enList[eName][0]
+            
             if eName in langList:
-                logger.debug('match %s %s',eName, langList[eName][langNameCol])
+                logger.debug('match %s %s',eName, langList[eName][lNameCol])
                 #print('match %s %s',eName, langList[eName])
                 #logger.info('match '+eName+' '+langList[eName][langNameCol])
-                lName = langList[eName][langNameCol].strip()
-                lUec = langList[eName][langUniCol].strip()
+                lName = langList[eName][lNameCol].strip()
+                lUec = langList[eName][lUniCol].strip()
+                lref = langList[eName][lRefCol].strip()
                 if lUec != eUec:
                     logger.warning(">>>unicode mismatch<<<, use primary unicode., %s %s %s",eName, eUec, lUec)
                 if ' ' in lName:
@@ -139,10 +131,10 @@ def mergeLists(enList, langList):
                 #mList.append([eSym, eName, lName, eUec])
             else:
                 #logger.warning('***Name*** not used  %s for %s ignore row',eName,cfg["language"])
-                logger.warning('***Name*** not used  %s:%s,  name blank for %s ',eName,lUec,cfg["language"])
+                logger.warning('***Name*** not used  %s:%s ,  name blank for %s ',eName,eUec,cfg["language"])
               
                 lName = ""
-            mList.append([eSym, eName, lName, eUec])
+            mList.append([eSym, eName, lName, eUec, lref])
         # sort by language column
         #name_sort = sorted(mList, key=lambda x: x[langNameCol])  #, reverse=True) 
         # sort by english column
@@ -158,12 +150,14 @@ def readENPri(pwfile):
         with open(pwfile, 'r', encoding="utf-8") as f:
             reader = csv.reader(f, delimiter=',', quotechar='"')
             for row in reader:
+                logger.debug(row)
                 uic = row[pwSym].strip()
                 name = row[pwName].strip().strip('"').strip("'")
                 uec = row[pwUec].strip().strip('"').strip('"').lower()
                 #pwname = pwname+':'+name
                 #pwuec = pwuec+':'+uec.lower()
                 nameList[name] = [uic,uec]
+                logger.debug('%s %s',name,nameList[name])
             logger.info('primary name list created')
             #logger.info(nameList)
     except Exception as e:

@@ -45,7 +45,7 @@ def getUnicode(str):
         a = chr(int(str,16)).encode('utf-8')
         return a.decode('utf-8')
     except Exception as  e:
-        log_err("fatal error getUnicode",e)
+        logger.error("fatal error getUnicode %s",e)
         sys.exit(1)
         
 def unicode2hex(uic): 

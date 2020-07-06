@@ -43,8 +43,8 @@ def makeSVG(fontName, uniName, name, alias, debug):
             
         svgFile = "Svg\\"+alias+"_"+uniName+".svg"
         pnmFile = "tmp.pnm"
-        pattern = "Svg\\*_"+uniName+"+*.svg"
-        if glob.glob(pattern):
+        #pattern = "Svg\\*_"+uniName+"+*.svg"
+        if glob.glob(svgFile):
             logger.warning('file pattern %s alreadyexists',uniName)
             return 0
         exists = os.path.isfile(svgFile)
@@ -94,7 +94,9 @@ def read_list(fontname, csvFile, namelist=""):
         with open(csvFile, encoding='utf8') as csvDataFile:
             csvReader = csv.reader(csvDataFile, delimiter=',', quotechar ='"')
             for row in csvReader:
-                #log_info('|'+alias+'|',row, ixn, ixu)
+                #logger.info('%s,%d %d',alias,ixn, ixu)
+                logger.info(row)
+                #logger.info('%s %s',row[ixn],row[ixu])
                 ncol = len(row)
                 name = row[ixn].strip()
                 unicode = row[ixu].strip().lower()

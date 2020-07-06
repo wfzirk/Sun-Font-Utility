@@ -35,15 +35,21 @@ def read_kmn(kmnfile):
         l = len(row)
         if l == 3:
             if '>'  in row[1]:
-                csvRow = [None, None, None]
+                # 'Aaron' + ' ' > U+Eb0d   c		 Acts 7:40
+                csvRow = [None, None, None, None]
                 #log_info(row)
-                unicode = row[2].strip().strip('\"').strip("\'").lower()
+                ref = row[2][4:].strip()[1:].strip()
+                unicode = row[2][:4]
+                logger.info(ref)
+                logger.info(unicode)
+                #unicode = row[2].split(' ').strip().strip('\"').strip("\'").lower()
                 uic = getUnicode(unicode)
                 name = row[0].strip().strip('\"').strip("\'")
                 csvRow[enc["index_font"]] = uic
                 csvRow[enc["index_name"]] = name
                 csvRow[enc["index_unicode"]] = unicode
-                logger.info('%s %s %s',uic.encode().hex(),unicode, name)
+                csvRow[enc["index_ref"]] = ref
+                logger.info('%s %s %s %s',uic.encode().hex(), name, unicode, ref)
                 kmnAry.append(csvRow)
                 #csvWriter.writerow(csvRow)
                 
@@ -60,23 +66,6 @@ def read_kmn(kmnfile):
     # note: need to sort this by name
 
     return name_sort
-'''
-# parse kmn file and generate csv file for documentation
-def write_kmn(arry, outfile):
-    #cfg = json.load(open('config.json'))["enColumns"]
-    #cfg = readCfg()["enColumns"]
-    #kmnAry = []
-    #fr = open(namelist, 'r')
-    fw = open(outfile, 'w' ,encoding='utf8')
-    #csvReader = csv.reader(fr, delimiter='+')
-    csvWriter = csv.writer(fw, delimiter=',', lineterminator='\n')
-    for row in arry:
-        csvWriter.writerow(csvRow)
-
-    fw.close()
-
-    return 0
-'''
 
 
 def main(*ffargs):

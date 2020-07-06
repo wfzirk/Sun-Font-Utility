@@ -31,18 +31,32 @@ def getUnicode(str):
         logger.error("fatal error getUnicode %s",e)
         return 1
 
-def listGlyphs(font):
+def readKmnCSV(filename):
+    refList = {}
+    ixr = cfg["enColumns"]["index_ref"]
+    ixn = cfg["enColumns"]["index_name"]
+    with open(filename) as csvfile:
+        readCSV = csv.reader(csvfile, delimiter=',')
+        for r in readCSV:
+            ref = r[ixr].strip()
+            if ref:
+                refList[r[ixn]] = r[ixr]
+    return refList
+
+
+def listGlyphs(font, refList):
     #cfg = readCfg()
     DEBUG = cfg["debug"] == "true"
     IMAGEPOS = cfg["enColumns"]["index_font"]
     #LANGNAMEPOS = cfg["langColumns"]["index_langName"]
     UECPOS = cfg["enColumns"]["index_unicode"]
-    ENNAMEPOS = cfg["langColumns"]["index_name"]
-    
+    ENNAMEPOS = cfg["enColumns"]["index_name"]
+    refPos = cfg["enColumns"]["index_ref"]
+    print(refPos)
     cnt = 0
     glyphs = []
     for glyph in font:
-        gl = [None, None, None]
+        gl = [None, None, None, None]
         try:
             if font[glyph].unicode != -1:
                 unicode = hex(font[glyph].unicode)[2:]
@@ -56,6 +70,10 @@ def listGlyphs(font):
                 gl[IMAGEPOS] = uic
                 gl[ENNAMEPOS] = name
                 gl[UECPOS] = unicode
+                if name in refList:
+                    gl[refPos] = refList[name]
+                else:
+                    gl[refPos] = ""
                 glyphs.append(gl)
                  
         except Exception as e:
@@ -74,7 +92,7 @@ def listGlyphs(font):
     return 0, name_sort
 
 def writeGlyphs(glyphs, outfile):
-    logger.info('wrg %s',outfile)
+    logger.info('wrtglphs %s',outfile)
     fw = open(outfile, 'w' ,encoding='utf8', newline='')
     csvWriter = csv.writer(fw)
     count = 0
@@ -100,12 +118,14 @@ def main(*ffargs):
     rc = 0
     if len(args) > 2: 
         fontName  = args[1]
-        outfile = args[2]
+        kmfile = args[2]
+        outfile = args[3]
         try:
+            refList = readKmnCSV(kmfile)
             font = fontforge.open (fontName)
             cfg["sunFontName"] = font.fontname
             saveCfg(cfg)        #make font name
-            rc,glyphs = listGlyphs(font)
+            rc,glyphs = listGlyphs(font, refList)
             if rc == 0:
                 rc = writeGlyphs(glyphs, outfile)
             if rc == 0:
@@ -118,10 +138,11 @@ def main(*ffargs):
             logger.exception(e)
             rc = 1
     else:
-        logger.warning("\n  SYNTAX: fontforge -script sfd2csv.py fontforgefile.sfd csvfile.csv")
-        logger.warning("  Takes data from fontforge file to generate a csv file of symbols,")
+        logger.warning("\n  SYNTAX: fontforge -script sfd2csv.py fontforgefile.sfd keyman_csvfile csvfile.csv")
+        logger.warning("  i.e. fontforge -script sfd2csv.py fontfile.sfd keyman.csv pwlist.csv")
+        logger.warning("  Takes data from fontforge file to generate a csv file of symbols and names,")
         logger.warning("  unicodes and names")
-        logger.warning("  i.e. symbol,eb08,Athens")
+        logger.warning("  i.e. symbol,eb08,Athens, reference")
         rc = 1
         
     if rc != 0:

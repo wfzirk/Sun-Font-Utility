@@ -37,9 +37,13 @@ def get_header(name):
     logger.info(hdr)
     return hdr
     
-def build_row(name, unicode):  
+def build_row(name, unicode, ref):  
     #   'Aaron' + ' ' > U+Eb0d
-    row = "'"+name+"' + ' ' > U+"+unicode.lower()
+    comment = ''
+    if ref:
+        comment = '   c '+ref
+    row = "'"+name+"' + ' ' > U+"+unicode.lower()+comment
+    logger.debug(row)
     return row
     
 def read_csv(f):
@@ -47,6 +51,7 @@ def read_csv(f):
     ixu = cfg["index_unicode"]
     ixn = cfg["index_langName"]
     ixe = cfg["index_name"]
+    ixr = 4
     logger.info('read_csv %s %s',f, cfg["index_langName"])
     csvData = []
     try:
@@ -57,15 +62,18 @@ def read_csv(f):
             cnt = 0
             for i in data:
                 #logger.debug('%s %d %s %s',i, len(i), i[ixu],i[ixn], i[ixe])
-                logger.debug('%d %s %s %s', cnt, i[ixu],i[ixn], i[ixe])
+                logger.debug('%d %s %s %s %s', cnt, i[ixu],i[ixn], i[ixe], i[ixr])
                 unicode = i[ixu].lower()
                 #log_info('unicode', unicode)
                 name = i[ixn]
                 if len(name) == 0:
                     #logger.error('length = 0')
                     continue
+                ref = i[ixr]
+                if len(ref) == 0:
+                    ref = ""
                 #log_info('name',name, len(name))
-                csvData.append(build_row(name, unicode)) 
+                csvData.append(build_row(name, unicode, ref)) 
                 cnt += 1
                 
     except Exception as  e:
