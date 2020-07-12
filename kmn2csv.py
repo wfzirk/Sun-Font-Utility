@@ -31,6 +31,7 @@ def read_kmn(kmnfile):
     #fw = open(outfile, 'w' ,encoding='utf8')
     csvReader = csv.reader(fr, delimiter='+')
     #csvWriter = csv.writer(fw, delimiter=',', lineterminator='\n')
+    kerrors = False
     for row in csvReader:
         l = len(row)
         if l == 3:
@@ -39,9 +40,14 @@ def read_kmn(kmnfile):
                 csvRow = [None, None, None, None]
                 #log_info(row)
                 ref = row[2][4:].strip()[1:].strip()
-                unicode = row[2][:4]
-                logger.info(ref)
-                logger.info(unicode)
+                unicode = row[2][:4].lower().strip()
+                name = row[0].strip().strip('\"').strip("\'")
+                if len(unicode) != 4:
+                    logger.error('invalid unicode %s %s',unicode, name)
+                    kerrors = True
+                if unicode[:1] != 'e':
+                    logger.error('invalid unicode %s %s',unicode, name)
+                    kerrors = True
                 #unicode = row[2].split(' ').strip().strip('\"').strip("\'").lower()
                 uic = getUnicode(unicode)
                 name = row[0].strip().strip('\"').strip("\'")
@@ -52,15 +58,12 @@ def read_kmn(kmnfile):
                 logger.info('%s %s %s %s',uic.encode().hex(), name, unicode, ref)
                 kmnAry.append(csvRow)
                 #csvWriter.writerow(csvRow)
-                
-        if DEBUG:
-            cnt = cnt+1
-            if cnt>20:
-                break
-
 
     fr.close()
-
+    
+    if kerrors:
+        return 1
+        
     name_sort = sorted(kmnAry, key=lambda x: x[enc["index_name"]].lower())
     
     # note: need to sort this by name
@@ -74,18 +77,25 @@ def main(*ffargs):
     rc = 0
 
     args = []
+    cnt = 0
     for a in ffargs[0]:
-        logger.debug('%s',a)
+        logger.debug('%d %s',cnt,a)
         args.append(a)
-
+        cnt += 1
+        print('args',cnt,a)
+        
     if len(args) == 3: 
         namelist = args[1]
         outFile = args[2]
         try:
             kmnAry = read_kmn(namelist)
+            
             if kmnAry:
-                cfg = readCfg()
-                array2xlsx(kmnAry, outFile[:-4]+'.ods', csv=True)
+                if kmnAry == 1:
+                    rc = 1
+                else:    
+                    cfg = readCfg()
+                    array2xlsx(kmnAry, outFile[:-4]+'.ods', csv=True)
             else:
                 rc = 1
         except Exception as e:

@@ -27,14 +27,14 @@ rem sequence of commands to build backfont file
 
 :kmn2csv
 if %alias% == EN (
-	cmd /c fontforge -quiet -script kmn2csv.py %kmn% dist/kmn%ver%_%alias%.csv
+	cmd /c fontforge -quiet -script kmn2csv.py "%kmn%" dist/kmn%ver%_%alias%.csv
 	if ERRORLEVEL 1 (goto errorexit)
 )
 if %docmd%  NEQ all (goto end)
 
 :sfd2csv
 if %alias% == EN (
-	cmd /c fontforge -quiet -script sfd2csv.py %sfd% dist/kmn%ver%_%alias%.csv dist/pw%ver%_%alias%.csv
+	cmd /c fontforge -quiet -script sfd2csv.py "%sfd%" dist/kmn%ver%_%alias%.csv dist/pw%ver%_%alias%.csv
 	if ERRORLEVEL 1 (goto errorexit)
 )
 :langpri
