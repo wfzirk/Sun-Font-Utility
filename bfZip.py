@@ -25,16 +25,30 @@ def createFileList(cfg):
     "readMe": "dist/readMe.csv",  
     
     '''
-
+    
     if alias == "EN":
+    
+        sfdfile = cfg['sfdFile'].strip()
+        fileList.append([sfdfile,"SFD file for generating dictionaries"])
+        kmnfile = cfg['kmnFile'].strip()
+        fileList.append([kmnfile,"KMN file for generating dictionaries"])
+        cpstr = sfdfile+'  '+os.getcwd()
+        cpstr = cpstr.replace('/', '\\')
+        logger.info('copy /y '+cpstr)
+        os.system('copy /y '+cpstr)
+        cpstr = kmnfile+'  '+os.getcwd()
+        cpstr = cpstr.replace('/', '\\')
+        os.system('copy /y '+cpstr)
+        
         pwf = cfg["pwFile"][:-4]+'.ods'
-        fileList.append([pwf,"Primary words dictionary created from "+cfg["sfdFile"]]) 
+        fileList.append([pwf,"Primary words dictionary created from "+os.path.basename(cfg["sfdFile"])])
         pwf = cfg["pwFile"][:-4]+'.csv'
-        fileList.append([pwf,"Primary words dictionary created from "+cfg["sfdFile"]]) 
+        fileList.append([pwf,"Primary words dictionary created from "+os.path.basename(cfg["sfdFile"])]) 
         kmn = cfg["kmncsv"][:-4]+'.ods'
-        fileList.append([kmn,"Complete dictionary created from "+cfg["kmnFile"]])
+        fileList.append([kmn,"Complete dictionary created from "+os.path.basename(cfg["kmnFile"])])
         kmn = cfg["kmncsv"][:-4]+'.csv'
-        fileList.append([kmn,"Complete dictionary created from "+cfg["kmnFile"]])
+        fileList.append([kmn,"Complete dictionary created from "+os.path.basename(cfg["kmnFile"])])
+        
     else:
         pwlf = cfg["pwLangFile"][:-4]+'.ods'
         fileList.append([pwlf, "primary words dictionary for given language"])
@@ -55,7 +69,7 @@ def createFileList(cfg):
     for file in fileList:
         f = os.path.basename(file[0])
         file[0] = f 
-
+        logger.info('f %s',f)
     return fileList
     
 
