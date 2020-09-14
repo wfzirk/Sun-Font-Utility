@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+    <head>
+        Your head content goes here
+    </head>
+	<style>
+		@font-face {
+			font-family: "SUNBF77_702_EN";
+			src: url("SUNBF77_702_EN.woff") format('woff');
+		}
+		
+		body {
+			font-family: "SUNBF77_702_EN", Fallback, sans-serif;
+			font-size: 15px;
+		}
+
+	</style>
+    <body >
+       <div id="output" >
+			<!--16  Aaron Ziphron   Aaron	   -->
+			 16  Aaron   	 
+		</div>
+		<div><br>
+		<div id="uniout" contentEditable="true" style="border:1px solid black;"> uniout </div>
+		<br>
+		Unicode <textarea id="inputunicode" oninput="convertunicode()" placeholder="Enter text" style="width:100%; padding:5px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; color: #00000; font-family: 'Helvetica';"></textarea>	
+		UTF-8 Text <textarea id="inpututf8text" oninput="convertutf8text()" rows="2" placeholder="Enter text" style="width:100%; padding:5px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; color: #00000;"></textarea>		
+		UTF-8 Hex <textarea id="inpututf8" oninput="convertutf8()" rows="2" placeholder="Enter text" style="width:100%; padding:5px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; color: #00000;"></textarea>
+		UTF-16 <textarea id="inpututf16" oninput="convertutf16()" rows="2" placeholder="Enter text" style="width:100%; padding:5px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; color: #00000;"></textarea>
+		UTF-32 <textarea id="inpututf32" oninput="convertutf32()" rows="2" placeholder="Enter text" style="width:100%; padding:5px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; color: #00000;"></textarea>	
+		Base64 <textarea id="inputbase64" oninput="convertbase64()" rows="2" placeholder="Enter text" style="width:100%; padding:5px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; color: #00000;"></textarea>
+		URL (%) <textarea id="inputurl" oninput="converturl()" rows="2" placeholder="Enter text" style="width:100%; padding:5px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; color: #00000;"></textarea>
+		Decimal <textarea id="inputdec" oninput="convertdec()" rows="2" placeholder="Enter text" style="width:100%; padding:5px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; color: #00000;"></textarea>
+		</div>
+	</body>
+	
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			console.log('DOM fully loaded')
+			inner = document.getElementById("output").innerHTML;
+			txt = inner.split(' ')
+			cnt = 0
+
+			U8Array = [239, 187, 191, 74, 111, 104, 110, 32, 51, 58, 49, 54, 13, 10, 13, 10, 238, 141, 190, 32, 49, 54, 32, 238, 128, 182, 238, 128, 154, 32, 65, 97, 114, 111, 110, 32, 90, 105, 112, 104, 114, 111, 110, 32, 238, 132, 169, 32, 32, 238, 141, 190, 65, 97, 114, 111, 110, 9, 238, 128, 182, 32, 238, 130, 131, 13, 10]
+
+			hexStr = intAry2hexStr(U8Array)
+			inner = inner + '<br>hexStr '+hexStr
+			asc = hex2ascii(hexStr)
+			console.log('hex',hexStr)
+			console.log('ascii',asc)
+	
+			inner = inner+'<br>asc '+encodeURIComponent(U8Array);
+			gdocStr = String.fromCharCode.apply(null, new Uint8Array(asc));
+			console.log(gdocStr)
+			inner = inner + 'gdocstr '+gdocStr
+
+			document.getElementById("output").innerHTML = inner
+			
+
+
+
+		});
+	
+		function pad(num, size) {
+			var s = num+"";
+			while (s.length < size) s = "0" + s;
+			return s;
+		}
+		
+		function intAry2hexStr(ints) {
+			var hexstr = "";
+			for(var i=0; i < ints.length; i++) {
+				hexstr += pad(ints[i].toString(16),2);
+			}
+			return hexstr;
+		}
+
+
+		function hex2ascii(str1) {
+			var hex  = str1.toString();
+			var str = '';
+			for (var n = 0; n < hex.length; n += 2) {
+				str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+			}
+			return str;
+		}
+
+		//==================================================================
+		// https://convertcodes.com/unicode-converter-encode-decode-utf/
+	
+	var chkutf8 = new Boolean(false);
+   	var chkutf16 = new Boolean(false);
+   	var chkutf32 = new Boolean(false);
+   	
+   	
+   	/*
+   	jQuery(document).ready(function($){
+   	    
+   	    chkutf8 = document.getElementById('chknotationutf8').checked;
+   	    chkutf16 = document.getElementById('chknotationutf16').checked;
+   	    chkutf32 = document.getElementById('chknotationutf32').checked;
+   	    
+   	});
+   	
+   	
+   	function clickutf8(){
+   	    chkutf8 = document.getElementById('chknotationutf8').checked;
+   	    convertunicode();
+   	}
+   	
+   	function clickutf16(){
+   	    chkutf16 = document.getElementById('chknotationutf16').checked;
+   	    convertunicode();
+   	}
+   	
+   	function clickutf32(){
+   	    chkutf32 = document.getElementById('chknotationutf32').checked;
+   	    convertunicode();
+   	}
+   	*/
+   	function TextToURL(x){
+   	    return encodeURIComponent(x);
+   	}
+   	
+   	function URLToText(x){
+   	    return decodeURIComponent(x);
+   	}
+   	
+   	function TextToUTF8text(x){
+   	    return unescape(encodeURIComponent(x));
+   	}
+   	
+   	function UTF8textToText(x){
+   	    return decodeURIComponent(escape(x));
+   	}
+   	
+   	function TextToUTF8(x){
+   	    var result = "";
+   	    try {
+   	        x = TextToUTF8text(x);
+   	        for (var i=0; i < x.length; i++) {
+   	            if(chkutf8){
+   	                result += ("0" + x.charCodeAt(i).toString(16)).substr(-2);
+   	            } else {
+   	                result += "\\x" + ("0" + x.charCodeAt(i).toString(16)).substr(-2);
+   	            }
+   	        }
+   	    } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+   	}
+   	
+   	
+   	function UTF8ToText(x){
+   	    var result = "";
+   	    try {
+   	        if(chkutf8){
+   	            x = x.toString();
+   	            for (var i = 0; (i < x.length && x.substr(i, 2) !== '00'); i += 2)
+   	                result += String.fromCharCode(parseInt(x.substr(i, 2), 16));
+   	        } else {
+   	            x = x.replace(/\\x/gi,"");
+   	            x = x.toString();
+   	            for (var i = 0; (i < x.length && x.substr(i, 2) !== '00'); i += 2)
+   	                result += String.fromCharCode(parseInt(x.substr(i, 2), 16));
+   	        }
+   	        result = decodeURIComponent(escape(result));
+   	    } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+   	}
+   	
+   	
+   	function TextToUTF16(x){
+   	    var result = "";
+   	    try {
+   	        for(var i = 0; i < x.length; i++){
+   	            // Assumption: all characters are < 0xffff
+   	            if(chkutf16){
+   	                result += ("000" + x[i].charCodeAt(0).toString(16)).substr(-4);
+   	            } else {
+   	                result += "\\u" + ("000" + x[i].charCodeAt(0).toString(16)).substr(-4);
+   	            }
+   	        }
+   	    } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+   	}
+   	
+   	function UTF16ToText(x) {
+   	    var result = "";
+   	    try {
+   	        if(chkutf16){
+   	            result = x.replace(/[0-9a-fA-F]{4}/gi, 
+   	            function (match) {
+   	                return String.fromCharCode(parseInt(match, 16));
+   	            });
+   	        } else {
+   	            result = x.replace(/\\u[0-9a-fA-F]{4}/gi, 
+   	            function (match) {
+   	                return String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16));
+   	            });
+   	        }
+   	    } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+   	}
+   	
+    function TextToUTF32(x) {
+        var result = "", i = 0;
+        try {
+            while(i < x.length) {
+                var chr = x.charCodeAt(i++);
+                if(!chkutf32)
+                    result += "u+";
+                if(chr >= 0xD800 && chr <= 0xDBFF) {
+                    // surrogate pair
+                    var low = x.charCodeAt(i++);
+                    //r.push(0x10000 + ((chr - 0xD800) << 10) | (low - 0xDC00));
+                    result += ("0000000" + (0x10000 + ((chr - 0xD800) << 10) | (low - 0xDC00)).toString(16)).substr(-8);
+                } else {
+                    // ordinary character
+                    //r.push(chr);
+                    result += ("0000000" + chr.toString(16)).substr(-8);
+                }
+            }
+        } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+    }
+    
+    function UTF32ToText(x) {
+        var result = "";
+        try {
+            if(chkutf32){
+   	            result = x.replace(/[0-9a-fA-F]{8}/gi, 
+   	            function (match) {
+   	                return String.fromCharCode(parseInt(match, 16));
+   	            });
+   	        } else {
+   	            result = x.replace(/u\+[0-9a-fA-F]{8}/gi, 
+   	            function (match) {
+   	                return String.fromCharCode(parseInt(match.replace(/u\+/g, ''), 16));
+   	            });
+   	        }
+   	    } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+    }
+    
+    function TextToDec(x){
+   	    var result = "";
+   	    try {
+   	        for (var i=0; i < x.length; i++) {
+   	            result += ("0000" + x[i].charCodeAt(0).toString(10)).substr(-5);
+   	        }
+   	    } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+   	}
+    
+    function DecToText(x){
+        var result = "";
+        try {
+   	        result = x.replace(/[0-9]{5}/gi,
+   	        function (match) {
+   	            return String.fromCharCode(parseInt(match, 10));
+   	        });
+   	    } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+   	}
+    
+    function TextToBase64(x) {
+        // first we use encodeURIComponent to get percent-encoded UTF-8,
+        // then we convert the percent encodings into raw bytes which
+        // can be fed into btoa.
+        var result = "";
+        try {
+            result = btoa(encodeURIComponent(x).replace(/%([0-9A-F]{2})/g,
+                function toSolidBytes(match, p1) {
+                    return String.fromCharCode('0x' + p1);
+            }));
+        } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+    }
+    
+    function Base64ToText(x) {
+        // Going backwards: from bytestream, to percent-encoding, to original string.
+        var result = "";
+        try {
+            result = decodeURIComponent(atob(x).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+        } catch(err) {
+   	        return err.message;
+   	    } finally {
+   	        return result;
+   	    }
+    }
+   	
+   	function convertunicode(mode = 0){
+   		var inputdata = document.getElementById("inputunicode").value;
+		document.getElementById("uniout").innerHTML = inputdata;
+   		if(mode != "utf8text")
+   		    document.getElementById("inpututf8text").value = TextToUTF8text(inputdata);
+   		if(mode != "utf8")
+   		    document.getElementById("inpututf8").value = TextToUTF8(inputdata);
+   		if(mode != "utf16")
+   		    document.getElementById("inpututf16").value = TextToUTF16(inputdata);
+   		if(mode != "utf32")
+   		    document.getElementById("inpututf32").value = TextToUTF32(inputdata);
+   		if(mode != "url")
+   		    document.getElementById("inputurl").value = TextToURL(inputdata);
+   		if(mode != "dec")
+   		    document.getElementById("inputdec").value = TextToDec(inputdata);
+   		if(mode != "base64")
+   		    document.getElementById("inputbase64").value = TextToBase64(inputdata);
+   	}
+   	
+   	function sampletext(){
+   		document.getElementById("inputunicode").value = "ConvertCodes";
+   		convertunicode();
+   	}
+   	
+   	function convertutf16(){
+   		var inputdata = document.getElementById("inpututf16").value;
+   		document.getElementById("inputunicode").value = UTF16ToText(inputdata);
+   		convertunicode("utf16");
+   	}
+   	
+   	function convertutf8text(){
+   		var inputdata = document.getElementById("inpututf8text").value;
+   		document.getElementById("inputunicode").value = UTF8textToText(inputdata);
+   		convertunicode("utf8text");
+   	}
+   	
+   	function convertutf8(){
+   		var inputdata = document.getElementById("inpututf8").value;
+   		document.getElementById("inputunicode").value = UTF8ToText(inputdata);
+   		convertunicode("utf8");
+   	}
+   	
+   	function converturl(){
+   		var inputdata = document.getElementById("inputurl").value;
+   		document.getElementById("inputunicode").value = URLToText(inputdata);
+   		convertunicode("url");
+   	}
+   	
+   	function convertutf32(){
+   		var inputdata = document.getElementById("inpututf32").value;
+   		document.getElementById("inputunicode").value = UTF32ToText(inputdata);
+   		convertunicode("utf32");
+   	}
+   	
+   	function convertdec(){
+   		var inputdata = document.getElementById("inputdec").value;
+   		document.getElementById("inputunicode").value = DecToText(inputdata);
+   		convertunicode("dec");
+   	}
+   	
+   	function convertbase64(){
+   		var inputdata = document.getElementById("inputbase64").value;
+   		document.getElementById("inputunicode").value = Base64ToText(inputdata);
+   		convertunicode("base64");
+   	}
+	
+		// ====================================================	
+
+	/* ======================================================================*/
+
+	</script>
+</html>

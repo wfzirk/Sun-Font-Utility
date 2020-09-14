@@ -1,0 +1,2613 @@
+﻿store(&VERSION) '9.0'
+store(&TARGETS) 'any windows macosx linux web iphone ipad androidphone androidtablet mobile desktop tablet'
+store(&KEYBOARDVERSION) '090012'
+store(&LAYOUTFILE) 'Sun2-layout.js'
+store(&NAME) 'sun7_7_702'
+begin Unicode > use(main)
+
+group(main) using keys
+
+'Aaron' + ' ' > U+Eb0d   c		 Acts 7:40
+'Abel' + ' ' > U+EA96   c		 Gen 25:4
+'Abiathar' + ' ' > U+E35F   c		 Mark 2:26
+'abide' + ' ' > U+E17B
+'Abijah' + ' ' > U+EA5B    c		 Luke 1:5
+'Abilene' + ' ' > U+Ec4d   c		 Luke 3:1
+'ability' + ' ' > U+E124
+'Abiud' + ' ' > U+EA6A     c		 Matt 1:13
+'abomination' + ' ' > U+E0a4
+'about' + ' '  > U+E11B
+'above' + ' ' > U+E110  
+'Abraham' + ' ' > U+E373   c		 Matt 1:1
+'Abyss' + ' ' > U+Ec4e   c		 Luke 8:31
+'according_to' + ' ' > U+E24D   
+'accuse' + ' ' > U+E055
+'Achaia' + ' ' > U+Eb7c   c		 Acts 18:12
+'Achim' + ' ' > U+EA6E   c		 Matt 1:14
+'Adam_man' + ' ' > U+Ec4f
+'Addi' + ' ' > U+Ec50   c		 Luke 3:28
+'Admin' + ' ' > U+Ec51   c		 Luke 3:33
+'adopt' + ' ' > U+E177  
+'adoption' + ' ' > U+E177
+'Adramyttium' + ' ' > U+Eb93   c		 Acts 27:2
+'Adriatic_Sea' + ' ' > U+Ec17   c		 Acts 27:27
+'adultery' + ' ' > U+E027
+'Aeneas' + ' ' > U+Ec2a   c		 Acts 9:33
+'Aenon' + ' ' > U+Eba1        c		 John 3:23
+'afraid' + ' ' > U+E056
+'after' + ' ' > U+E11D
+'Agabus' + ' ' > U+Eb89   c		 Acts 11:28
+'against' + ' ' > U+E330
+'Agrippa' + ' ' > U+Eb9d   c		 Acts 25:13
+'Ahaz' + ' ' > U+EA61   c		 Matt 1:9
+'air' + ' ' > U+E312
+'alabaster' + ' ' > U+E0d4   
+'Alexander' + ' ' > U+EA14   c		 Acts 19:33
+'Alexandria' + ' ' > U+Eb5a   c		 Acts 18:24
+'alive' + ' ' > U+E09F
+'all' + ' ' > U+E251
+'allow' + ' ' > U+E04A
+'alone' + ' ' > U+E223
+'Alphaeus' + ' ' > U+ec24   c		 Acts 1:13
+'altar' + ' ' > U+EA3C   c		 Gen 8:20
+'always' + ' ' > U+E252
+'amazed' + ' ' > U+E14A
+'amazing' + ' ' > U+E14A   c		 Esth 1:1
+'amen' + ' ' > U+E100
+'Amminadab' + ' ' > U+EA51    c		 Matt 1:4
+'Amon' + ' ' > U+EA64   c		 Matt 1:10
+'Amos' + ' ' > U+Ec47   c		 Amos
+'Amphipolis' + ' ' > U+EB2E   c		 Acts 17:1
+'Ampliatus' + ' ' > U+Ebb9   c		 Rom 16:8
+'Ananias' + ' ' > U+Eb65   c		 Acts 23:2
+'ancestor' + ' ' > U+Ec80
+'and' + ' ' > U+E11C
+'Andrew' + ' ' > U+E357   c		 Matt 4:18
+'Andronicus' + ' ' > U+Ebba   c		 Rom 16:7
+'angel' + ' ' > U+E0a7
+'anger' + ' ' > U+E204
+'angry' + ' ' > U+E204
+'animal' + ' ' > U+E102
+'Anna' + ' ' > U+Eb02   c		 Luke 2:36-38
+'Annas' + ' ' > U+Eb63   c		 Acts 4:6
+'anointed' + ' ' > U+E033
+'Antioch' + ' ' > U+Eb58   c		 Acts 6:5
+'Antipatris' + ' ' > U+Eb9a   c		 Acts 23:31
+'Apelles' + ' ' > U+Ebbb   c		 Rom 16:10
+'Apollos' + ' ' > U+EB3E   c		 Acts 18:24
+'Apollonia' + ' ' > U+EB30   c		 Acts 17:1
+'apostle' + ' ' > U+Ebef
+'appear' + ' ' > U+E162
+'appointed' + ' ' > U+E041
+'Aquila' + ' ' > U+Eb17    c		 Acts 18:2
+'Arabia' + ' ' > U+Eb77   c		 Gal 1:17
+'Areopagus' + ' ' > U+Ec35   c		 Acts 17:19
+'argument' + ' ' > U+E057
+'Arimathea' + ' ' > U+E34D   c		 Matt 27:57
+'arise' + ' ' > U+E322
+'Aristarchus' + ' ' > U+Ec10   c		 Acts 20:3
+'Aristobulus' + ' ' > U+Ebbc   c		 Rom 16:10
+'arm' + ' ' > U+E14E
+'armor' + ' ' > U+Ebbd
+'army' + ' ' > U+E148
+'Arni' + ' ' > U+Ec52   c		 Luke 3:33
+'around' + ' ' > U+E31B
+'Arphaxad' + ' ' > U+Ec53   c		 Luke 3:36
+'arrest' + ' ' > U+E25F
+'Artemas' + ' ' > U+Ec34   c		 Acts 19:24
+'Asa' + ' ' > U+EA5C     c		 Matt 1:7
+'ascend' + ' ' > U+E322  
+'ash' + ' ' > U+EA90
+'ashamed' + ' ' > U+E05F
+'Ashhur' + ' ' > U+Ebdd   c		 1 Chr 2:24
+'Asher_man' + ' ' > U+Ebde
+'Asia' + ' ' > U+Eb6f   c		 Acts 6:9
+'ask' + ' ' > U+E061
+'Assos' + ' ' > U+Eb20   c		 Acts 20:13
+'assurance' + ' ' > U+E070
+'Asyncritius' + ' ' > U+Ebbe   c		 Rom 16:14
+'Athens' + ' ' > U+Eb07    c		 Acts 17:15
+'Attalia' + ' ' > U+EB31    c		 Acts 14:25
+'attendant' + ' ' > U+E150
+'author' + ' ' > U+E12C
+'authority' + ' ' > U+E034
+'awake' + ' ' > U+Ec54
+'away' + ' ' > U+E11E
+'Azor' + ' ' > U+EA6C   c		 Matt 1:14
+'Azotus' + ' ' > U+Eb7e   c		 Acts 8:40
+'Baal' + ' ' > U+Ebbf   c		 Rom 11:4
+'baby' + ' ' > U+E0a6
+'Babylon' + ' ' > U+EA67    c		 Acts 7:43
+'backward' + ' ' > U+E325
+'bad' + ' ' > U+E17D
+'bag' + ' ' > U+E26F
+'bank' + ' ' > U+Ec55
+'baptism' + ' ' > U+E24A
+'baptize' + ' ' > U+E24A
+'Barabbas' + ' ' > U+E36D   c		 Matt 27:16
+'Barachiah' + ' ' > U+EA97   c		 Matt 23:35
+'Barnabas' + ' ' > U+Ec2f   c		 Acts 9:27
+'Barsabbas' + ' ' > U+Eb69   c		 Acts 15:22,27
+'Bartholomew' + ' ' > U+E362   c		 Matt 10:3
+'Bartimaeus' + ' ' > U+E36B   c		 Mark 10:46
+'basket' + ' ' > U+E19F
+'battle' + ' ' > U+E283
+'bear_with' + ' ' > U+E227
+'beast' + ' ' > U+E103
+'beat' + ' ' > U+E0e4 
+'beautiful' + ' ' > U+EA4A
+'beauty' + ' ' > U+EA4A
+'because' + ' '  > U+E066
+'beckon' + ' ' > U+E040   c		 Luke 5:7
+'become_person' + ' ' > U+E83A
+'become_thing' + ' ' > U+E839 
+'bed' + ' ' > U+E122
+'Beelzebul' + ' ' > U+E335   c		 Matt 10:25
+'before' + ' ' > U+E107
+'beg' + ' ' > U+E21e
+'beginning' + ' ' > U+E231
+'behind' + ' ' > U+E116
+'believe' + ' ' > U+E06F
+'Believer' + ' ' > U+Eb90     c		 Acts 5:14
+'belt' + ' ' > U+E29D
+'Benjamin' + ' ' > U+EB4B   c		 Gen 35:18
+'Berea' + ' ' > U+Eb13   c		 Acts 17:10
+'Bernice' + ' ' > U+Eb9e   c		 Acts 25:13
+'beside' + ' ' > U+E117
+'best' + ' ' > U+E21F
+'Bethany' + ' ' > U+E349   c		 Matt  21:17
+'Bethesda' + ' ' > U+Eba0   c		 John 5:2
+'Bethlehem' + ' ' > U+EA45   c		 Matt 2:1
+'Bethphage' + ' ' > U+E348   c		 Matt 21:1
+'Bethsaida' + ' ' > U+E340   c		 Matt 11:21
+'betray' + ' ' > U+E195
+'betrayal' + ' ' > U+E195
+'better' + ' ' > U+E09E
+'between' + ' ' > U+E118
+'Bible' + ' ' > U+E22c
+'big' + ' ' > U+E120
+'bird' + ' ' > U+E25C
+'birth' + ' ' > U+E235
+'Bithynia' + ' ' > U+EB48   c		 Acts 16:7
+'black' + ' ' > U+Eb86
+'blasphemy' + ' ' > U+E05B
+'Blastus' + ' ' > U+Eb8d   c		 Acts 12:20
+'bless' + ' ' > U+E05C
+'blessed' + ' ' > U+Ea21
+'blessing' + ' ' > U+E05C
+'blind' + ' ' > U+E192
+'blood' + ' ' > U+E087
+'boast' + ' ' > U+E14B
+'boat' + ' ' > U+E265
+'Boaz' + ' ' > U+EA54   c		 Matt 1:5
+'body' + ' ' > U+E143
+'bone' + ' ' > U+E0B2
+'book' + ' ' > U+E22A
+'born' + ' ' > U+E235
+'bottom' + ' ' > U+E119
+'bound' + ' ' > U+E25F
+'bow' + ' ' > U+E210
+'bowl' + ' ' > U+E384
+'box' + ' ' > U+E29E
+'boy' + ' ' > U+E001
+'boys' + ' ' > U+E002
+'branch' + ' ' > U+E246
+'brave' + ' ' > U+E196
+'bread' + ' ' > U+E05D
+'break' + ' ' > U+E0e1
+'breathe' + ' ' > U+ecee 
+'bribe' + ' ' > U+ebdb
+'bride' + ' ' > U+E015
+'bright' + ' ' > U+E21B
+'bring' + ' ' > U+E088
+'bronze' + ' ' > U+Eb2c
+'brother' + ' ' > U+E006
+'brothers' + ' ' > U+E007
+'build' + ' ' > U+E17a
+'building' + ' ' > U+E0a1
+'burden' + ' ' > U+ec86
+'bury' + ' ' > U+E0d7
+'but' + ' ' > U+E11A
+'buy' + ' ' > U+E32a
+'Caesar' + ' ' > U+E370   c		 Acts 26:32
+'Caesarea' + ' ' > U+E346   c		 Matt 16:13
+'Caiaphas' + ' ' > U+EA77   c		 Matt 26:3
+'Cainan' + ' ' > U+Ec56   c		 Luke 3:36
+'call' + ' ' > U+E040
+'camel' + ' ' > U+E29F 
+'can' + ' ' > U+E124   c		 Gen 4:13
+'Cana' + ' ' > U+Eba2   c		 John 2:11
+'Canaan_land' + ' ' > U+E33D   c		 Acts 7:11
+'Candace' + ' ' > U+Eb85   c		 Acts 8:27
+'Capernaum' + ' ' > U+E33A   c		 Matt 4:13
+'Cappadocia' + ' ' > U+Eb74   c		 Acts 2:9
+'careful' + ' ' > U+E19E
+'carpenter' + ' ' > U+E14F
+'carry' + ' ' > U+E088
+'case' + ' ' > U+Ec87   c		 Exod 18:22
+'catch' + ' ' > U+E115
+'Cauda' + ' ' > U+Ec36   c		 Acts 27:16
+'Cenchrea' + ' ' > U+EB3d   c		 Acts 18:18
+'census' + ' ' > U+E0B8
+'centurion' + ' ' > U+Eb7a
+'ceremony' + ' ' > U+Ec88
+'chain' + ' ' > U+E25F
+'chair' + ' ' > U+E298
+'Chaldea' + ' ' > U+Eb0e   c		 Jer 50:10
+'change' + ' ' > U+E31E
+'chapter' + ' ' > U+E230
+'chariot' + ' ' > U+Ec82
+'child' + ' ' > U+E200
+'children' + ' ' > U+E201
+'Chios' + ' ' > U+eb22   c		 Acts 20:15
+'Chloe' + ' ' > U+Ebe2   c		 1 Cor 1:11
+'choose' + ' ' > U+E021
+'Chorazin' + ' ' > U+EA8F   c		 Matt 11:21
+'Christ' + ' ' > U+E334   c		 Matt 1:1
+'Christian' + ' ' > U+Eb90   c		 Acts 26:28
+'Chuza' + ' ' > U+Ec57   c		 Luke 8:3
+'Cilicia' + ' ' > U+Eb5b   c		 Acts 6:9
+'circumcise' + ' ' > U+E250
+'circumcision' + ' ' > U+E250
+'citizen' + ' ' > U+Eb98 
+'Clauda' + ' ' > U+Ec36   c		 Acts 27:16
+'Claudius' + ' ' > U+Eb8a   c		 Acts 11:28
+'clay' + ' ' > U+ebec
+'clean' + ' ' > U+E248  
+'Cleopas' + ' ' > U+Ec58   c		 Luke 24:18
+'cloak' + ' ' > U+EA76
+'Clopas' + ' ' > U+Ebb5   c		 John 19:25
+'close' + ' ' > U+e300
+'closed' + ' ' > U+E23F
+'clothe' + ' ' > U+E147
+'clothing' + ' ' > U+E253
+'cloud' + ' ' > U+E26E
+'Cnidus' + ' ' > U+Ec14   c		 Acts 27:7
+'cohort' + ' ' > U+E148
+'cold' + ' ' > U+E0f2
+'color' + ' ' > U+E284
+'come_out' + ' ' > U+E243
+'come' + ' ' > U+E25A
+'comfort' + ' ' > U+EA3B
+'command' + ' ' > U+E058
+'compassion' + ' ' > U+E01A
+'condemn' + ' ' > U+Ea7f
+'condemnation' + ' ' > U+Ea7f
+'confession' + ' ' > U+e03f
+'confidence' + ' ' > U+E070
+'confuse' + ' ' > U+Eb08
+'control' + ' ' > U+E332  
+'convert' + ' ' > U+E83A
+'Corinth' + ' ' > U+Ea59   c		 Acts 18:1
+'Cornelius' + ' ' > U+Eb81   c		 Acts 10:1
+'corner' + ' ' > U+Eb83
+'cornerstone' + ' ' > U+E21C
+'correct' + ' ' > U+E09a
+'couch' + ' ' > U+Eb5f
+'council' + ' ' > U+E0f7
+'counted' + ' ' > U+Ebc0
+'country' + ' ' > U+E0a2
+'countrymen' + ' ' > U+E157
+'countryside' + ' ' > U+Eb96
+'courage' + ' ' > U+E196
+'courtyard' + ' ' > U+E0f6
+'covenant' + ' ' > U+E21D
+'cover' + ' ' > U+E39A
+'covet' + ' ' > U+E022
+'cow' + ' ' > U+EB36
+'create' + ' ' > U+E076
+'creation' + ' ' > U+Ebc3
+'Creator' + ' ' > U+Ec22   c		 Rom 1:25
+'credit' + ' ' > U+Ebc0
+'Crete' + ' ' > U+Ec8d   c		 Acts 27:7
+'Crispus' + ' ' > U+EB3A   c		 Acts 18:8
+'crooked' + ' ' > U+EB39
+'cross' + ' ' > U+E038
+'crowd' + ' ' > U+E128
+'crown' + ' ' > U+Eda4
+'crucify' + ' ' > U+E03C
+'crush' + ' ' > U+E146
+'cry' + ' ' > U+E20C
+'cup' + ' ' > U+E274
+'curse' + ' ' > U+E05A
+'curtain' + ' ' > U+E254
+'Cush_man' + ' ' > U+Edca    c		 Gen 10:6
+'cushion' + ' ' > U+E26c 
+'custom' + ' ' > U+Eb10 
+'cut' + ' ' > U+E24E
+'cymbal' + ' ' > U+ebe3 
+'Cyprus' + ' ' > U+Eb88   c		 Acts 4:36
+'Cyrene' + ' ' > U+Eb59   c		 Matt 27:32
+'Dalmanutha' + ' ' > U+E344   c		 Mark 8:10
+'Damaris' + ' ' > U+EB37   c		 Acts 17:34
+'Damascus' + ' ' > U+Ec31   c		 Gen  14:15
+'dance' + ' ' > U+E259
+'Daniel' + ' ' > U+EA78   c		 Matt 24:15
+'dark' + ' ' > U+EA17
+'daughter' + ' ' > U+E00C
+'daughters' + ' ' > U+E00D
+'David' + ' ' > U+E35E   c		 Matt 1:1
+'day' + ' ' > U+E15F
+'dead' + ' ' > U+E181
+'deaf' + ' ' > U+E191
+'death' + ' ' > U+E181
+'Decapolis' + ' ' > U+E33e   c		 Matt 4:25
+'deceive' + ' ' > U+E17F
+'deceiver' + ' ' > U+E152
+'deception' + ' ' > U+E17F
+'deep' + ' ' > U+E321
+'Demetrius' + ' ' > U+Eb1a   c		 Acts 19:24
+'demon' + ' ' > U+eb87
+'denarius' + ' ' > U+E165   c		 Matt 22:19
+'deny' + ' ' > U+E0e5
+'depart' + ' ' > U+E243
+'depth' + ' ' > U+E321
+'Derbe' + ' ' > U+EB43   c		 Acts 14:6
+'descend' + ' ' > U+E317
+'descendant' + ' ' > U+Eb60
+'desert' + ' ' > U+E156
+'deserve' + ' ' > U+E0f5
+'desire' + ' ' > U+E020
+'destroy' + ' ' > U+E141
+'Didymus' + ' ' > U+Ebb6   c		 John 11:16
+'die' + ' ' > U+E181
+'difficult' + ' ' > U+E093
+'Dionysius' + ' ' > U+Eb78   c		 Acts 17:34
+'direction' + ' ' > U+E323
+'dirt' + ' ' > U+E15b
+'dirty' + ' ' > U+E249
+'disciple' + ' ' > U+E142
+'discourage' + ' ' > U+E261
+'disease' + ' ' > U+E20A
+'dish' + ' ' > U+E384
+'disobedience' + ' ' > U+E193
+'disobey' + ' ' > U+E193
+'divide' + ' ' > U+E326
+'division' + ' ' > U+E326
+'divorce' + ' ' > U+EA3D
+'do' + ' ' > U+E08C
+'doctor' + ' ' > U+E144
+'dog' + ' ' > U+E104
+'dominion' + ' ' > U+E032
+'donkey' + ' ' > U+Ea09
+'door' + ' ' > U+E23E
+'Dorcas' + ' ' > U+Ec2c   c		 Acts 9:36
+'doubt' + ' ' > U+E194
+'dough' + ' ' > U+EA36
+'dove' + ' ' > U+E25E
+'down' + ' ' > U+E319  
+'dream' + ' ' > U+EA80
+'drink' + ' ' > U+E274 
+'drum' + ' ' > U+Ebe3
+'drunk' + ' ' > U+EA8D
+'Drusilla' + ' ' > U+Eb9c       c		 Acts 24:24
+'dry' + ' ' > U+E188
+'dust' + ' ' > U+E15D
+'dwell' + ' ' > U+E17B
+'ear' + ' ' > U+E299
+'earn' + ' ' > U+E0f5
+'earth' + ' ' > U+E153
+'earthquake' + ' ' > U+E159
+'east' + ' ' > U+EA38
+'easy' + ' ' > U+E092
+'eat' + ' ' > U+E053
+'Eber_man' + ' ' > U+Ec5a   c		 Gen 10:21
+'Egypt' + ' ' > U+EA44     c		 Matt 2:13
+'eight' + ' ' > U+E293
+'Elam_land' + ' ' > U+Eb6d   c		 Gen 14:1
+'elder' + ' ' > U+Eb62
+'Eleazar' + ' ' > U+EA70   c		 Exod 6:23
+'elect' + ' ' > U+Ec9f
+'Eli' + ' ' > U+Ec44   c		 1 Sam 1:3
+'Eliakim' + ' ' > U+EA6B   c		 Matt 1:13
+'Eliezer' + ' ' > U+Ec5b   c		 Gen 15:2
+'Elijah' + ' ' > U+E36A   c		 1 Kgs 17:1
+'Elisha' + ' ' > U+Ec5c    c		 1 Kgs 19:16
+'Eliud' + ' ' > U+EA6F   c		 Matt 1:14
+'Elizabeth' + ' ' > U+Ec3a   c		 Luke 1:5
+'Elmadam' + ' ' > U+Ec5d   c		 Luke 3:28
+'Emmaus' + ' ' > U+Ec5e   c		 Luke 24:13
+'Emmor' + ' ' > U+eb5d   c		 Acts 7:16
+'empty' + ' ' > U+E277
+'encourage' + ' ' > U+E262
+'end' + ' ' > U+E232
+'endure' + ' ' > U+E170
+'enemy' + ' ' > U+E025
+'enmity' + ' ' > U+E01B
+'Enoch' + ' ' > U+Ec5f   c		 Gen 4:17
+'Enos' + ' ' > U+Ec60   c		 Luke 3:38
+'enter' + ' ' > U+E242
+'envy' + ' ' > U+E022
+'Epaenetus' + ' ' > U+ebc1   c		 Rom 16:5
+'Ephesus' + ' ' > U+Ec0c   c		 Acts 18:19
+'Ephraim_land' + ' ' > U+Eba4   c		 2 Chr 30:10
+'Ephraim_man' + ' ' > U+Eba3   c		 Gen 41:52
+'Epicurean' + ' ' > U+Ec05   c		 Acts 17:18
+'equal' + ' ' > U+E24B
+'Er' + ' ' > U+Ec61   c		 Gen 38:3
+'Erastus' + ' ' > U+Ec0e   c		 Acts 19:22
+'Esau' + ' ' > U+Ebc2   c		 Gen 25:25
+'Esli' + ' ' > U+Ec49   c		 Luke 3:25
+'eternal' + ' ' > U+E252
+'eternity' + ' ' > U+E252  
+'Ethiopia' + ' ' > U+Ec32   c		 Acts 8:27
+'eunuch' + ' ' > U+Eb8f
+'Eutychus' + ' ' > U+Eb1f   c		 Acts  20:9
+'evangelist' + ' ' > U+E13F
+'Eve' + ' ' > U+Ebeb   c		 Gen 3:20
+'evening' + ' ' > U+E273
+'everyone' + ' ' > U+E140
+'everything' + ' ' > U+E114
+'everywhere' + ' ' > U+E155
+'exalt' + ' ' > U+E04b
+'example' + ' ' > U+Ecf0 
+'explain' + ' ' > U+E059
+'explanation' + ' ' > U+E059
+'eye' + ' ' > U+E238
+'fabric' + ' ' > U+E253
+'face' + ' ' > U+E203
+'Fair_Haven' + ' ' > U+Ec18   c		 Acts 27:8
+'faith' + ' ' > U+E06F
+'faithful' + ' ' > U+E219
+'faithfulness' + ' ' > U+E219
+'fall' + ' '  > U+E218
+'false' + ' ' > U+E17F
+'family' + ' ' > U+E176
+'famine' + ' ' > U+E18D
+'far' + ' ' > U+E197
+'farewell' + ' ' > U+Ec83
+'farm' + ' ' > U+Eb91
+'farmer' + ' ' > U+E133
+'fast_no_eat' + ' ' > U+E18E
+'fast_speed' + ' ' > U+E21A  
+'fat_animal' + ' ' > U+Eb11
+'fat' + ' ' > U+EA86
+'father' + ' ' > U+E003
+'fear' + ' ' > U+E056
+'feast' + ' ' > U+E054
+'Felix' + ' ' > U+Eb99   c		 Acts 23:24
+'festival' + ' ' > U+E20B
+'few' + ' ' > U+E19B
+'field' + ' ' > U+Eb91
+'fight' + ' ' > U+E283
+'fill' + ' ' > U+E278
+'find' + ' ' > U+E101
+'finger' + ' ' > U+Eba5
+'finish' + ' ' > U+E232
+'fire' + ' ' > U+E301
+'first' + ' ' > U+E233
+'fish' + ' ' > U+E263
+'fisherman' + ' ' > U+E264
+'five' + ' ' > U+E290
+'fix' + ' ' > U+E09D
+'flesh' + ' ' > U+E26B
+'flip' + ' ' > U+E31D
+'flour' + ' ' > U+EA35
+'flower' + ' ' > U+Eb24 
+'flute' + ' ' > U+EA8B
+'fly' + ' ' > U+E25B
+'follow' + ' ' > U+E13E
+'food' + ' ' > U+E053
+'fool' + ' ' > U+EA7C
+'foot' + ' ' > U+E13D
+'for' + ' ' > U+E086
+'foreigner' + ' ' > U+E158
+'foreknowledge' + ' ' > U+Eb79
+'forest' + ' ' > U+Ec27
+'forgive' + ' ' > U+E18F                
+'forgiveness' + ' ' > U+E18F
+'forward' + ' ' > U+E318
+'foundation' + ' ' > U+E179
+'four' + ' ' > U+E28F   
+'fox' + ' ' > U+EA8A
+'fragrant' + ' ' > U+E097
+'free_no_cost' + ' ' > U+Ebe4
+'free' + ' ' > U+E260
+'Freedmen' + ' ' > U+Ec8e   c		 Acts 6:9
+'freedom' + ' ' > U+E260       
+'friend' + ' ' > U+E024
+'from' + ' ' > U+E31A
+'fruit' + ' ' > U+E27E
+'fulfill' + ' ' > U+E0d2          
+'full' + ' ' > U+E276
+'futile' + ' ' > U+E190
+'future' + ' ' > U+E16E
+'Gabriel' + ' ' > U+Ec39   c		 Luke 1:19
+'Gadara' + ' ' > U+E33f   c		 Matt 8:28
+'gain' + ' ' > U+E1a3
+'Gaius' + ' ' > U+Ec0f      c		 Acts 19:29
+'Galatia' + ' ' > U+EB46   c		 Acts 16:6
+'Galilee' + ' ' > U+E337   c		 Josh 20:7
+'Gallio' + ' ' > U+Eb3b   c		 Acts 18:12
+'Gamaliel' + ' ' > U+Eb4d   c		 Acts 5:34
+'gate' + ' ' > U+E289
+'gathered_people' + ' ' > U+E126
+'gathered_things' + ' ' > U+E108
+'Gaza' + ' ' > U+Eb7f   c		 Gen 10:19
+'generation' + ' ' > U+E019   
+'Gennesaret' + ' ' > U+E341   c		 Matt 14:34
+'gentile' + ' ' > U+E158   c		 Matt 4:15
+'gentle' + ' ' > U+E26D
+'gentleness' + ' ' > U+E26D
+'Gerasenes' + ' ' > U+E33F   c		 Mark 5:1
+'Gethsemane' + ' ' > U+E34A   c		 Matt 26:36
+'gift' + ' ' > U+E072
+'girl' + ' ' > U+E009 
+'girls' + ' ' > U+E00A
+'give' + ' ' > U+E086
+'glory' + ' ' > U+E217 
+'gluttony' + ' ' > U+EA8C
+'go_down' + ' ' > U+E080
+'go' + ' ' > U+E381
+'goat' + ' ' > U+EA7D
+'God' + ' ' > U+E036   c		 Gen 1:1
+'godly' + ' ' > U+E130 
+'gold' + ' ' > U+Eb2a
+'Golgotha' + ' ' > U+E34B   c		 Matt 27:33
+'Gomorrah' + ' ' > U+EA7A    c		 Gen 10:19
+'gong' + ' ' > U+ebe5
+'good_news' + ' ' > U+E22b 
+'good' + ' ' > U+E096
+'gospel' + ' ' > U+E22B
+'governor' + ' ' > U+E0a3
+'grace' + ' ' > U+E01F
+'grain' + ' ' > U+E279
+'grass' + ' ' > U+ea33
+'grateful' + ' ' > U+E20E
+'gratitude' + ' ' > U+E20e
+'grave' + ' ' > U+E178
+'Greece' + ' ' > U+E345   c		 Acts 20:3
+'greed' + ' ' > U+EA94
+'greeting' + ' ' > U+E051
+'grieve' + ' ' > U+E207
+'grind' + ' ' > U+E83D
+'groom' + ' ' > U+E013
+'ground_soil' + ' ' > U+E15b
+'ground' + ' ' > U+E153
+'grow' + ' ' > U+E154
+'growth' + ' ' > U+E154
+'guard' + ' ' > U+E0c1
+'guilt' + ' ' > U+EA84
+'guilty' + ' ' > U+EA84
+'hail' + ' ' > U+EA13
+'hair' + ' ' > U+E208
+'half' + ' ' > U+Ea22
+'Hamor' + ' ' > U+Eb5d   c		 Gen 33:19
+'hand' + ' ' > U+E071
+'Hannah' + ' ' > U+Eb02   c		 1 Sam 1:2
+'happy' + ' ' > U+E205
+'Haran_land' + ' ' > U+Eb0b      c		 Gen 11:31
+'hard' + ' ' > U+E269
+'harvest' + ' ' > U+E082
+'harvester' + ' ' > U+E139
+'hate' + ' ' > U+E01B
+'have_to' + ' ' > U+E07f
+'have' + ' ' > U+E083
+'head' + ' ' > U+E206
+'heal' + ' ' > U+E084
+'healer' + ' ' > U+E144
+'health' + ' ' > U+E209
+'healthy' + ' ' > U+E209
+'hear' + ' ' > U+E299 
+'heart' + ' ' > U+E29A
+'heat' + ' ' > U+E301
+'heaven' + ' ' > U+E380   c		 Gen 1:8
+'heavy' + ' ' > U+E0e7
+'Hebrew' + ' ' > U+Ec8f   c		 Gen 14:13
+'hedge' + ' ' > U+E28A
+'heir' + ' ' > U+E018
+'Heli' + ' ' > U+Ec44   c		 Luke 3:23
+'hell' + ' ' > U+E0d1   c		 Deut 32:22
+'help' + ' ' > U+E13A
+'helper' + ' ' > U+E150
+'here' + ' ' > U+E212
+'Hermas' + ' ' > U+Ebc4   c		 Rom 16:14
+'Hermes_idol' + ' ' > U+EB2F   c		 Acts 14:12
+'Herod' + ' ' > U+E360   c		 Matt 2:1
+'Herodians' + ' ' > U+Ea05   c		 Mark 3:6
+'Herodias' + ' ' > U+E355   c		 Matt 14:3
+'Hezekiah' + ' ' > U+EA62   c		 2 Kgs 16:20
+'Hezron' + ' ' > U+EA4F     c		 Gen 46:9
+'hide' + ' ' > U+E085
+'hill' + ' ' > U+E202
+'hire' + ' ' > U+E13B
+'hit' + ' ' > U+E0e4
+'hole' + ' ' > U+E302
+'holy' + ' ' > U+E13C
+'honey' + ' ' > U+E052
+'honor' + ' ' > U+E031
+'hope' + ' ' > U+E213
+'horse' + ' ' > U+E303
+'hosanna' + ' ' > U+E216
+'Hosea' + ' ' > U+Ebc5   c		 Hos 1:1
+'hot' + ' ' > U+E301
+'hour' + ' ' > U+E331
+'house' + ' ' > U+E171
+'how_long' + ' ' > U+E83c   c		 Exod 10:3
+'how' + ' ' > U+E068
+'human_nature' + ' ' > U+E23D                        c		 Rom 6:19
+'humble' + ' ' > U+E19D
+'humiliate' + ' ' > U+E065
+'humility' + ' ' > U+E19D
+'hungry' + ' ' > U+E01E
+'hurt' + ' ' > U+E24F
+'husband' + ' ' > U+E012
+'Hymenaeus' + ' ' > U+ecaa   c		 1Tim 1:20
+'hymn' + ' ' > U+E0e3   c		 Matt 26:30
+'hypocrite' + ' ' > U+E152
+'I' + ' ' > U+E166
+'Iconium' + ' ' > U+ec1f   c		 Acts 13:51
+'idol' + ' ' > U+E35d
+'if' + ' ' > U+E111
+'ignorance' + ' ' > U+E06E
+'ignorant' + ' ' > U+E06E
+'Illyricum' + ' ' > U+Ebc6   c		 Rom 15:19
+'immeasurable' + ' ' > U+E18C
+'immediately' + ' ' > U+E215
+'important' + ' ' > U+Ebe7
+'impossible' + ' ' > U+E180
+'imprisoned' + ' ' > U+E25F
+'impure' + ' ' > U+E249
+'in_front' + ' ' > U+E112
+'in' + ' ' > U+E240
+'incense' + ' ' > U+Ec98
+'inheritance' + ' ' > U+E017
+'insect' + ' ' > U+E304
+'inside' + ' ' > U+E240
+'iron' + ' ' > U+Eb29
+'Isaac' + ' ' > U+E374   c		 Gen 17:19
+'Isaiah' + ' ' > U+E372   c		 2 Kgs 19:2
+'island' + ' ' > U+Eb05 
+'Israel' + ' ' > U+Ea04   c		 Gen 32:28
+'Italy' + ' ' > U+Ec90   c		 Acts 18:2
+'Ituraea' + ' ' > U+Ec3e   c		 Luke 3:1
+'Jacob' + ' ' > U+E375   c		 Gen 25:26
+'Jairus' + ' ' > U+E367   c		 Mark 5:22
+'Jair' + ' ' > U+e3cc    c		 Num 32:41
+'James_the_Disciple' + ' ' > U+E376   c		 Mark 1:19
+'James' + ' ' > U+E358   c		 Matt 4:21
+'Jannai' + ' ' > U+Ec46   c		 Luke 3:24
+'jar' + ' ' > U+E0d5
+'Jared' + ' ' > U+Ec62    c		 Gen 5:15
+'Jechoniah' + ' ' > U+EA66   c		 Matt 1:11
+'Jehoshaphat' + ' ' > U+EA5D   c		 1 Kgs 15:24
+'Jeremiah' + ' ' > U+EA28    c		 2 Chr 36:12
+'Jericho' + ' ' > U+Ea08   c		 Num 22:1
+'Jerusalem' + ' ' > U+E338   c		 Josh 10:1
+'Jesse' + ' ' > U+EA58   c		 Ruth 4:17
+'Jesus' + ' ' > U+E037   c		 Matt 1:1
+'Jew' + ' ' > U+e0f9   c		 Esth 2:5
+'Jewish' + ' ' > U+E0f9   c		 Titus 1:14
+'Joanan' + ' ' > U+Ec4c   c		 Luke 3:27
+'Joanna' + ' ' > U+Ec63   c		 Luke 8:3
+'Joda' + ' ' > U+E34b   c		 Luke 3:26
+'Joel' + ' ' > U+Ec92   c		 Joel 1:1
+'John_the_Baptist' + ' ' > U+E336   c		 Matt 3:4
+'John_the_Disciple' + ' ' > U+E35a   c		 Matt 4:21
+'John' + ' ' > U+E35a   c		 John 1:42
+'Jonah_Simons_father' + ' ' > U+EA29    c		 Matt 16:17
+'Jonah' + ' ' > U+E0c5   c		 Jonah 1:1
+'Jonam' + ' ' > U+Ec9b   c		 Luke 3:30
+'Joppa' + ' ' > U+Ec2d   c		 Jonah 1:3
+'Joram' + ' ' > U+EA5E    c		 2 Kgs 8:16
+'Jordan_River' + ' ' > U+E34F   c		 Gen 50:10
+'Jorim' + ' ' > U+Ec64   c		 Luke 3:29
+'Joseph' + ' ' > U+EA15   c		 Gen 30:24
+'Joses' + ' ' > U+E369   c		 Matt 13:55
+'Joshua_man' + ' ' > U+Eb03
+'Josiah' + ' ' > U+EA65   c		 2 Kgs 21:24
+'Jotham' + ' ' > U+Eb82   c		 Judg 9:5
+'Tekoa_man' + ' ' > U+E1ff    c		 1Cron 2:24
+'journey' + ' ' > U+E381
+'joy' + ' ' > U+E205
+'Judas' + ' ' > U+E368   c		 Mark 6:3
+'Judah_man' + ' ' > U+EA4B   c		 Gen 29:35
+'Judas_Iscariot' + ' ' > U+E365   c		 Matt 10:4
+'Judas_not_Iscariot' + ' ' > U+E368   c		 John 14:22
+
+'Jude' + ' ' > U+E368   c		 Jude 1:1
+'Judea' + ' ' > U+E339   c		 Rom 15:31
+'judge' + ' ' > U+E1a2
+'judgment' + ' ' > U+E1a2   
+'Julia' + ' ' > U+Ebc7   c		 Rom 16:15
+'Julius' + ' ' > U+Ec07   c		 Acts 27:1
+'Junia' + ' ' > U+Ebc8   c		 Rom 16:7
+'justice' + ' ' > U+ea25
+'justify' + ' ' > U+EB4F
+'Justus' + ' ' > U+Eb6a    c		 Acts 1:23
+'keep' + ' ' > U+E099  
+'key' + ' ' > U+EA9D
+'Kidron_Valley' + ' ' > U+Eba6   c		 John 18:1
+'kill' + ' ' > U+E141                
+'kind_nice' + ' ' > U+E01C      
+'kindness' + ' ' > U+E01C
+'king' + ' ' > U+E028
+'kingdom' + ' ' > U+E02F
+'Kish' + ' ' > U+EB49   c		 1 Chr 24:29
+'Kislon' + ' ' > U+e3f3    c		 Num 34:21
+'kiss' + ' ' > U+E0E8
+'kneel' + ' ' > U+E138
+'knife' + ' ' > U+E24E
+'knock' + ' ' > U+Eb8b
+'knot' + ' ' > U+E30E
+'know' + ' ' > U+E062
+'knowledge' + ' ' > U+E062
+'lake' + ' ' > U+Ec65
+'Lamech' + ' ' > U+Ec66   c		 Gen 5:25
+'lamp' + ' ' > U+E164
+'lampstand' + ' ' > U+E281
+'land' + ' ' > U+E153
+'language' + ' ' > U+Ea23
+'Lasea' + ' ' > U+Ec16   c		 Acts 27:8
+'last' + ' ' > U+E234
+'late' + ' ' > U+E225
+'later' + ' ' > U+E225
+'Latin' + ' ' > U+Eba8   c		 John 19:20
+'laugh' + ' ' > U+E224
+'laughter' + ' ' > U+E224
+'law' + ' ' > U+E22F
+'lawful' + ' ' > U+E22F
+'Lazarus' + ' ' > U+Ec67   c		 John 11:14
+'lead_astray' + ' ' > U+E17f
+'lead' + ' ' > U+E137
+'leader' + ' ' > U+E137
+'leaf' + ' ' > U+E0B3
+'learn' + ' ' > U+E22A
+'lease' + ' ' > U+E175
+'least' + ' ' > U+E397
+'leather' + ' ' > U+E255
+'leave' + ' ' > U+E243
+'leaven' + ' ' > U+E32D
+'left' + ' ' > U+E0f4
+'leg' + ' ' > U+Ebe0
+'Legion' + ' ' > U+E366   c		 Mark 5:9
+'leprosy' + ' ' > U+E382
+'letter' + ' ' > U+Eb84
+'level' + ' ' > U+E0d9
+'Levi_Matthew' + ' ' > U+E35C   c		 Luke 5:29
+'Levi' + ' ' > U+Eb1b   c		 Exod 1:2
+
+'Libya' + ' ' > U+Eb73   c		 Acts 2:10
+'lie_down' + ' ' > U+E121
+'lie' + ' ' > U+E17F   c		 Acts 5:4
+'life' + ' ' > U+E09F
+'lift' + ' ' > U+E081
+'light' + ' ' > U+E0c2
+'lightning' + ' ' > U+EA88
+'like' + ' ' > U+E020
+'live' + ' ' > U+E09F
+'loaf' + ' ' > U+E05D
+'longsuffering' + ' ' > U+E16F
+'lord' + ' ' > U+E028
+'lost' + ' ' > U+E089
+'lot' + ' ' > U+Ea16
+'Lot' + ' ' > U+Ebdc   c		 Gen 11:27
+'lots' + ' ' > U+EA16   c		 Luke 23:34
+'loud' + ' ' > U+Ebe8
+'love' + ' ' > U+E01A
+'lower_adj' + ' ' > U+E324
+'lower_verb' + ' ' > U+E080  
+'Lucius' + ' ' > U+Ec93   c		 Acts 13:1
+'Luke' + ' ' > U+Eb68   c		 Col 4:14
+'lunatic' + ' ' > U+E06D
+'lust' + ' ' > U+E239
+'Lycaonia' + ' ' > U+EB51   c		 Acts 14:6
+'Lycia' + ' ' > U+Ec13   c		 Acts 27:5
+'Lydda' + ' ' > U+Ec2e    c		 Acts 9:35
+'Lydia' + ' ' > U+EB50    c		 Acts 16:14
+'Lysanias' + ' ' > U+Ec40   c		 Luke 3:1
+'Lysias' + ' ' > U+Ec37   c		 Acts 24:22
+'Lystra' + ' ' > U+EB44   c		 Acts 16:2
+'Maath' + ' ' > U+Ec4b   c		 Luke 3:26
+'Macedonia' + ' ' > U+Ec0d   c		 Acts 16:9
+'Magadan' + ' ' > U+EA30   c		 Matt 15:39
+'magician' + ' ' > U+Ec8a
+'Mahalalel' + ' ' > U+Ec68
+'make' + ' ' > U+E076
+'Makheloth' + ' ' > U+e3f5    c		 Num 33:26
+'Malchus' + ' ' > U+Ebb7   c		 John 18:10
+'Malta' + ' ' > U+Ec19    c		 Acts 28:1
+'man' + ' ' > U+E000
+'Manaen' + ' ' > U+EB40   c		 Acts13:1
+'Manasseh_man' + ' ' > U+EA63   c		 Gen 41:51
+'manna' + ' ' > U+Eba9   c		 Exod 16:31
+'many' + ' ' > U+E198
+'Mark' + ' ' > U+E371   c		 Acts 15:37
+'market_place' + ' ' > U+E02E
+'marriage' + ' ' > U+E010
+'Martha' + ' ' > U+Ec69   c		 John 11:5
+'Mary_Magdalene' + ' ' > U+E353   c		 Mark 15:40
+'Mary_Mother_of_Jesus' + ' ' > U+E354   c		 Matt 1:16
+'Mary' + ' ' > U+E354   c		 Matt 27:56
+'Mattatha' + ' ' > U+Ec9c   c		 Luke 3:31
+'Mattathias' + ' ' > U+Ec9d   c		 Luke 3:26
+'Matthan' + ' ' > U+EA71   c		 Matt 1:15
+'Matthat' + ' ' > U+Ed12   c		 Luke 3:24
+'Matthew' + ' ' > U+Eb04   c		 Matt 9:9
+'Matthias' + ' ' > U+Eb04   c		 Acts 1:26
+'mattress' + ' ' > U+E122
+'mature' + ' ' > U+E236
+'me' + ' ' > U+E166
+'meal' + ' ' > U+E053
+'measure' + ' ' > U+E305
+'Media' + ' ' > U+Eb70   c		 Ezra 6:2
+'Melchi' + ' ' > U+Ec45   c		 Luke 3:24
+'Melea' + ' ' > U+Ec6a   c		 Luke 3:31
+'member' + ' ' > U+E174
+'Menna' + ' ' > U+Ec6b   c		 Luke 3:31
+'mercy' + ' ' > U+E01D
+'Mesopotamia' + ' ' > U+Eb72   c		 Acts 2:9
+'message' + ' ' > U+E22d
+'messenger' + ' ' > U+E136
+'Messiah' + ' ' > U+E334    c		 John 4:25
+'metal' + ' ' > U+Eb28
+'Methuselah' + ' ' > U+Ec6c   c		 Gen 5:21
+'Midian_land' + ' ' > U+Eb0f   c		 Exod 2:15
+'Miletus' + ' ' > U+Eb23   c		 Acts 20:15
+'mind' + ' ' > U+E06C
+'miracle' + ' ' > U+E095
+'Miriam' + ' ' > U+E385    c		 Num 12:1
+'mirror' + ' ' > U+ebe6
+'Mitylene' + ' ' > U+Eb21   c		 Acts 20:14
+'Mnason' + ' ' > U+EB26   c		 Acts 21:16
+'mock' + ' ' > U+EA12
+'Molech' + ' ' > U+Ec26   c		 Lev 18:21
+'money' + ' ' > U+E029
+'month' + ' ' > U+E34c
+'moon' + ' ' > U+E272
+'more' + ' ' > U+E199
+'morning' + ' ' > U+E163
+'Moses' + ' ' > U+E35B   c		 Exod 2:10
+'most' + ' ' > U+E229
+'mother' + ' ' > U+E00B
+'Mount_of_Olives' + ' ' > U+E351   c		 Matt 21:1
+'Mount_Sinai' + ' ' > U+Eb5c   c		 Exod 19:11
+'mountain' + ' ' > U+E306
+'mouth' + ' ' > U+E03F
+'move' + ' ' > U+E32F
+'multitude' + ' ' > U+E128
+'murderer' + ' ' > U+EA10
+'mustard' + ' ' > U+E039
+'mute' + ' ' > U+E050
+'Myra' + ' ' > U+Ec28   c		 Acts 27:5
+'myrrh' + ' ' > U+E245
+'Mysia' + ' ' > U+EB4A    c		 Acts 16:7
+'mystery' + ' ' > U+E18B
+'Naaman' + ' ' > U+Ec6d   c		 Gen 46:21
+'Naggai' + ' ' > U+Ec4a   c		 Luke 3:25
+'Nahor' + ' ' > U+Ec6e   c		 Gen 11:22
+'Nahshon' + ' ' > U+EA52    c		 Exod 6:23
+'Nahum' + ' ' > U+Ec48   c		 Nah 1:1
+'nail' + ' ' > U+Ebaa
+'Nain' + ' ' > U+EA48    c		 Luke 7:11
+'name' + ' ' > U+E04F
+'Naphtali' + ' ' > U+EA40    c		 Gen 30:8
+'Narcissius' + ' ' > U+Ebc9
+'Nathan' + ' ' > U+Ec6f   c		 2 Sam 5:14
+'Nathaniel' + ' ' > U+Ec6f   c		 Num 7:23
+'nation' + ' ' > U+E0a2
+'Nazareth' + ' ' > U+E34E   c		 Matt 2:23
+'near' + ' ' > U+E300
+'neck' + ' ' > U+E0d3
+'need' + ' ' > U+E07F
+'needle' + ' ' > U+E078
+'neighbor' + ' ' > U+E173
+'Neapolis' + ' ' > U+EB4E   c		 Acts 16:11
+'Nereus' + ' ' > U+Ebca   c		 Rom 16:15
+'Neri' + ' ' > U+Ec70   c		 Luke 3:27
+'net' + ' ' > U+E307
+'new' + ' ' > U+E308
+'news' + ' ' > U+E22d
+'Nicanor' + ' ' > U+Eb55   c		 Acts 6:5
+'Nicodemus' + ' ' > U+Ebab   c		 John 3:1
+'Nicolaus' + ' ' > U+Eb56   c		 Acts 6:5
+'night' + ' ' > U+E272
+'nine' + ' ' > U+E294
+'Nineveh' + ' ' > U+E0c6   c		 Gen 10:12
+'no' + ' ' > U+E17C
+'Noah_man' + ' ' > U+EA43   c		 Gen 6:8
+'noise' + ' ' > U+Ebe9
+'north' + ' ' > U+Ea74
+'nose' + ' ' > U+E309 
+'not' + ' ' > U+E17C
+'now' + ' ' > U+E215
+'number' + ' ' > U+E0B7
+'Obed' + ' ' > U+EA56   c		 Matt 1:5
+'obedience' + ' ' > U+E04E
+'obey' + ' ' > U+E04E
+'ocean' + ' ' > U+E14D
+'offering' + ' ' > U+E03A
+'oil' + ' ' > U+E030
+'old' + ' ' > U+E189
+'Olympus' + ' ' > U+Ebcb   c		 Rom 16:15
+'on_top_of' + ' ' > U+E113
+'on' + ' ' > U+E113
+'one' + ' ' > U+E28C      
+'only' + ' ' > U+E223
+'open' + ' ' > U+E18A
+'or' + ' ' > U+E106
+'order' + ' ' > U+Ebe7
+'other' + ' ' > U+E184
+'out' + ' ' > U+E241
+'outside' + ' ' > U+E241
+'over' + ' ' > U+E110
+'owe' + ' ' > U+EA49  
+'ox' + ' ' > U+EA85
+'pain' + ' ' > U+E24F
+'Pamphylia' + ' ' > U+Eb6e   c		 Acts 2:10
+'Paphos' + ' ' > U+eb9f   c		 Acts 13:6
+'parable' + ' ' > U+E22D
+'paralyze' + ' ' > U+E131
+'Parmenas' + ' ' > U+Eb57   c		 Acts 6:5
+'part' + ' ' > U+E29B
+'Parthia' + ' ' > U+Eb0a   c		 Acts 2:9
+'party' + ' ' > U+E20B
+'pass' + ' ' > U+E10b
+'passion' + ' ' > U+Ebac
+'Passover' + ' ' > U+E20d   c		 Exod 12:11
+'past' + ' ' > U+E16D
+'Patara' + ' ' > U+ec23    c		 Acts 21:1
+'path' + ' ' > U+E23C
+'patience' + ' ' > U+E16F
+'patient' + ' ' > U+E16F
+'Patrobas' + ' ' > U+Ebcc   c		 Rom 16:14
+'Paul' + ' ' > U+E377   c		 Acts 13:9
+'pavement' + ' ' > U+Ebad
+'peace' + ' ' > U+E123
+'Peleg' + ' ' > U+Ec71   c		 Gen 10:25
+'pen' + ' ' > U+E29C
+'pentecost' + ' ' > U+Ec81   c		 Acts 2:1
+'Pentecost' + ' ' > U+Ec81   c		 Acts 2:1
+'people' + ' ' > U+E127
+'perceive' + ' ' > U+E06A
+'Perez' + ' ' > U+EA4C   c		 1 Chr 27:3
+'perfume' + ' ' > U+E097
+'Perga' + ' ' > U+EB47   c		 Acts 13:13
+'permission' + ' ' > U+E04A
+'permit' + ' ' > U+E04a
+'persecute' + ' ' > U+E03e
+'persecution' + ' ' > U+E03E
+'Persis' + ' ' > U+Ebce   c		 Rom 16:12
+'person' + ' ' > U+E11F
+'Phanuel' + ' ' > U+Ec3c   c		 Luke 2:36
+'Pharaoh' + ' ' > U+Ec94   c		 Genesis 12:15
+'Pharisee' + ' ' > U+E383   c		 Matt 23:26
+'Philip' + ' ' > U+E361   c		 Matt 10:3
+'Philippi' + ' ' > U+E347   c		 Phil 1:1
+'Philologus' + ' ' > U+Ebcf   c		 Rom 16:15
+'philosopher' + ' ' > U+Ec04
+'Phlegon' + ' ' > U+Ebd1   c		 Rom 16:14
+'Phoebe' + ' ' > U+Ebd2   c		 Rom 16:1
+'Phoenicia' + ' ' > U+E343   c		 Acts 11:19
+'Phoenix' + ' ' > U+Ec29   c		 Acts 27:12
+'Phrygia' + ' ' > U+Eb76   c		 Acts 2:10
+'pig' + ' ' > U+E30A
+'pigeon' + ' ' > U+E0B6
+'Pilate' + ' ' > U+E36f   c		 Matt 27:2
+'pillow' + ' ' > U+E26C
+'Pisidia' + ' ' > U+Eb97   c		 Acts 14:24
+'plan' + ' ' > U+E06B
+'plant' + ' ' > U+E244
+'plate' + ' ' > U+E386
+'platter' + ' ' > U+E386
+'plow' + ' ' > U+Ec72   c		 Deut  22:10
+'Pontus' + ' ' > U+Eb75   c		 Acts 2:9
+'poor' + ' ' > U+EA3A 
+'porch' + ' ' > U+eb5e   c		 John 10:23
+'Porcius' + ' ' > U+Ec38   c		 Rev 1:11
+'possible' + ' ' > U+E098
+'pour' + ' ' > U+E0d6  
+'power' + ' ' > U+E124
+'praise' + ' ' > U+E04B
+'pray' + ' ' > U+E05E
+'prayer' + ' ' > U+E05E
+'preach' + ' ' > U+E04D
+'preacher' + ' ' > U+E134
+'preaching' + ' ' > U+E04D 
+'precious' + ' ' > U+EA37
+'pregnant' + ' ' > U+E0a5
+'prepare' + ' ' > U+E091
+'press' + ' ' > U+E228   c		 Luke 8:45
+'pretend' + ' ' > U+E094
+'prevail' + ' ' > U+eb14   c		 Luke 23:23
+'pride' + ' ' > U+E14B
+'priest' + ' ' > U+E03B
+'prince' + ' ' > U+Eb61
+'priority' + ' ' > U+Ebe7
+'Priscilla' + ' ' > U+Eb18   c		 Acts 18:2
+'prison' + ' ' > U+E172
+'prisoner' + ' ' > U+E145
+'Prochorus' + ' ' > U+Eb53   c		 Acts 6:5
+'proconsul' + ' ' > U+E0a3     c		 Acts 13:12
+'profit' + ' ' > U+E035
+'promise' + ' ' > U+E37A
+'prophesy' + ' ' > U+E23B
+'prophet' + ' ' > U+E135
+'proverb' + ' ' > U+Ec73
+'Psalm' + ' ' > U+E0e2   c		 1 Chr 16:7
+'Ptolemais' + ' ' > U+Ec08   c		 Acts 21:7
+'Publius' + ' ' > U+Ec1a   c		 Acts 28:7
+'pure' + ' ' > U+E248   c		 Matt 5:8
+'purple' + ' ' > U+E286
+'purpose' + ' ' > U+E066   c		 Rom 8:28
+'put_verb' + ' ' > U+E07E   c		 Gen 3:15
+'Put_man' + ' ' > U+Eeba   c		 1 Chr 1:8
+'Puteoli' + ' ' > U+Ec1e    c		 Acts 28:13
+'Pyrrhus' + ' ' > U+Eb1c   c		 Acts 20:4
+'Quartus' + ' ' > U+Ebd3   c		 Rom 16:23
+'queen' + ' ' > U+eb15   c		 1  Kgs 10:1
+'questioned' + ' ' > U+E061
+'quiet' + ' ' > U+E185   c		 Matt 20:31
+'Quirinius' + ' ' > U+Ec3b   c		 Luke 2:2
+'Rachel' + ' ' > U+EA41   c		 Gen 29:6
+'Rahab' + ' ' > U+EA55   c		 Josh 2:1
+'rain' + ' ' > U+EA3E
+'Ram' + ' ' > U+EA50   c		 Ruth 4:19
+'Ramah' + ' ' > U+EA42     c		 Josh 18:25
+'read' + ' ' > U+E22A
+'reason' + ' ' > U+E066 
+'Rebekah' + ' ' > U+Ebd4   c		 Gen 22:23
+'rebellion' + ' ' > U+E193
+'rebuke' + ' ' > U+E060
+'receive' + ' ' > U+E1a3
+'reckon' + ' ' > U+Ebc0   c		 Rom 4:4
+'reconcile' + ' ' > U+E026
+'red' + ' ' > U+E287
+'redeem' + ' ' > U+E02C
+'redemption' + ' ' > U+E02C   c		 Luke 2:38
+'reed' + ' ' > U+ea26
+'Rehoboam' + ' ' > U+EA5A   c		 1 Kgs 11:43
+'relative' + ' ' > U+E176 
+'religion' + ' ' > U+ec33
+'remember' + ' ' > U+E0d8
+'repeat' + ' ' > U+E049
+'repent' + ' ' > U+E320
+'repentance' + ' ' > U+E320
+'report' + ' ' > U+E22d
+'rescue' + ' ' > U+E214   c		 Acts 12:11
+'rest' + ' ' > U+E121   c		 Matt 11:28
+'result' + ' ' > U+E237
+'resurrect' + ' ' > U+E329
+'resurrection' + ' ' > U+E329
+'Reu' + ' ' > U+Ec74   c		 Gen 11:18
+'reveal' + ' ' > U+E162   c		 Matt 11:27
+'reward' + ' ' > U+E02D
+'Rhegium' + ' ' > U+Ec1d   c		 Acts 28:13
+'Rhesa' + ' ' > U+Ec75   c		 Luke 3:27
+'Rhoda' + ' ' > U+Eb92   c		 Acts 12:13
+'Rhodes' + ' ' > U+Eb25   c		 Acts 21:1
+'right_time' + ' ' > U+Ed10
+'right' + ' ' > U+E0f3
+'righteous_person' + ' ' > U+E130   c		 Matt 13:43
+'righteous' + ' ' > U+E090
+'righteousness' + ' ' > U+E090   c		 Matt 5:20
+'ring' + ' ' > U+ebdf
+'ripe' + ' ' > U+E236
+'ripen' + ' ' > U+E154
+'river' + ' ' > U+E30B
+'road' + ' ' > U+E23C
+'robber' + ' ' > U+E0e9
+'rock' + ' ' > U+E26A
+'Rome' + ' ' > U+Eb16   c		 Acts 2:10
+'room' + ' ' > U+Eb06
+'rooster' + ' ' > U+E25D
+'root' + ' ' > U+E15C
+'rough' + ' ' > U+ec99   c		 Luke 3:5
+'Rufus' + ' ' > U+E36E   c		 Mark 15:21
+'ruler' + ' ' > U+E028    c		 Matt  9:18
+'run' + ' ' > U+E258
+'Ruth' + ' ' > U+EA57          c		 Ruth 1:4
+'Sabbath' + ' ' > U+E160   c		 Exod 16:23
+'sacrifice' + ' ' > U+E0b5
+'sad' + ' ' > U+E207
+'Sadducee' + ' ' > U+Ea03   c		 Matt 3:7
+'said' + ' ' > U+E03F
+'sail' + ' ' > U+E267
+'saint' + ' ' > U+E130
+'Salamis' + ' ' > U+Ebe1   c		 Acts 13:5
+'Salathiel' + ' ' > U+Ec76   c		 1 Chr 3:17
+'Salim' + ' ' > U+Ebae   c		 John 3:23
+'Salmon' + ' ' > U+EA53    c		 Ruth 4:20
+'Salmone' + ' ' > U+Ec15   c		 Acts 27:7
+'Salome' + ' ' > U+E379   c		 Mark 15:40
+'salt' + ' ' > U+E046
+'salvation' + ' ' > U+Eb80
+'Samaria' + ' ' > U+EA83   c		 1 Kgs 13:32
+'Samaritan' + ' ' > U+EA7B   c		 Luke 10:33
+'same' + ' ' > U+E24B   c		 Matt 26:44
+'Samos' + ' ' > U+Ec25    c		 Acts 20:15
+'Samothrace' + ' ' > U+EB4C   c		 Acts 16:11
+'Samuel' + ' ' > U+Eb8e   c		 1 Sam 1:20
+'sanctuary' + ' ' > U+Eb01
+'Sapphira' + ' ' > U+Eb66   c		 Acts 5:1
+'Sarah' + ' ' > U+Ebd5   c		 Gen 17:15
+'Satan' + ' ' > U+E335   c		 Job 1:6
+'Saul' + ' ' > U+Eb54   c		 1 Sam 9:2
+'save' + ' ' > U+E214 
+'savior' + ' ' > U+Ec85
+'scatter' + ' ' > U+ea34   c		 Matt 26:31
+'Sceva' + ' ' > U+Eb19   c		 Acts 19:14
+'scorpion' + ' ' > U+Ec77
+'scribe' + ' ' > U+E12C       c		 Acts 2:4
+'Scripture' + ' ' > U+E22c   c		 Mark 12:10
+'Sea_of_Galilee' + ' ' > U+E350   c		 Matt 4:18
+'Sea_of_Reeds' + ' ' > U+Eb0c    c		 Exod 10:19
+'Sea_of_Tiberias' + ' ' > U+Ebaf   c		 John 6:1
+'sea' + ' ' > U+E14D
+'seal' + ' ' > U+E221   c		 Matt 27:66
+'sealed' + ' ' > U+e221
+'search' + ' ' > U+E074
+'secret' + ' ' > U+E186
+'sect' + ' ' > U+Ec33   c		 Acts 28:22
+'Secundus' + ' ' > U+Eb1d   c		 Acts 20:4
+'see' + ' ' > U+E238
+'seed' + ' ' > U+E27A  
+'Seleucia' + ' ' > U+EB42   c		 Acts 13:4
+'self' + ' ' > U+EA95
+'sell' + ' ' > U+E32B
+'Semein' + ' ' > U+Ec9e
+'send' + ' ' > U+E075
+'sensuality' + ' ' > U+E239   c		 Jas 3:15
+'separate' + ' ' > U+E326
+'Sergius' + ' ' > U+EB45   c		 Acts 13:7
+'Serug' + ' ' > U+Ec78   c		 Gen11:20
+'servant' + ' ' > U+E12D
+'serve' + ' ' > U+E08E
+'Seth' + ' ' > U+Ec79   c		 Gen 4:25
+'seven' + ' ' > U+E292
+'sew' + ' ' > U+E077 
+'sex' + ' ' > U+EA87
+'sexual_desire' + ' ' > U+E239   c		 1 Cor 7:9
+'shade' + ' ' > U+E079
+'shake' + ' ' > U+E27D
+'shame' + ' ' > U+E065 
+'share' + ' ' > U+E07A 
+'Sharon' + ' ' > U+Ec2b    c		 1 Chr 5:16
+'shave' + ' ' > U+Eb27
+'Shealtiel' + ' ' > U+EA68   c		 Ezra 3:2
+'Shechem_city' + ' ' > U+Ec95   c		 Josh 21:21
+'sheep' + ' ' > U+E270                
+'Shelah' + ' ' > U+Ec7a   c		 Gen 38:5
+'Shem' + ' ' > U+Ec7b   c		 Gen 5:32
+'Sheol' + ' ' > U+E0c9   c		 2 Sam 22:6
+'shepherd' + ' ' > U+E271
+'shield' + ' ' > U+E388
+'shoe' + ' ' > U+E12E
+'shout' + ' ' > U+E149
+'show' + ' ' > U+E162
+'sick' + ' ' > U+E20A
+'side' + ' ' > U+E10D
+'Sidon_city' + ' ' > U+E33C   c		 Matt 11:21
+'sigh' + ' ' > U+E047
+'sign' + ' ' > U+E0a9
+'Silas' + ' ' > U+EB41   c		 Acts 15:22
+'silence' + ' ' > U+E185
+'Siloam_city' + ' ' > U+ebb1   c		 Luke 13:4
+'silver' + ' ' > U+Eb2b
+'Simeon' + ' ' > U+Ea47   c		 Gen 29:33
+'Simon_Jesus_Brother' + ' ' > U+ea92   c		 Matt 13:55
+'Simon_of_Cyrene' + ' ' > U+E37C   c		 Mark 15:21
+'Simon_Peter' + ' ' > U+E356   c		 Matt 4:18
+'Simon_the_Canaanite' + ' ' > U+E364   c		 Matt 10:4
+'Simon_the_Leper' + ' ' > U+E0f8   c		 Mark 14:3
+'Simon' + ' ' > U+EA47     c		 John 13:26
+'sin' + ' ' > U+E08F
+'sinful' + ' ' > U+E08F
+'sing' + ' ' > U+E0e2
+'sinner' + ' ' > U+E151
+'sister' + ' ' > U+E00E
+'sisters' + ' ' > U+E00F
+'sit' + ' ' > U+E298
+'six' + ' ' > U+E291
+'skull' + ' ' > U+E20F
+'sky' + ' ' > U+Ec8b
+'slave' + ' ' > U+E10E
+'sleep' + ' ' > U+E121
+'slow' + ' ' > U+E19C
+'small' + ' ' > U+E19B
+'smaller' + ' ' > U+E32E
+'smallest' + ' ' > U+E397
+'smell' + ' ' > U+E309
+'smoke' + ' ' > U+Ec03
+'smooth' + ' ' > U+Ec9a
+'snake' + ' ' > U+E30C
+'Sodom' + ' ' > U+EA8E   c		 Gen 10:19
+'soft' + ' ' > U+E268
+'soil' + ' ' > U+E15B
+'sojourner' + ' ' > U+E158
+'soldier' + ' ' > U+E12F
+'Solomon' + ' ' > U+EA32    c		 2 Sam 5:14
+'some' + ' ' > U+E29B
+'Son_of_Man' + ' ' > U+E352   c		 Matt 8:20
+'son' + ' ' > U+E004
+'song' + ' ' > U+E0e2
+'sons' + ' ' > U+E005
+'Sopater' + ' ' > U+Ec20   c		 Acts 20:4
+'sorcery' + ' ' > U+Ec8c
+'Sosthenes' + ' ' > U+EB3C   c		 Acts 18:17
+'soul' + ' ' > U+E10F    
+'sound' + ' ' > U+Ebe9         
+'south' + ' ' > U+ea31
+'sow' + ' ' > U+E07D
+'sower' + ' ' > U+E133
+'space' + ' ' > U+E153
+'Spain' + ' ' > U+Ebd6   c		 Rom 15:24
+'speak' + ' ' > U+E03F
+'spend' + ' ' > U+E32a
+'spirit' + ' ' > U+E187
+'spit' + ' ' > U+E048
+'split' + ' ' > U+E326
+'sponge' + ' ' > U+EA18
+'Stachys' + ' ' > U+Ebd7   c		 Rom 16:9
+'staff' + ' ' > U+E14C
+'stair' + ' ' > U+E0d9
+'stand' + ' ' > U+E32C
+'star' + ' ' > U+E0c3
+'start' + ' ' > U+E231
+'stay' + ' ' > U+E83b
+'steal' + ' ' > U+E07B
+'stem' + ' ' > U+Ea01
+'Stephanas' + ' ' > U+Ebea   c		 1 Cor 1:16
+'Stephen' + ' ' > U+Eb6b    c		 Acts 6:5
+'stern' + ' ' > U+E266
+'stewardship' + ' ' > U+E07C
+'stick' + ' ' > U+E398
+'Stoic' + ' ' > U+Ec06    c		 Acts 17:18
+'stomach' + ' ' > U+E0C8
+'stop' + ' ' > U+E073
+'storehouse' + ' ' > U+Ec43
+'storm' + ' ' > U+E27C
+'story' + ' ' > U+E22D
+'straight' + ' ' > U+E313
+'stranger' + ' ' > U+E069
+'strangled' + ' ' > U+EB33
+'stream' + ' ' > U+E30B
+'stretch' + ' ' > U+E31C
+'strong' + ' ' > U+E08A
+'stumble' + ' ' > U+E257
+'stumbling_block' + ' ' > U+ea27
+'suffering' + ' ' > U+E222
+'summer' + ' ' > U+E0c4
+'sun' + ' ' > U+E15F
+'sundown' + ' ' > U+E161
+'Susanna' + ' ' > U+Ec7c   c		 Luke 8:3
+'sweet' + ' ' > U+E30D
+'sword' + ' ' > U+E282
+'synagogue' + ' ' > U+E0b9
+'Syracuse' + ' ' > U+Ec1c   c		 Acts 28:12
+'Syria' + ' ' > U+E342   c		 Matt 4:24
+'tabernacle' + ' ' > U+Eb32   c		 Exod 25:9
+'table' + ' ' > U+E280
+'take' + ' ' > U+E088
+'Tamar' + ' ' > U+EA4E   c		 Gen 38:6
+'Tarsus' + ' ' > U+Ec30   c		 Acts 9:11
+'taste' + ' ' > U+Ea07
+'tax_collector' + ' ' > U+E12A
+'tax' + ' ' > U+E02B
+'teach' + ' ' > U+E04C
+'teacher' + ' ' > U+E12B
+'teaching' + ' ' > U+E04C
+'teeth' + ' ' > U+E0B1
+'temple' + ' ' > U+E03D
+'tempt' + ' ' > U+E183
+'temptation' + ' ' > U+E183
+'ten' + ' ' > U+E295
+'tent' + ' ' > U+EB32
+'Terah_man' + ' ' > U+Ec7d   c		 Gen 11:24
+'Tertullus' + ' ' > U+Eb9b   c		 Acts 24:1
+'test' + ' ' > U+Ec21
+'testimony' + ' ' > U+E22E
+'Thaddaeus' + ' ' > U+E37B   c		 Matt 10:3
+'thank' + ' ' > U+E20E
+'that' + ' ' > U+E184
+'them' + ' ' > U+E125
+'Theophilus' + ' ' > U+Eb67   c		 Luke 1:3
+'therefore' + ' ' > U+E066
+'Thessalonica' + ' ' > U+Eb12   c		 Acts 17:1
+'Theudas' + ' ' > U+Eb71     c		 Acts 5:36
+'they' + ' ' > U+E125
+'thief' + ' ' > U+E0e9
+'thing' + ' ' > U+E105  
+'think_opinion' + ' ' > U+E06c
+'think_wonder' + ' ' > U+E06c
+'think' + ' ' > U+E06C
+'this' + ' ' > U+E226
+'Thomas' + ' ' > U+E363   c		 Matt 10:3
+'thorn' + ' ' > U+E27B
+'thought' + ' ' > U+E06c
+'thousand' + ' ' > U+E296
+'three' + ' ' > U+E28E 
+'threshing_floor' + ' ' > U+Ec42
+'threshing' + ' ' > U+EA39
+'throne' + ' ' > U+Ec84
+'through' + ' ' > U+E10B
+'throw' + ' ' > U+E327
+'thunder' + ' ' > U+E044
+'Thyatira' + ' ' > U+EB52   c		 Acts 16:14
+'Tiberias_city' + ' ' > U+Ebb0   c		 John 6:23
+'Tiberius_man' + ' ' > U+Ec3d   c		 Luke 3:1
+'tie' + ' ' > U+E30E
+'Timaeus' + ' ' > U+E36C   c		 Mark 10:46
+'time' + ' ' > U+E16A
+'times' + ' ' > U+E049
+'Timon' + ' ' > U+Ec96   c		 Acts 6:5
+'Timothy' + ' ' > U+Ec02   c		 1 Tim 1:2
+'Titus' + ' ' > U+EB38   c		 Titus 1:4
+'to_clothe' + ' ' > U+E147
+'to_plant' + ' ' > U+E07d
+'to' + ' ' > U+E318
+'together_people' + ' ' > U+E126
+'together_things' + ' ' > U+E108
+'tomb' + ' ' > U+E178
+'tongue' + ' ' > U+E045
+'tool' + ' ' > U+Eb34
+'touch' + ' ' > U+E10C
+'tower' + ' ' > U+E30F
+'Trachonitis' + ' ' > U+Ec3f   c		 Luke 3:1
+'transfiguration' + ' ' > U+E31F
+'transfigure' + ' ' > U+E31F
+'travel' + ' ' > U+E381
+'tree' + ' ' > U+E244
+'trial' + ' ' > U+Ec87
+'tribe' + ' ' > U+EA81
+'tribulation' + ' ' > U+E03e
+'trip' + ' ' > U+E381
+'triumph' + ' ' > U+eb14
+'Troas' + ' ' > U+Ec0b   c		 Acts 16:8
+'Trophimus' + ' ' > U+Eb1e   c		 Acts 20:4
+'trouble' + ' ' > U+E333
+'true' + ' ' > U+E09C  
+'trumpet' + ' ' > U+EA79
+'trust' + ' ' > U+E023
+'truth' + ' ' > U+E09C
+'try' + ' ' > U+Eb94
+'Tryphaena' + ' ' > U+Ebd8   c		 Rom 16:12
+'Tryphosa' + ' ' > U+Ebd9   c		 Rom 16:12
+'turn' + ' ' > U+E31E
+'twin' + ' ' > U+Ec1b
+'two' + ' ' > U+E28D
+'Tyrannus' + ' ' > U+EB3F   c		 Acts 19:9
+'Tyre' + ' ' > U+E33B   c		 Josh 19:29
+'unbelief' + ' ' > U+E194
+'under' + ' ' > U+E10A
+'understand' + ' ' > U+E063
+'understanding' + ' ' > U+E063
+'unity' + ' ' > U+E297
+'unleavened' + ' ' > U+E043
+'untie' + ' ' > U+E37F
+'until' + ' ' > U+E16C
+'up' + ' ' > U+E315
+'Urbanus' + ' ' > U+Ebda   c		 Rom 16:9
+'Uriah' + ' ' > U+EA46   c		 2 Sam 11:3
+'us' + ' ' > U+E167
+'use' + ' ' > U+E08D
+'useful' + ' ' > U+E08D
+'useless' + ' ' > U+E190
+'Uzziah' + ' ' > U+EA5F   c		 2 Kgs 15:13
+'valley' + ' ' > U+Eba7
+'value' + ' ' > U+E09b
+'vendor' + ' ' > U+E0B4
+'very' + ' ' > U+E211
+'victory' + ' ' > U+eb14
+'village' + ' ' > U+E19A
+'vine' + ' ' > U+Ec91
+'vineyard' + ' ' > U+E27F
+'virgin' + ' ' > U+EA7E
+'vision' + ' ' > U+Ea80
+'visit' + ' ' > U+E25a
+'voice' + ' ' > U+E042 
+'waist' + ' ' > U+E391
+'wait' + ' ' > U+EA11
+'walk' + ' ' > U+E256
+'wall' + ' ' > U+E288
+'want' + ' ' > U+E020
+'war' + ' ' > U+E283
+'wash' + ' ' > U+E08B
+'watchman' + ' ' > U+E0a8
+'watchtower' + ' ' > U+E23A
+'water' + ' ' > U+E247
+'wave' + ' ' > U+E328
+'way' + ' ' > U+E23C
+'we' + ' ' > U+E167
+'weak' + ' ' > U+ea24
+'wealth' + ' ' > U+E029
+'wealthy' + ' ' > U+E029
+'wedding' + ' ' > U+E011
+'week' + ' ' > U+Ebb2
+'weigh' + ' ' > U+E0e6
+'weight' + ' ' > U+E0e6
+'well' + ' ' > U+Ebb3
+'west' + ' ' > U+EA89
+'wet' + ' ' > U+E247
+'what' + ' ' > U+E109
+'wheat' + ' ' > U+E279
+'when' + ' ' > U+E16A
+'where' + ' ' > U+E15A
+'whip' + ' ' > U+E310
+'whisper' + ' ' > U+E186
+'white' + ' ' > U+E285
+'who' + ' ' > U+E1a1
+'whole' + ' ' > U+E251
+'why' + ' ' > U+E067
+'widow' + ' ' > U+E016
+'wife' + ' ' > U+E014
+'wild' + ' ' > U+E17E
+'wilderness' + ' ' > U+E156
+'will' + ' ' > U+E020
+'wind' + ' ' > U+E220
+'window' + ' ' > U+E311
+'wine' + ' ' > U+E275
+'wing' + ' ' > U+Eb7d
+'wings' + ' ' > U+Eb7d
+'winnowing_fork' + ' ' > U+Ec41   c		 Matt 3:12
+'winter' + ' ' > U+E16B
+'wisdom' + ' ' > U+E064
+'wise' + ' ' > U+E064
+'with' + ' ' > U+E24C
+'witness' + ' ' > U+E22e
+'woman' + ' ' > U+E008
+'wood' + ' ' > U+E244
+'Word_of_God' + ' ' > U+E22c   c		 Rev 19:13
+'word' + ' ' > U+Ebb4
+'Word' + ' ' > U+Ebb8   c		 John 1:1
+'work' + ' ' > U+E08C
+'world' + ' ' > U+E129
+'worm' + ' ' > U+Ea06
+'worry' + ' ' > U+E056 
+'worse' + ' ' > U+E182
+'worship' + ' ' > U+E04B
+'worth' + ' ' > U+E09b
+'worthy' + ' ' > U+E09B
+'wrap' + ' ' > U+EA19
+'wrath_of_God' + ' ' > U+E02A
+'write' + ' ' > U+E29C
+'writer' + ' ' > U+E12C
+'wrong' + ' ' > U+Ea02
+'Yahweh' + ' ' > U+E0c7   c		 Exod 6:3
+'year' + ' ' > U+E15E
+'yes' + ' ' > U+E09A
+'yoke' + ' ' > U+Eb09
+'you' + ' ' > U+E314
+'young' + ' ' > U+E0f1      
+'Zacchaeus' + ' ' > U+Ec7e   c		 Luke 19:2
+'Zadok' + ' ' > U+EA6D   c		 2 Sam 15:24
+'Zarephath' + ' ' > U+Ec7f   c		 1 Kgs 17:9
+'Zebedee' + ' ' > U+E359    c		 Matt 4:21
+'Zebulun' + ' ' > U+EA3F    c		 Gen 30:20
+'Zechariah' + ' ' > U+EA98     c		 Zech 1:1
+'Zerah' + ' ' > U+EA4D     c		 Gen 36:13
+'zero' + ' ' > U+E28B
+'Zerubbabel' + ' ' > U+EA69   c		 Ezra 2:2
+'Zeus' + ' ' > U+EB2D   c		 Acts 14:12
+
+c punctuation
+
+ '.' + ' ' > U+E37E
+ '*' + ' ' > U+E390
+ 'pn' + ' ' > U+Ed11
+ 'pos' + ' ' > U+E390
+ '?' + ' ' > U+E316
+
+
+c new entries
+
+'Herodion' + ' ' > U+EbF1   c		 Rom 16:11
+'Hermes_man' + ' ' > U+ebed    c		 Rom 16:14
+'Tertius' + ' ' > U+Ebee   c		 Rom 16:22
+'another' + ' ' > U+ebf2
+'sharp' + ' ' > U+ebf3
+'Patmos' + ' ' > U+ebf4   c		 Rev 1:9
+'Smyrna' + ' ' > U+ebf5   c		 Rev 1:11
+'Pergamum' + ' ' > U+ebf6   c		 Rev 1:11
+'Sardis' + ' ' > U+ebf7   c		 Rev 1:11
+'Philadelphia' + ' ' > U+ebf8   c		 Rev 1:11
+'Laodicea' + ' ' > U+ebf9   c		 Col 4:13
+'wool' + ' ' > U+ebfa
+'snow' + ' ' > U+ebfb
+'church' + ' ' > U+ebfc
+'ambassador' + ' ' > U+ebfd          
+'weary' + ' ' > U+ebfe
+'Balak' + ' ' > U+ebff   c		 Rev 2:14
+'Antipas' + ' ' > U+ec01   c		 Rev 2:13
+'Balaam' + ' ' > U+eca1   c		 2 Pet 2:15
+'Jezebel' + ' ' > U+eca2   c		 1 Kgs 16:31
+'milk' + ' ' > U+Eca3
+'Fortunatus' + ' ' > U+eca4       c		 1 Cor 16:17
+'Achaicus' + ' ' > U+eca5   c		 1 Cor 16:17
+'Aretas' + ' ' > U+eca6   c		 2 Cor 11:32
+'harsh' + ' ' > U+eca7                    
+'stern_words' + ' ' > U+eca7
+'pillar' + ' ' > U+eca8
+'Cephas' + ' ' > U+E356   c		 John1:42
+'Silvanus' + ' ' > U+eca9   c		 2 Cor 1:19
+'deacon' + ' ' >U+e12d
+'Sosipater' + ' ' > U+ec20   c		 Rom 16:21
+'next' + ' ' > U+ebf2
+'suffer' + ' ' > U+e222
+'insult' + ' ' > U+e05b
+'blaspheme' + ' ' > U+e05b
+'remain' + ' ' > U+e83b
+'commandment' + ' ' > U+e22f
+'warn' + ' ' > U+e19e
+'revile' + ' ' > U+e055   c		 1 Cor 4:12
+'criticize' + ' ' > u+e055
+'much' + ' ' > U+e198
+'insist' + ' ' > U+e058
+'dignify' + ' ' > U+e04b
+'oppose' + ' ' > U+e330
+'master' + ' ' > U+e028
+'reject' + ' ' > U+e193
+'great' + ' ' > U+e14a
+'lawlessness' + ' ' > U+e08f
+'unrighteous' + ' ' > U+e08f   c		 Matt 5:45
+'unrighteousness' + ' ' > U+e08f
+'manage' + ' ' > U+e137
+'proud' + ' ' > U+e14b
+'destruction' + ' ' > U+e141
+'glorify' + ' ' > U+e217
+'breath' + ' ' > U+ecee
+'Hagar' + ' ' > u+ecab      c		 Gen 16:1
+
+   c 7.0 words added from 4_16_2019
+
+'horn' + ' ' > U+ecc5
+'harp' + ' ' > U+ecc6
+'string' + ' ' > U+ecc7
+'bow_arrow' + ' ' > U+ecc8
+'eagle' + ' ' > U+ecc9
+'Philetus' + ' ' > U+ecac   c		 2 Tim 2:17
+'Carpus' + ' ' > U+ecad   c		 2 Tim 4:13
+'Claudia' + ' ' > U+ecae   c		 2 Tim 4:21
+'Crescan' + ' ' > U+ecaf   c		 2 Tim 4:10
+'Dalmatia' + ' ' > U+ecb1   c		 2 Tim 4:10
+'Demes' + ' ' > U+ecb2   c		 2 Tim 4:10
+'Eubulus' + ' ' > U+ecb3   c		 2 Tim 4:21
+'Eunice' + ' ' > U+ecb4   c		 2 Tim 1:5
+'Hermogenes' + ' ' > U+ecb5   c		 2 Tim 1:15
+'Linus' + ' ' > U+ecb0   c		 2 Tim 4:21
+'lion' + ' ' > U+ecb6
+'Lois' + ' ' > U+ecb7   c		 2 Tim 1:5
+'Onesiphorus' + ' ' > U+ecb8   c		 2 Tim I:16
+'Onesimus' + ' ' > U+ecb8   c		 Phlm 1:10
+'Phygelus' + ' ' > U+ecb9   c		 2 Tim 1:15
+'Pudens' + ' ' > U+ecba   c		 2 Tim 4:21
+'Tychicus' + ' ' > U+ecbb   c		 Acts 20:4
+'Jambres' + ' ' > U+ecbc   c		 2 Tim 3:8
+'Jannes' + ' ' > U+ecbe   c		 2 Tim 3:8
+'arrow' + ' ' > U+ecbf
+'height' + ' ' > U+ecc1
+'length' + ' ' > U+ecc2
+'pastor' + ' ' > U+ecc3
+'wide' + ' ' > U+ecc4 
+'Cain' + ' ' > U+Ec56   c		 Gen 4:1
+'Reuben' + ' ' > U+Ecc0    c		 Gen 29:32
+'Gad' + ' ' > U+Ecbd   c		 Gen 46:16
+'Issachar' + ' ' > U+ecce   c		 Gen 30:18
+'thirst' + ' ' > U+eccf
+'thirsty' + ' ' > U+eccf
+'burn' + ' ' > U+ecd0
+'burnt' + ' ' > U+ecd0
+'green' + ' ' > U+Ecd1 
+'bitter' + ' ' > U+ecd2 
+'Wormwood' + ' ' > U+ecd3    c		 Rev 8:11
+'locust' + ' ' > U+ecd4 
+'breastplate' + ' ' > U+Ecd5 
+'tail' + ' ' > U+ecd6 
+'Abaddon' + ' ' > U+ecd7    c		 Rev 9:11
+'Appolyon' + ' ' > U+ecd7 
+'Euphrates_River' + ' ' > U+Ecd8    c		 Rev. 9:14
+'million' + ' ' > U+ecd9 
+'blue' + ' ' > U+ecda 
+'yellow' + ' ' > U+ecdb 
+'rainbow' + ' ' > U+ecdc 
+'hail_storm' + ' ' > U+ecdd 
+'glass' + ' ' > U+ecde 
+'dragon' + ' ' > U+ecdf 
+'flood' + ' ' > U+ece0 
+'Michael_angel' + ' ' > U+ece1    c		 Jude 9
+'Diotrephes' + ' ' > U+ece2    c		 3 John 1:9
+'Clement' + ' ' > U+ece3    c		 Phil 4:3
+'Epaphroditus' + ' ' > U+ece4    c		 Phil 2:25
+'Euodia' + ' ' > U+ece5    c		 Phil 4:2
+'Syntyche' + ' ' > U+ece6    c		 Phil 4:2
+'Archippus' + ' ' > U+ece7    c		 Col 4:17
+'Colossae' + ' ' > U+ece8    c		 Col 1:2
+'Epaphras' + ' ' > U+ece4    c		 Col 1:7
+'Hierapolis' + ' ' > U+ece9    c		 Col 4:13
+'Nympha' + ' ' > U+ecea   c		 Col 4:15
+'Scythia' + ' ' > U+eceb     c		 Col 3:11
+'complete' + ' ' > U+ecec 
+'perfect' + ' ' > U+ecec
+'own' + ' ' > U+eced
+'looks_like' + ' ' > U+ebcd 
+'bear' + ' ' > U+ecef
+'pattern' + ' ' > U+ecf0 
+'Apphia' + ' ' > U+ecf1    c		 Phil 1:2
+'Philemon' + ' ' > U+ecf2    c		 Phlm 1:1
+'Korah' + ' ' > U+ecf3    c		 Gen 36:14
+'grape' + ' ' > U+ecf4 
+'Mount_Zion' + ' ' > U+ecf5    c		 2 Kgs 19:31
+'frog' + ' ' > U+ecf6 
+'Gog' + ' ' > U+ecf7    c		 Ezek 38:2
+'leopard' + ' ' > U+ecf8 
+'Magog_land' + ' ' > U+ecf9    c		 Ezek 38:2
+'meaning' + ' ' > U+ecfa 
+'Megiddo' + ' ' > U+ecfb    c		 Josh 12:21
+'prostitute' + ' ' > U+ecfc
+'harlot' + ' ' > U+ecfc  
+'different' + ' ' > U+ecff
+'sand' + ' ' > U+ecfd 
+'spice' + ' ' > U+ecfe 
+'leap' + ' ' > U+ed0a
+'jump' + ' ' > U+ed0a 
+'type' + ' ' > U+ed00 
+'kind_same' + ' ' > U+ed00  
+'spot' + ' ' > U+Ed01 
+'blemish' + ' ' > U+ed01    
+'continue' + ' ' > U+e049
+'Barak' + ' ' > U+ed02    c		 Heb 11:32
+'Gideon' + ' ' > U+ed03    c		 Judg 6:11
+'Jephthah' + ' ' > U+ed04    c		 Judg 11:1
+'Melchizedek' + ' ' > U+ed05    c		 Gen 14:18
+'Samson' + ' ' > U+ed06    c		 Judg 13:24
+'spy' + ' ' > U+ed07 
+'Nicopolis' + ' ' > U+ed08    c		 Titus 3:12
+'Zenas' + ' ' > U+ed09   c		 Titus 3:13
+'Job' + ' ' > U+ed0b    c		 Job 1:1
+'avenge' + ' ' > U+ed0c
+'revenge' + ' ' > U+ed0c   c		 Rom 12:19
+'vengeance' + ' ' > U+ed0c
+'thigh' + ' ' > U+ed0d 
+'Antichrist' + ' ' > U+ed0e   c		 1 John 4:3
+'tithe' + ' ' > U+ed0f
+'olive' + ' ' > U+eda1
+'fig' + ' ' > U+eda2
+'Beor' + ' ' > U+eda3   c		 Gen 36:32
+'discipline' + ' ' > U+eda5
+
+C words added for Sun 7.23
+'cave' + ' ' > U+eda6
+'Adah' + ' ' > U+eda7   c		 Gen 4:19
+'Admah' + ' ' > U+eda8   c		 Gen 10:19
+'Ahuzzath' + ' ' > U+eda9   c		 Gen 26:26
+'Ai' + ' ' > U+edaa   c		 Gen 13:3
+'Akkad' + ' ' > U+edab   c		 Gen 10:10
+'Almodad' + ' ' > U+edac   c		 Gen 10:26
+'Ammon' + ' ' > U+edae   c		 Gen 19:38
+'Amorites' + ' ' > U+edaf    c		 Gen 10:16
+'Amraphel' + ' ' > U+edb1   c		 Gen  14:1
+'Anam' + ' ' > U+edb2    c		 Gen 10:13
+'Aner' + ' ' > U+edb3    c		 Gen  14:13
+'Aram_man' + ' ' > U+edb4    c		 Gen 10:22
+'Ararat' + ' ' > U+edb5    c		 Gen 8:4
+'Arioch' + ' ' > U+edb6    c		 Gen  14:1
+'Arkites' + ' ' > U+edb7    c		 Gen 10:17
+'Arvad' + ' ' > U+edb8    c		 Gen 10:18
+'Ashkenaz' + ' ' > U+edb9    c		 Gen 10:3
+'Ashteroth_Karnaim' + ' ' > U+edba    c		 Gen 14:5
+'Ashur_man' + ' ' > U+edbb    c		 Gen 10:22
+'Assyria' + ' ' > U+edbc    c		 Gen 10:11
+'Basemath' + ' ' > U+edbd    c		 Gen 26:34
+'Beeri' + ' ' > U+edbe    c		 Gen 26:34
+'Beersheba' + ' ' > U+edbf    c		 Gen 26:33
+'Bela_village' + ' ' > U+edc1    c		 Gen 14:8
+'Ben_Ammi' + ' ' > U+edc2    c		 Gen 19:38
+'Bera' + ' ' > U+edc3    c		 Gen 14:2
+'Bethel' + ' ' > U+edc4    c		 Gen 12:8
+'Birsha' + ' ' > U+edc5    c		 Gen 14:2
+'Calah' + ' ' > U+edc6    c		 Gen 10:12
+'Canaan_man' + ' ' > U+edc7    c		 Gen 9:18
+'Caphtorites' + ' ' > U+edc8    c		 Gen  10:14
+'Kasluhites' + ' ' > U+edc9    c		 Gen 10:14
+'Cush' + ' ' > U+edca    c		 Gen 2:13
+'Cypress' + ' ' > U+edcb    c		 Gen 6:14
+'Dan_land' + ' ' > U+edcc    c		 Gen 14:14
+'Dan_man' + ' ' > U+edcd    c		 Gen 30:6
+'Dedan' + ' ' > U+edce    c		 Gen 10:7
+'Dodanim' + ' ' > U+edcf    c		 Gen  10:4
+'Eden_garden' + ' ' > U+edd2    c		 Gen  2:8
+'El' + ' ' > U+edd3    c		 Gen 35:17
+'Eden_man' + ' ' > U+e1e9    c		 2 Chr 29:12
+'Ellasar' + ' ' > U+edd6    c		 Gen 14:1
+'Elon' + ' ' > U+edd7    c		 Gen 26:34
+'Enosh' + ' ' > U+Ec60     c		 Gen 4:26
+'Erech' + ' ' > U+edd9    c		 Gen 10:10
+'Esek' + ' ' > U+edda    c		 Gen 26:20
+'Eshkol_land' + ' ' > U+e3cb    c		 Num 13:23
+'Eshkol_man' + ' ' > U+eddb    c		 Gen 14:13
+'garden' + ' ' > U+eddc 
+'Gerar' + ' ' > U+eddd    c		 Gen 10:19
+'Gether' + ' ' > U+edde    c		 Gen 10:23
+'Gihon' + ' ' > U+eddf    c		 Gen 2:13
+'Girgashites' + ' ' > U+ede1    c		 Gen 10:16
+'Goiim' + ' ' > U+ede2    c		 Gen 14:1
+'Gomer' + ' ' > U+ede3    c		 Gen 10:2
+'Hadoram' + ' ' > U+ede4    c		 Gen 10:27
+'Ham_man' + ' ' > U+ede5    c		 Gen 6:10
+'Ham_village' + ' ' > U+ede6    c		 Gen 14:5
+'Hamathites' + ' ' > U+ede7    c		 Gen 10:18
+'Havilah_land' + ' ' > U+ede8    c		 Gen 2:11
+'Hazarmaveth' + ' ' > U+ede9   c		 Gen 10:26
+'Hazar_Addar' + ' ' > u+e3ea    c		 Num 34:4
+'Hazar_Enan' + ' ' > U+e3eb    c		 Num 34:9
+'Hazezon_Tamar' + ' ' > U+edea    c		 Gen 14:7
+'Hebron' + ' ' > U+edeb    c		 Gen 13:18
+'Heth' + ' ' > U+edec    c		 Gen 10:15
+'Hittites' + ' ' > U+eded    c		 Gen 15:20
+'Hivites' + ' ' > U+edee    c		 Exod 3:8
+'Hobah' + ' ' > U+edef    c		 Gen 14:15
+'Horites' + ' ' > U+edf1    c		 Gen 14:6
+'Hor_Haggidgad' + ' ' > U+e3ec   c		 Num 33:32
+'Hul' + ' ' > U+edf2    c		 Gen 10:23
+'Irad' + ' ' > U+edf3    c		 Gen 4:18
+'Japheth' + ' ' > U+edf4    c		 Gen 6:10
+'Jerah' + ' ' > U+edf5    c		 Gen 10:26
+'Jobab' + ' ' > U+edf6    c		 Gen 10:29
+'Jubal' + ' ' > U+edf7    c		 Gen 4:21
+'Judith' + ' ' > U+edf8    c		 Gen 26:34
+'Kadesh' + ' ' > U+edf9   c		 Gen 14:7
+'Kadesh_Barnea' + ' ' > U+edf9   c		 Num 34:4
+'Kalneh' + ' ' > U+edfa    c		 Gen 10:10
+'Kedorlaomer' + ' ' > U+edfb    c		 Gen 14:1
+'Kittim_man' + ' ' > U+edfc    c		 Gen 10:4
+'Laban' + ' ' > U+edfd    c		 Gen 24:29
+'Luz' + ' ' > U+edfe    c		 Gen 28:19
+'Madai' + ' ' > U+edff    c		 Gen 10:2
+'Mahalath' + ' ' > U+eea2    c		 Gen 28:9
+'Mamre' + ' ' > U+eea3    c		 Gen 18:1
+'Mehujael' + ' ' > U+eea4    c		 Gen 4:18
+'Mesha_land' + ' ' > U+eea5    c		 Gen 10:30
+'Meshech' + ' ' > U+eea6    c		 Gen 10:2
+'Methushael' + ' ' > U+eea7    c		 Gen 4:18
+'Mizraim' + ' ' > U+eea8    c		 1 Chr 1:8
+'Moab_man' + ' ' > U+eea9    c		 Gen 19:37
+'Moreh' + ' ' > U+eeaa    c		 Gen 12:6
+'Naamah' + ' ' > U+eeab    c		 Gen 4:22
+'Naphtuh' + ' ' > U+eeac    c		 Gen 10:13
+'Nebaioth' + ' ' > U+eead    c		 Gen 28:9
+'Negev' + ' ' > U+eeae    c		 Gen 12:9
+'Elishah' + ' ' > U+ec5c    c		 Gen 10:4
+'Nimrod' + ' ' > U+eeaf    c		 Gen 10:8
+'Nod' + ' ' > U+eeb1    c		 Gen 4:16
+'Obal' + ' ' > U+eeb2    c		 Gen 10:28
+'Ophir' + ' ' > U+eeb3    c		 Gen 10:29
+'Pathrusites' + ' ' > U+eeb4    c		 1 Chr 1:12
+'Perizzites' + ' ' > U+eeb5    c		 Gen 15:20
+'Phicol' + ' ' > U+eeb6    c		 Gen 21:22
+'Philistia' + ' ' > U+eeb7    c		 Ps 60:8
+'Pishon' + ' ' > U+eeb8    c		 Gen 2:11
+'pitch' + ' ' > U+eeb9    c		 Gen 6:14
+'tar' + ' ' > U+eeb9 
+'Raamah' + ' ' > U+eebb    c		 Gen 10:7
+'Rehoboth' + ' ' > U+eebc    c		 Gen 26:22
+'Rephaim' + ' ' > U+eebd    c		 Josh 15:8
+'Resen' + ' ' > U+eebe    c		 Gen 10:12
+'rib' + ' ' > U+eebf    c		 Gen 2:21
+'Riphath' + ' ' > U+eec1    c		 Gen 10:3
+'Sabtah' + ' ' > U+eec2    c		 Gen 10:7
+'Sabteka' + ' ' > U+eec3    c		 Gen 10:7
+'Sarai' + ' ' > U+eec4    c		 Gen 11:29
+'Seba_man' + ' ' > U+eec5    c		 Gen10:7 (man)
+'Seir' + ' ' > U+eec6    c		 Gen 14:6
+'Sephar' + ' ' > U+eec7    c		 Gen 10:30
+'Shaveh_Kiriathaim' + ' ' > U+eec8    c		 Gen 14:5
+'Sheba_man' + ' ' > U+eec9    c		 2 Sam 20:1
+'Sheleph' + ' ' > U+eeca    c		 Gen 10:26
+'Shemeber' + ' ' > U+eecb    c		 Gen 14:2
+'Shinab' + ' ' > U+eecc    c		 Gen 14:2
+'Shinar' + ' ' > U+eecd    c		 Gen10:10
+'Siddim' + ' ' > U+eece    c		 Gen 14:3
+'Sidon_man' + ' ' > U+eecf    c		 Gen 10:15
+'Sinites' + ' ' > U+eed1    c		 Gen 10:17
+'Sitnah' + ' ' > U+eed2 
+'Tarshish_man' + ' ' > U+eed3    c		 Gen 10:4
+'Tarshish_village' + ' ' > U+eed4    c		 Ps 48:7
+'Tidal' + ' ' > U+eed5    c		 Gen 14:1
+'Tigris' + ' ' > U+eed6    c		 Dan 10:4
+'Tiras' + ' ' > U+eed7   c		 Gen 10:2
+'Togarmah' + ' ' > U+eed8    c		 Gen 10:3
+'Tubal' + ' ' > U+eed9    c		 Gen 10:2
+'Ishbak' + ' ' > U+eeda    c		 Gen 25:2
+'Iskah' + ' ' > U+eedb    c		 Gen 11:29
+'Jetur' + ' ' > U+eedc    c		 Gen 25:15
+'Jokshan' + ' ' > U+eedd    c		 Gen 25:2
+'Kedar' + ' ' > U+eede    c		 Gen 25:13
+'Kedemah' + ' ' > U+eedf    c		 Gen 25:15
+'Keturah' + ' ' > U+eee1    c		 Gen 25:1
+'Letush' + ' ' > U+eee2    c		 Gen 25:3
+'Leum' + ' ' > U+eee3    c		 Gen 25:3
+'Machpelah' + ' ' > U+eee4    c		 Gen 23:19
+'Massa' + ' ' > U+eee5    c		 Gen 25:14
+'Mibsam' + ' ' > U+eee6    c		 Gen 25:13
+'Medan' + ' ' > U+eee7    c		 Gen 25:2
+'Milkah' + ' ' > U+eee8    c		 Gen 11:29
+'Naphish' + ' ' > U+eee9    c		 Gen 25:15
+'Paddan_Aram' + ' ' > U+eeea    c		 Gen  25:20
+'Paran' + ' ' > U+eeeb    c		 Gen 21:21
+'Potiphar' + ' ' > U+eeec    c		 Gen 37:36
+'Tema_man' + ' ' > U+eeed    c		 Gen 25:15
+'Tema_land' + ' ' > U+ea60   c		 Isa 21:14
+'Shuah' + ' ' > U+eeee    c		 Gen 25:2
+'Tubal_Cain' + ' ' > U+eeef    c		 Gen 4:22
+'Uzal' + ' ' > U+eef2    c		 Gen 10:27
+'Zeboyim' + ' ' > U+eef3    c		 1 Sam 13:18
+'Zemarites' + ' ' > U+eef4    c		 Gen 10:18
+'Zillah' + ' ' > U+eef5    c		 Gen 4:19
+'Zoar' + ' ' > U+eef6    c		 Gen 13:10
+'Zuzites' + ' ' > U+eef7    c		 Gen 14:5
+'Abida' + ' ' > U+eef8    c		 Gen 25:4
+'Beer_Lahai_Roi' + ' ' > U+eef9    c		 Gen 16:14
+'Bilhah' + ' ' > U+eefa    c		 Gen 29:29
+'brick' + ' ' > U+eefb 
+'concubine' + ' ' > U+eefc 
+'Dumah' + ' ' > U+eefd    c		 Gen 25:14
+'Epher' + ' ' > U+eefe    c		 Gen 25:4
+'Ephron' + ' ' > U+eeff    c		 Gen 23:8
+'Gilead_land' + ' ' > U+efa1    c		 Gen 31:21
+'Hadad' + ' ' > U+efa2    c		 Gen 25:15
+'Haran_man' + ' ' > U+efa4    c		 Gen 11:27
+'Ur' + ' ' > U+efa5    c		 Gen 11:28
+'Zilpah' + ' ' > U+efa6    c		 Gen 29:24
+'Zohar' + ' ' > U+efa7    c		 Gen 23:8
+'Emites' + ' ' > U+efa8    c		 Gen 14:5
+'Abel_Mizraim' + ' ' > U+efa9    c		 Gen 50:11
+'Areli' + ' ' > U+efac    c		 Gen 46:16
+'Asenath' + ' ' > U+efad    c		 Gen 41:45
+'Ashbel' + ' ' > U+efae   c		 Gen 46:21
+'Atad' + ' ' > U+efaf    c		 Gen 50:10
+'Bered_man' + ' ' > U+efb2    c		 I Chr 7:20
+'Bered_city' + ' ' > U+e2d0    c		 Gen 16:14
+'Beriah' + ' ' > U+efb3    c		 Gen 46:17
+'Deborah' + ' ' > U+efb5    c		 Gen 35:8
+'deer' + ' ' > U+efb6 
+'Dinah' + ' ' > U+efb7    c		 Gen 30:21
+'Ehi' + ' ' > U+efb8    c		 Gen 46:21
+'Enaim' + ' ' > U+efb9   c		 Gen 38:14
+'Ephrath' + ' ' > U+efba    c		 Gen 35:16
+'Magog_man' + ' ' > U+eea1    c		 Rev 20:8
+'Gaham' + ' ' > U+efbb    c		 Gen 22:24
+'Galeed' + ' ' > U+efbc    c		 Gen 31:47
+'Gera' + ' ' > U+efbd    c		 Gen 46:21
+'Gershon' + ' ' > U+efbe    c		 Gen 46:11
+'Goshen' + ' ' > U+efbf    c		 Gen 47:1
+'Guni' + ' ' > U+efc1    c		 Num 26:48
+'Haggi' + ' ' > U+efc2    c		 Gen 46:16
+'Hamul' + ' ' > U+efc3    c		 Gen 46:12
+'Huppim' + ' ' > U+efc5    c		 Gen 46:21
+'Hushim' + ' ' > U+efc6    c		 Gen 46:23
+'Imnah' + ' ' > U+efc7    c		 1 Chr 7:30
+'Ishvah' + ' ' > U+efc8    c		 Gen 46:17
+'Ishvi' + ' ' > U+efc9    c		 Gen 46:17
+'Jabbok' + ' ' > U+efca    c		 Gen 32:22
+'Jahleel' + ' ' > U+efcb    c		 Gen 46:14
+'Jamin' + ' ' > U+efcc    c		 Gen 46:10
+'Jemuel' + ' ' > U+efcd    c		 Exod 6:15
+'Jidlaph' + ' ' > U+efce    c		 Gen 22:22
+'Kadmonites' + ' ' > U+efd1    c		 Gen 15:19
+'Karmi' + ' ' > U+efd2    c		 Gen 46:9
+'On_city' + ' ' > U+efe2    c		 Gen 41:45
+'Kemuel' + ' ' > U+efd3    c		 Gen 22:21
+'Kenaz' + ' ' > U+efd4    c		 Gen 36:11
+'Kenites' + ' ' > U+efd5    c		 Gen 15:19
+'Kesed' + ' ' > U+efd6    c		 Gen 22:22
+'Kiriath_Arba' + ' ' > U+efd7    c		 Gen 23:2
+'Kohath' + ' ' > U+efd8    c		 Gen 46:11
+'Leah' + ' ' > U+efd9    c		 Gen 30:12
+'Mahanaim' + ' ' > U+efdb    c		 Gen 32:2
+'Merari' + ' ' > U+efdc    c		 Gen 46:11
+'Moriah' + ' ' > U+efdd    c		 Gen 22:2
+'Muppim' + ' ' > U+efde    c		 Gen 46:21
+'Nile' + ' ' > U+efdf    c		 Exod 7:18
+'Pildash' + ' ' > U+efe3    c		 Gen 22:22
+'Peniel' + ' ' > U+efe4    c		 Gen 32:30
+'Akan' + ' ' > U+efe5    c		 Gen 36:27
+'Alvah' + ' ' > U+efe6    c		 Gen 36:40
+'Alvan' + ' ' > U+efe8    c		 Gen 36:23
+'Amalek_man' + ' ' > U+efe9    c		 Gen 36:12
+'Avith' + ' ' > U+efea    c		 Gen 36:35
+'Bilhan' + ' ' > U+efeb    c		 Gen 36:27
+'Bozrah' + ' ' > U+efec    c		 Gen 36:33
+'Dinhabah_city' + ' ' > U+efed    c		 Gen 36:32
+'Dishon' + ' ' > U+efee    c		 Gen 36:21
+'Ebal' + ' ' > U+efef    c		 Gen 36:23
+'Eliphaz' + ' ' > U+eff1    c		 Gen 36:4
+'Eshban' + ' ' > U+eff2    c		 Gen 36:26
+'Gatam' + ' ' > U+eff3    c		 Gen 36:11
+'Hemdan' + ' ' > U+eff4    c		 Gen 36:26
+'Hori' + ' ' > U+eff5    c		 Gen 36:22
+'Iram' + ' ' > U+eff6    c		 Gen 36:43
+'Jalam' + ' ' > U+eff7    c		 Gen 36:5
+'Jetheth' + ' ' > U+eff8    c		 Gen 36:40
+'Keran' + ' ' > U+eff9   c		 Gen 36:26
+'Lotan' + ' ' > U+effb    c		 Gen 36:20
+'Magdiel' + ' ' > U+effc    c		 Gen 36:43
+'Masrekah_city' + ' ' > U+effd    c		 Gen 36:36
+'Matred' + ' ' > U+effe    c		 Gen 36:39
+'Me_Zahab' + ' ' > U+efff    c		 Gen 36:39
+'Mehetabel' + ' ' > U+eff0    c		 Gen 36:39
+'Oholibamah_woman' + ' ' > U+efe0    c		 Gen 36:18
+'Pau' + ' ' > U+efd0    c		 Gen 36:39
+'Pinon' + ' ' > U+efc0    c		 Gen 36:41
+'Samlah' + ' ' > U+efb0    c		 Gen36:36
+'Shammah' + ' ' > U+efa0    c		 Gen 36:13
+'Teman_land' + ' ' > U+e1e1     c		 Jer 49:20
+'Timna_man' + ' ' > U+e0ad   c		 Gen 36:22
+'Timna_woman' + ' ' > U+ef80    c		 Gen 36:12
+'Zaavan' + ' ' > U+ef70    c		 Gen 36:27
+'Zibeon' + ' ' > U+ef60    c		 Gen 36:20
+'Shechem_man' + ' ' > U+ec97    c		 Gen 34:20
+'Reumah' + ' ' > U+efc4    c		 Gen 22:24
+'Rameses' + ' ' > U+efb4    c		 Gen 47:11
+'Sered' + ' ' > U+edd1    c		 Gen 46:14
+'Shillem' + ' ' > U+edd5    c		 Gen46:24
+'Shimron_man' + ' ' > U+efe7    c		 Gen 46:13
+'Tebah' + ' ' > U+e0b0    c		 Gen 22:24
+'Tola' + ' ' > U+e0c0    c		 Gen 46:13
+'shoulder' + ' ' > U+e132 
+'Adullam' + ' ' > U+efaa    c		 Gen 38:1
+'Allon_Bakuth' + ' ' > U+efab    c		 Gen 35:8
+'Beker' + ' ' > U+efb1   c		 Gen 46:21
+'Succoth_city' + ' ' > U+e0a0    c		 Josh 13:27
+'Zephon' + ' ' > U+e0d0    c		 Num 26:15
+'Havilah_man' + ' ' > U+effa    c		 Gen 10:7
+'Shuni' + ' ' > U+e0e0    c		 Gen 46:16
+'Ohad' + ' ' > U+efe1    c		 Gen 46:10
+'Uz_man' + ' ' > U+eef1    c		 Gen 10:23
+'Malkiel' + ' ' > U+efcf    c		 Gen 46:17
+'Eldaah' + ' ' > U+e1e3     c		 Gen 25:4
+'Oholibamah_man' + ' ' > U+e0ac   c		 Gen 36:41
+'Ashhur' + ' ' > U+ebdd    c		 1 Chr 2:24
+'Maakah_man' + ' ' > U+efda    c		 1 Chr 11:43
+'Aram_Naharaim' + ' ' > U+eb72    c		 Gen 24:10
+'Aran' + ' ' > U+e0fa    c		 Gen 36:28
+'Babel' + ' ' > U+ea67    c		 Gen 11:9
+'Akbor' + ' ' > U+e0ed    c		 Gen 36:38
+'Abimael' + ' ' > U+e0fb    c		 Gen 10:28
+'Abimelech' + ' ' > U+e0ab    c		 Gen 26:1
+'Adbeel' + ' ' > U+e0fe   c		 Gen 25:13
+'Aiah' + ' ' > U+e0fd    c		 Gen 36:24
+'Anah' + ' ' > U+e0ba    c		 Gen 36:2
+'Ard' + ' ' > U+e0ff    c		 Gen 46:21
+'Arodi' + ' ' > U+e168       c		 Gen 46:16
+'Ashur_land' + ' ' > U+e0ef    c		 Josh 17:7
+'Baal_Hanan' + ' ' > U+e169    c		 Gen 36:38
+'Ben_oni' + ' ' > U+e1a4    c		 Gen 35:18
+'Cosam' + ' ' > U+ec59    c		 Luke 3:28
+'Bethuel_man' + ' ' > U+e1a0    c		 Gen 22:22
+'Buz' + ' ' > U+E1a5     c		 Gen 22:21
+'Diklah' + ' ' > U+e1ac    c		 Gen  10:27
+'Edom_man' + ' ' > U+e1a6    c		 Gen 25:30
+'Edom_land' + ' ' > U+e1a7    c		 Gen 32:3
+'Elah' + ' ' > U+e1a9     c		 Gen  36:41
+'Elam_man' + ' ' > U+edd4    c		 Gen 10:22
+'Ephah' + ' ' > U+e1ad    c		 Gen 25:4
+'Eri' + ' ' > U+e1ae    c		 Gen 46:16
+'Ezbon' + ' ' > U+e1aa    c		 Gen 46:16
+'Ezer' + ' ' > U+e1ab    c		 Gen 36:21
+'Hadar' + ' ' > U+e1af    c		 Gen 36:39
+'Hanok' + ' ' > U+ec5f    c		 Gen 25:4
+'Hazo' + ' ' > U+e1b0    c		 Gen 22:22
+'Heber' + ' ' > U+e1b1    c		 Gen 46:17
+'Heman' + ' ' > U+e1b2    c		 1 Kgs 4:31
+'Hirah' + ' ' > U+e1b3    c		 Gen 38:1
+'Husham' + ' ' > U+e1b4    c		 Gen 36:34
+'Ishmael' + ' ' > U+e1b5    c		 Gen 17:18
+'Ithran' + ' ' > U+e1b6    c		 Gen 36:26
+'Jabal' + ' ' > U+e1b7    c		 Gen 4:20
+'Jahziel' + ' ' > U+e1b8    c		 Gen 46:24
+'Jakin' + ' ' > U+e1b9    c		 Gen 46:10
+'Javan' + ' ' > U+e1ba    c		 Gen 10:2
+'Abram' + ' ' > U+e1d1    c		 Gen 12:1
+'Bethuel_city' + ' ' > U+e1e0    c		 I Chr 4:30
+'Jeush' + ' ' > U+e1bb    c		 Gen 36:5
+'Jezer' + ' ' > U+e1bc    c		 Gen 46:24
+'Joktan' + ' ' > U+e1bd    c		 Gen 10:25
+'Kenan' + ' ' > U+ec56     c		 Gen 5:9
+'Timnah' + ' ' > U+e1dc    c		 Josh 15:10
+'Kezib' + ' ' > U+e1bf    c		 Gen 38:5
+'Lasha' + ' ' > U+e1c0    c		 Gen 10:19
+'Amittai' + ' ' > U+e1cf    c		 Jonah 1:1
+'Lud' + ' ' > U+e1c2    c		 Gen 10:22
+'Ludites' + ' ' > U+e1ea     c		 Gen 10:13
+'Lehabites' + ' ' > U+e1c1    c		 Gen 10:13
+'Manahath' + ' ' > U+e1c3    c		 Gen 36:23
+'Mibzar' + ' ' > U+e1c5    c		 Gen 36:42
+'Mishma' + ' ' > U+e1c6    c		 Gen 25:14
+'Mizzah' + ' ' > U+e1c7    c		 Gen 36:13
+'Nahath' + ' ' > U+e1c8    c		 Gen 36:13
+'Omar' + ' ' > U+e1c9    c		 Gen 36:11
+'Onan' + ' ' > U+e1cb    c		 Gen 38:8
+'Onam' + ' ' > U+e1ca    c		 Gen 36:23
+'Pallu' + ' ' > U+e1cc    c		 Exod 6:14
+'Potiphera' + ' ' > U+e1cd    c		 Gen 41:45
+'Reuel' + ' ' > U+e1ce    c		 Gen 36:4
+'punish' + ' ' > U+e1d0 
+'punishment' + ' ' > U+e1d0 
+'Cush_land' + ' ' > U+e1e2    c		 Isa 11:11
+'Rosh' +  ' ' > U+e1d2    c		 Gen 46:21
+'Puah_man' + ' ' > U+e1d3    c		 Judg 10:1
+'Puah_woman' + ' ' > U+e0dc     c		 Exod 1:15
+'Jegar_Sahadutha' + ' ' > U+e1e6    c		 Gen 31:47
+'Serah' + ' ' > U+e1d4    c		 Gen 46:17
+'Shaul' + ' ' > U+e1d5    c		 Gen 46:10
+'Shepho' + ' ' > U+e1d6    c		 Gen 36:23
+'Shibah' + ' ' > U+e1d7    c		 Gen 26:33
+'Shiloh' + ' ' > U+e1d8    c		 Josh 18:1
+'Shobal' + ' ' > U+e1d9    c		 Gen 36:20
+'Shur' + ' ' > U+e1da    c		 Gen 16:7
+'Tahash' + ' ' > U+e1db    c		 Gen 22:24
+'Uz_land' + ' ' > U+e1dd    c		 Job 1:1
+'Zepho' + ' ' > U+e1de   c		 Gen 36:11
+'Zimran' + ' ' > U+e1df   c		 Gen 25:2
+'Shua' + ' ' > U+e1e7    c		 1 Chr 2:3
+'El_Elohe' + ' ' > U+e1e4    c		 Gen 33:20
+'Teman_man' + ' ' > U+ef90    c		 Gen 36:11
+'Jebusites' + ' ' > U+e1e5    c		 Gen 10:16
+'Midian_man' + ' ' > U+e1eb    c		 Gen 25:2
+'Dishan' + ' ' > U+e1ec    c		 Gen 36:21
+'Bela_man' + ' ' > U+e1ed    c		 Gen 14:2
+'Bedad' + ' ' > U+e1ee   c		 Gen 36:35
+'Asshurites' + ' ' > U+e1ef    c		 Gen 25:3
+'Letush' + ' ' > U+eee2    c		 Gen 25:3
+'Leummim' + ' ' > U+eee3   c		 Gen 25:3
+'Dothan' + ' ' > U+efa3    c		 Gen 37:17
+'Aram' + ' ' > U+e342 
+'Gideoni' + ' ' > U+e2bd    c		 Num 1:11
+'Mizpah' + ' ' > U+e2cf    c		 Gen 31:49
+'Machir_man' + ' ' > U+e2d1    c		 Gen 50:23
+'Iob' + ' ' > U+e0ee    c		 Gen 46:13
+'Maakah_woman' + ' ' > U+e2d8    c		 2 Chr 11:21
+'toe' + ' ' > u+e2c8 
+'Jason' + ' ' > u+EB64   c		 Acts 17:5
+'Ahisamak' + ' ' > U+e0bb    c		 Exod 31:6
+'Asherah' + ' ' > U+e0bc   c		 Exod 34:13
+'Baal_Zephon' + ' ' > U+e0bd    c		 Exod 14:2
+'bell' + ' ' > U+e0be 
+'Bezalel' + ' ' > U+e0bf    c		 Exod 31:2
+'Elim' + ' ' > U+e0ca    c		 Exod 15:27
+'Gershom' + ' ' > U+e0cb    c		 Exod 2:22
+'Jethro' + ' ' > U+e0cc    c		 Exod 18:1
+'Marah' + ' ' > U+e0cd    c		 Exod 15:23
+'Migdol' + ' ' > U+e0ce    c		 Exod 14:2
+'Oholiab' + ' ' > U+e0cf    c		 Exod 31:6
+'Pi_Hahiroth' + ' ' > U+e0da    c		 Exod 14:2
+'Pithom' + ' ' > U+e0db    c		 Exod 1:11
+ 
+'Rephidim' + ' ' > U+e0dd    c		 Exod 17:1
+'Shiphrah' + ' ' > U+e0de    c		 Exod 1:15
+'Sin' + ' ' > U+e0ea    c		 Ezek 30:15
+'Thummim' + ' ' > U+e0eb    c		 Exod 28:30
+'Assir' + ' ' > U+e2bf    c		 Exod 6:24
+'Elkanah' + ' ' > U+e2c0    c		 Exod 6:24
+'Izhar' + ' ' > U+e2c1    c		 Exod 6:18
+'Etham' + ' ' > U+e2c2    c		 Exod 13:20
+'Massah' + ' ' > U+e2c3    c		 Exod 17:7
+'Jochebed' + ' ' > U+e2c4    c		 Exod 6:20
+'Mahli' + ' ' > U+e2c5    c		 Ezra 8:18
+'Mushi' + ' ' > U+e2c6   c		 Exod 6:19
+'Meribah' + ' ' > U+e2c7    c		 Exod 17:7
+'Mount_Horeb' + ' ' > U+eb5c    c		 Exod 33:6
+'Phinehas' + ' ' > U+e2c9    c		 Exod 6:25
+'Putiel' + ' ' > U+e2ca    c		 Exod 6:25
+'Shimei' + ' ' > U+e2cb    c		 Num 3:18
+'Urim' + ' ' > U+e2cc    c		 Exod  28:30
+'Zichri' + ' ' > U+e2cd    c		 Exodus 6:21
+'Zipporah' + ' ' > U+e2ce   c		 Exod 2:21
+'Abiasaph' + ' ' > U+e2dd   c		 Exod 6:24
+'Abihu' + ' ' > U+e2de    c		 Exod 28:1
+'Amram' + ' ' > U+e2df    c		 Exod 6:18
+'Hur' + ' ' > U+e2e0   c		 Exod 31:2
+'Ithamar' + ' ' > U+e2e1    c		 Exod 28:1
+'Libni' + ' ' > U+e2e2    c		 Exod 6:17
+'Nadab' + ' ' > U+e2e3    c		 Exod 6:23
+'Nepheg' + ' ' > U+e2e4    c		 Ex 6:21
+'Sithri' + ' '  > U+e2e5      c		 Exod 6:22
+'Nun' + ' ' > U+e2e6    c		 Exod 33:11
+'Uri' + ' ' > U+e2e8    c		 Exod 31:2
+'chew_cud' + ' ' > U+e2da    c		 Lev 11:3
+'breast' + ' ' > U+e2db
+'Mishael' + ' ' > U+e2dc   c		 Lev 10:4
+'Dibri' + ' ' > U+e2ef    c		 Lev 24:11
+'Elzaphan' + ' ' > U+e2f0    c		 Exod 6:22
+'Shelomith_man' + ' ' > U+e2f1    c		 1 Chr 23:9
+'Uzziel' + ' ' > U+e2f2    c		 Exod 6:18
+'Abidah' + ' ' > U+e2f3    c		 Gen 25:4
+'Ahira' + ' ' > U+e2f4    c		 Num 1:15
+'Arnon' + ' ' > U+e2f5    c		 Num 21:13
+'Bamoth_man' + ' ' > U+e2f6 
+'Dathan' + ' ' > U+e2f7    c		 Num 16:1
+'Hormah' + ' ' > U+e2f8    c		 Num 14:45
+'Kiriath_Huzoth' + ' ' > U+e2f9    c		 Num 22:39
+'Moab_land' + ' ' > U+e2fa    c		 Gen 36:35
+'Peleth' + ' ' > U+e2fb    c		 Num 16:1
+'Pethor' + ' ' > U+e2fc    c		 Num 22:5
+'Zippor' + ' ' > U+e2fd   c		 Num 22:2
+'jealous' + ' ' > U+e2fe 
+'Raphu' + ' ' > U+e2e9    c		 Num 13:9
+'Rehob' + ' ' > U+e2ea    c		 Num 13:21
+'Sethur' + ' ' > U+e2eb   c		 Num 13:13
+'Shammua' + ' ' > U+e2ec   c		 Num 13:4
+'Shaphat' + ' ' > U+e1e8    c		 Num 13:5
+'Shedeur' + ' ' > U+e2ed    c		 Num 1:5
+'Shelumiel' + ' ' > U+e2ee   c		 Num 1:6
+'Sheshai' + ' ' > U+e2d3    c		 Num 13:22
+'Sodi' + ' ' > U+e2d4    c		 Num 13:10
+'Taberah' + ' ' > U+e2d5    c		 Num 11:3
+'Talmai' + ' ' > U+e2d6    c		 Num 13:22
+'Valley_of_Eskol' + ' ' > U+e2d7    c		 Num 13:23
+'Shelomith_woman' + ' ' > U+e543   c		 Lev 24:11
+'Zaccur' + ' ' > U+e1f1    c		 Num 13:4
+'Zin' + ' ' > U+e1f2    c		 Num 13:21
+'Zoan' + ' ' > U+e1f3    c		 Num 13:22
+'Zuar' + ' ' > U+e1f4    c		 Num 1:8
+'Zuriel' + ' ' > U+e1f5    c		 Num 3:35
+'Zurishaddai' + ' ' > U+e1f6    c		 Num 1:6
+'Ahiezer' + ' ' > U+e2ab   c		 Num 1:12
+'Ahiman' + ' ' > U+e2ac    c		 Num 13:22
+'Ammiel' + ' ' > U+e2ad    c		 Num 13:12
+'Ammihud' + ' ' > U+e2ae    c		 Num 1:10
+'Ammishaddai' + ' ' > U+e2af    c		 Num 1:12
+'Anak' + ' ' > U+e2b0    c		 Num 13:22
+'banner' + ' ' > U+e2b1 
+'Caleb' + ' ' > U+e2b2    c		 Num 13:6
+'Deuel' + ' ' > U+e2b3    c		 Num 1:14
+'Eldad' + ' ' > U+e2b4    c		 Num 11:26
+'Eliab' + ' ' > U+e2b5    c		 Num 1:9
+'Eliasaph' + ' ' > U+e2b6    c		 Num 1:14
+'Elishama' + ' ' > U+e2b7    c		 Num 1:10
+'Elizaphan' + ' ' > U+e2b8    c		 Num 3:30
+'Enan' + ' ' > U+e2b9    c		 Num 1:15
+'Gaddi' + ' ' > U+e2ba   c		 Num 13:11
+'Gaddiel' + ' ' > U+e2bb    c		 Num 13:10
+'Gemalli' + ' ' > U+e2bc   c		 Num 13:12
+'Hazeroth' + ' ' > U+e2be    c		 Num 11:35
+'Abidan' + ' ' > U+e1f7    c		 Num 1:11
+'Abihail' + ' ' > U+e1f8    c		 Num 3:35
+'Elizur' + ' ' > U+e1fa    c		 Num 1:5
+'Geuel' + ' ' > U+e1fb    c		 Num 13:15
+'Helon' + ' ' > U+e1fc    c		 Num 1:9
+'Hobab' + ' ' > U+e1fd    c		 Num 10:29
+'Igal' + ' ' > U+e1fe    c		 Num 13:7
+'Jephunneh' + ' ' > U+e3ee    c		 Num 26:65
+'Kibroth_Hattaavah' + ' ' > U+e2a0    c		 Num 11:34
+'Lael' + ' ' > U+e2a1   c		 Num 3:24
+'Lebanon' + ' ' > U+e599     c		 Ps 29:5
+'Lebo_Hamath' + ' ' > U+e2a2   c		 Num 34:8
+'Maki' + ' ' > U+e2a3    c		 Num 13:15
+'Medad' + ' ' > U+e2a4   c		 Num 11:26
+'Michael_man' + ' ' > U+e2a5     c		 1 Chr 5:13
+'Nethanel' + ' ' > U+e2ff   c		 Num 1:8
+'Abiram' + ' ' > U+e480   c		 Num 16:1
+'Elisheba' + ' ' > U+e3b5   c		 Exod 6:23
+'Nahbi' + ' ' > U+e2a6    c		 Num 13:14
+'linen' + ' ' > U+ea20
+'Okran' + ' ' > U+e2a7   c		 Num 1:13
+'Pagiel' + ' ' > U+e2a8   c		 Num 1:13
+
+'Pedahzur' + ' ' > U+e2aa   c		 Num 1:10
+'Abarim' + ' ' > U+e38b    c		 Num 27:12
+'Ahiram' + ' ' > U+e3a1   c		 Num 26:38
+'Ar' + ' ' > U+e3a2    c		 Num 21:15
+'Arad_man' + ' ' > U+e3a3    c		 1 Chr 8:15
+'Asriel' + ' ' > U+e3a4    c		 Num 26:31
+'Atharim' + ' ' > U+e3a5    c		 Num 21:1
+'Bashan' + ' ' > U+e3a6    c		 Num 21:33
+'Beer' + ' ' > U+e3a7    c		 Num 21:16
+'Chemosh' + ' ' > U+e3a8    c		 Num 21:29
+'Dibon' + ' ' > U+e3a9    c		 Num 21:30
+'Eran' + ' ' > U+e3aa    c		 Num 26:36
+'Gilead_man' + ' ' > U+e3ab    c		 Num 26:29
+'Helek' + ' ' > U+e3ac    c		 Num 26:30
+'Hepher' + ' ' > U+e3ad    c		 Num 26:32
+'Heshbon' + ' ' > U+e3ae    c		 Josh 13:26
+'Hoglah' + ' ' > U+e3af   c		 Num 26:33
+'Hupham' + ' ' > U+e3b0    c		 Num 26:39
+'Iezer' + ' ' > U+e3b1   c		 Num 26:30
+'Iye_Abarim' + ' ' > U+e3b2    c		 Num 21:11
+'Jahaz' + ' ' > U+e3b3    c		 Num 21:23
+'Bamoth_land' + ' ' > U+e3c0    c		 Num 21:19
+'Shuham' + ' ' > U+e3b7    c		 Num 26:42
+'Shuthelah' + ' ' > U+e3b8    c		 Num 26:35
+'Sihon' + ' ' > U+e3b9    c		 Num 21:21
+'Tirzah_woman' + ' ' > U+e3ba    c		 Num 26:33
+'Waheb' + ' ' > U+e3bb    c		 Num 21:14
+'Zelophehad' + ' ' > U+e3bc    c		 Num 26:33
+'Zered' + ' ' > U+e3bd    c		 Deut 2:13
+'Zophim' + ' ' > U+e3be    c		 Num 23:14
+'Jashub' + ' ' > U+e389    c		 Num 26:24
+'Jazer' + ' ' > U+e38a    c		 Num 21:32
+'Mahlah' + ' ' > U+e38c    c		 Num 36:11
+'Mattanah' + ' ' > U+e38d    c		 Num 21:19
+'Medeba' + ' ' > U+e38e    c		 Num 21:30
+'Harbona' + ' ' > u+e38f
+'Mount_Hor' + ' ' > U+e3b4    c		 Num 20:22
+'Mount_Peor' + ' ' > U+e392    c		 Num 23:28
+'Mount_Pisgah' + ' ' > U+e393    c		 Num 21:20
+'Nahaliel' + ' ' > U+e394    c		 Num 21:19
+'Nazarite' + ' ' > U+e395    c		 Num 6:22
+'Nemuel' + ' ' > U+e396    c		 Num 26:9
+'nest' + ' ' > U+e399 
+'Nophah' + ' ' > U+e39b    c		 Num 21:30
+'Oboth' + ' ' > U+e39c    c		 Num 33:43
+'Og' + ' ' > U+e39d    c		 Ps 135:11
+'Ozni' + ' ' > U+e39e     c		 Num 26:16
+'Shemida' + ' ' > U+e39f    c		 Num 26:32
+'Shephupham' + ' ' > U+e3a0    c		 Num 26:39
+'Suphah' + ' ' > U+e3d5    c		 Num 21:14
+'Succoth_land' + ' ' > U+e2e7    c		 Gen 33:17
+'Mattithiah' + ' ' > U+e1c4    c		 Ezra 10:43
+'Abronah' + ' ' > U+e3d6    c		 Num 33:34
+'Agag' + ' ' > U+e3e0   c		 Num 24:27
+'Ahihud' + ' ' > U+e3e1    c		 Num 34:27
+'Ain' + ' ' > U+e3e6    c		 Num 34:11
+'Akrabbim' + ' ' > U+e3d7    c		 Num 34:4
+'Almon_Diblathaim' + ' ' > U+e3d8    c		 Num 33:46
+'Alush' + ' ' > U+e3d9    c		 Num 33:13
+'Arad_village' + ' ' > U+e3e7    c		 Num 33:40
+'Azmon' + ' ' > U+e3da    c		 Num 34:5
+'Azzan' + ' ' > U+e3e2    c		 Num 34:26
+'Bene_Jaakan' + ' ' > U+e3db    c		 Num 33:31
+'Beth_Jeshimoth' + ' ' > U+e3dc    c		 Num 33:49
+'Bukki' + ' ' > U+e3e3    c		 Num 34:22
+'Dibon_Gad' + ' ' > U+e3e8    c		 Num 33:45
+'Dophkah' + ' ' > U+e3dd    c		 Num 33:12
+'Elidad' + ' ' > U+e3e4    c		 Num 34:21
+'Ezion_Geber' + ' ' > U+e3e9    c		 Num 33:35
+'Hanniel' + ' ' > U+e3e5    c		 Num 34:23
+'Haradah' + ' ' > U+e3de    c		 Num 33:24
+'Hashmonah' + ' ' > U+e3df    c		 Num 33:29
+'tambourine' + ' ' > U+e413 
+'Reba' + ' ' > U+e3c4    c		 Num 31:8
+'Rekem_man' + ' ' > U+e3c3    c		 Num 31:8
+'Evi' + ' ' > u+e3c2    c		 Num 31:8
+'put' + ' ' > U+e07e 
+'gathered' + ' ' > U+e108 
+'Adoni_Zedek' + ' ' > U+e427   c		 Josh 10:1
+'Aijalon' + ' ' > U+e428   c		 Josh 10:12
+'Ashtaroth' + ' ' > U+e429   c		 Josh 9:10
+'Azekah' + ' ' > U+e42a   c		 Josh 10:10
+'Beeroth' + ' ' > U+e42b   c		 Deut 10:6
+'Beth_Horon' + ' ' > U+e42c   c		 Josh 10:10
+'Debir_man' + ' ' > U+e42d   c		 Josh 10:3
+'Eglon' + ' ' > U+e42e   c		 Josh 10:3
+'Gezer' + ' ' > U+e42f   c		 Josh 10:33
+'Gibeath_Haaraloth' + ' ' > U+e430   c		 Josh 5:3
+'Gibeon' + ' ' > U+e431   c		 Josh 9:3
+'Gilgal' + ' ' > U+e432   c		 Josh 5:9
+'Hoham' + ' ' > U+e433   c		 Josh 10:3
+'Japhia' + ' ' > U+e435   c		 Josh 10:3
+'Horam' + ' ' > U+e434   c		 Josh 10:33
+'Jarmuth' + ' ' > U+e436   c		 Josh 10:3
+'Kephirah' + ' ' > U+e437   c		 Jos 18:26
+'Kiriath_Jearim' + ' ' > U+e438   c		 Josh 9:17
+'Lachish' + ' ' > U+e439   c		 Josh 10:3
+'Makkedah' + ' ' > U+e414   c		 Josh 10:28
+'Mount_Ebal' + ' ' > U+e415   c		 Duet 11:29
+'Mount_Gerizim' + ' ' > U+e416   c		 Duet 11:29
+'Piram' + ' ' > U+e417   c		 Josh 10:3
+'Rekem_city' + ' ' > U+e418   c		 Josh 18:27
+'Chronicles' + ' ' > U+e419
+'Hegai_man' + ' ' > U+e41a   c		 Esth 2:8
+'Jehoiachin' + ' ' > U+e41b   c		 2 Kgs 24:6
+'Nebuchadnezzar' + ' ' > U+e41c   c		 Jer 21:2
+'Shaashgaz' + ' ' > U+e41d   c		 Esth 2:14
+'Elimelek' + ' ' > U+e41e   c		 Ruth 1:2
+'Kilion' + ' ' > U+e41f   c		 Ruth 1:5
+'Mahlon' + ' ' > U+e420   c		 Ruth 1:5
+'Naomi' + ' ' > U+e421   c		 Ruth 1:2
+'Orpah' + ' ' > U+e422   c		 Ruth 1:4
+'Beth_Peor' + ' ' > U+e423   c		 Deut 3:29
+'Sheba_land' + ' ' > U+e425   c		 2 Chr 9:12
+'Judah_land' + ' ' > U+e426   c		 Hag 1:1
+'Akshaph' + ' ' > U+E43b   c		 Josh 12:20
+'Aphek' + ' ' > U+e43c   c		 Josh 12:18
+'Baal_Gad' + ' ' > U+e44b   c		 Josh 11:17
+'Carmel' + ' ' > U+e43d   c		 Josh 12:22
+'Debir_city' + ' ' > U+e43e   c		 Josh 10:38
+'Dor' + ' ' > U+e43f   c		 Josh11:2
+'Geder' + ' ' > U+e440   c		 Josh 12:13
+'Goyim' + ' ' > U+e44c   c		 Josh 12:23
+'Hazor' + ' ' > U+e441   c		 Josh 12:19
+'Jokneam' + ' ' > U+e442   c		 Josh 12:22
+'Lasharon' + ' ' > U+e443   c		 Josh 12:18
+'Madon' + ' ' > U+e444   c		 Josh 11:1
+'Mount_Halak' + ' ' > U+e44e   c		 Josh 11:17
+'Salekah' + ' ' > U+e445   c		 Deut 3:10
+'Shimron_village' + ' ' > U+e446   c		 Josh 11:1
+'Taanach' + ' ' > U+e447   c		 Josh 12:21
+'Tappuah' + ' ' > U+e448   c		 Josh 12:17
+'Tirzah_village' + ' ' > U+e449   c		 Josh 12:24
+'Obadiah' + ' ' > U+e44f   c		 Neh 10:5
+'Thebes' + ' ' > U+e44a   c		 Jer 46:25
+'Manasseh_land' + ' ' > U+e470   c		 Josh 17:7
+'Naarah_woman' + ' ' > U+e477   c		 1 Chr 4:5
+'Kanah_village' + ' ' > U+e46e   c		 Josh 19:28
+'Kanah_brook' + ' ' > U+e46d   c		 Josh 16:8
+'Pethuel' + ' ' > U+e424   c		 Joel 1:1
+'Abiezer' + ' ' > U+e464   c		 Josh17:2
+'Ataroth_Addar' +  ' ' > U+e465   c		 Josh 16:5
+'Bezer' + ' ' > U+e466   c		 Deut 4:43
+'Endor' + ' ' > U+e467   c		 Josh 17:11
+'Golan' + ' ' > U+e468   c		 Duet 4:43
+'Ibleam' + ' ' > U+e469   c		 Josh 17:11
+'Janoah' + ' ' > U+e46a   c		 Josh 16:7
+'Japhlet' + ' ' > U+e46b   c		 Josh 16:3
+'Jezreel' + ' ' > U+e46c   c		 Josh 17:16
+'Makir' + ' ' > U+e46f   c		 Jos 13:31
+'Mikmethath' + ' ' > U+e471   c		 Josh 16:6
+'Naarah_village' + ' ' > U+e472   c		 Josh 16:7
+'Ramoth_Gilead' + ' ' > U+e473   c		 1 Kgs 4:13
+'Edrei' + ' ' > U+e474   c		 Josh 19:37
+'Ephod' + ' ' > U+e475   c		 Num 34:23
+'Tahan' + ' ' > U+e476   c		 Num 26:35
+'Amaziah' + ' ' > U+e450   c		 2 Kgs 12:21
+'Ashdod' + ' ' > U+e451   c		 Josh 11:22
+'Ashkelon' + ' ' > U+e452   c		 Judg 1:18
+'Ben_Hadad' + ' ' > U+e453   c		 1 Kgs 15:18
+'Beth_Eden' + ' ' > U+e454   c		 Amos 1:5
+'Ekron' + ' ' > U+e455   c		 Jos 13:3
+'Hazael' + ' ' > U+e456   c		 Amos 1:4
+'Jeroboam' + ' ' > U+e457   c		 1 Kgs 11:26
+'Joash' + ' ' > U+e458   c		 Judg 6:31
+'Kerioth' + ' ' > U+e459   c		 Jer 48:24
+'Kir' + ' ' > U+e45a   c		 Isa 22:6
+'Lo_Debar' + ' ' > U+e45b   c		 2 Sam 9:4
+'Mount_Carmel' + ' ' > U+e45c   c		 1 Kgs 18:19
+'Tekoa_village' + ' ' > U+e45d   c		 2 Sam 14:2
+'Achish' + ' ' > U+e45e   c		 1 Sam 21:10
+'Ahimelech' + ' ' > U+e45f   c		 1 Sam 21:1
+'Doeg' + ' ' > U+e460   c		 1 Sam 21:7
+'Gath' + ' ' > U+e461   c		 1 Sam 21:10
+'Goliath' + ' ' > U+e462   c		 1 Sam 21:9
+'Nob' + ' ' > U+e463   c		 1 Sam 21:1
+'Haggai' + ' ' > U+e48c   c		 Ezra 5:1
+'Ahasuerus' + ' ' > U+e48f   c		 Esth 1:1
+'Darius' + ' ' > U+e490   c		 Hag 1:1
+'Bigthana' + ' ' > U+e492   c		 Esth 6:2
+'Johozadak' + ' ' > U+e494
+'Argob' + ' ' > U+e495   c		 Deut 3:4
+'Avvites' + ' ' > U+e496   c		 2 Kgs 17:31
+'Eber_land' + ' ' > U+e497   c		 Num 24:24
+'Elath' + ' ' > U+e498   c		 Deut 2:8
+'Geshur' + ' ' > U+e499   c		 Duet 3:14
+'Kedemoth' + ' ' > U+e49a   c		 Duet 2:26
+'Sebam' + ' ' > U+e49b   c		 Num 32:3
+'Maakath_man' + ' ' > U+e49c   c		 Josh 12:5
+'Mount_Hermon' + ' ' > U+e49d   c		 Duet 3:8
+'Rabbah' + ' ' > U+e49e   c		 Deut 3:11
+'Esther' + ' ' > U+e49f   c		 Esth 2:7
+'Haman' + ' ' > U+e4a0   c		 Esth 3:1
+'Hathak' + ' ' > U+e4a1   c		 Esth 4:5
+'India' + ' ' > U+e4a2   c		 Esth 8:9
+'Mordecai' + ' ' > U+e4a3   c		 Esth 2:5
+'Persia' + ' ' > U+e4a4   c		 2 Chr 36:20
+'Susa' + ' ' > U+e4a5   c		 Ezra 4:9
+'Teresh' + ' ' > U+e4a6   c		 Esth 2:21
+'Vashti' + ' ' > U+e4a7   c		 Esth 1:9
+'Zeresh' + ' ' > U+e4a8   c		 Esth 5:10
+'Shemuel' + ' ' > U+e411   c		 Num 34:20
+'Beth_Haran' + ' ' > U+e479   c		 Num 32:36
+'Noah_woman' + ' ' > U+e47a   c		 Num 36:11
+'Maon_man' + ' ' > U+e47c
+'Shamir_man' + ' ' > U+e47d
+'Hammedatha' + ' ' > U+e47f   c		 Esth 3:1
+'Dizahab' + ' ' > U+e481   c		 Deut 1:1
+'egg' + ' ' > U+e482
+'Abner' + ' ' > U+e484   c		 1 Sam 14:50
+'Moserah' + ' ' > U+e485   c		 Duet 10:6
+'Mount_Nebo' + ' '  > U+e486   c		 Duet 32:49
+'Tophel_land' + ' ' > U+e487
+'Baanah' + ' ' > U+e488   c		 2 Sam 4:2
+'Gittaim' + ' ' > U+e489   c		 2 Sam 4:3
+'Ishbosheth' + ' ' > U+e48a   c		 2 Sam 2:8
+'Jonathan' + ' ' > U+e48b   c		 1 Sam 13:2
+'Maakath_land' + ' ' > U+e483   c		 Josh 13:13
+'Jehozadak' + ' ' > U+e47e   c		 Zech 6:11
+
+'Ataroth_Shophan' + ' ' > U+e3c7   c		 Num 32:35
+'Kittim_island' + ' ' > U+eb88   c		 Num 24:24
+'Jogbehah' + ' ' > U+e3cd   c		 Num 32:35
+'Jogli' + ' ' > U+e3ef   c		 Num 34:22
+'Jotbathah' +' ' > U+e3f0   c		 Num 33:33
+'Kehelathah' + ' ' > U+e3f1    c		 Num 33:22
+'Kenath' + ' ' > U+e3ce      c		 Num 32:42
+'Kinnereth' + ' ' > U+e3f2   c		 Josh 19:35
+'Kozbi' + ' ' > U+e3d1     c		 Num 25:15
+'Mithkah' + ' ' > U+e3f6    c		 Num 33:28
+'Moseroth' + ' ' > U+e3f7    c		 Num 33:30
+'Mount_Shepher' + ' ' > U+e3f8   c		 Num 33:23
+'Nebo' + ' ' > U+e3f9    c		 Num 33:47
+'Nimrah' + ' ' > U+E3cf   c		 Num 32:3
+'Nobah_land' + ' ' > U+e3d0    c		 Num 32:42
+'Nobah_man' + ' ' > U+e412    c		 Num 32:42
+'Palti' + ' ' > U+e2a9    c		 Num 13:9
+'Paltiel' + ' ' > u+e3fb   c		 Num 34:26
+'Parnak' + ' ' > U+e3fc   c		 Num 34:25
+'Pedahel' + ' ' > U+e3fd    c		 Num 34:28
+'Punon' + ' ' > U+e3fe    c		 Num 33:42
+'Riblah' + ' ' > U+e3ff   c		 Num 34:11
+'Rimmon_Perez' + ' ' > U+E400    c		 Num 33:19
+'Rissah' + ' ' > U+E401    c		 Num 33:21
+'Rithmah' + ' ' > U+e402    c		 Num 33:18
+'Salu' + ' ' > U+e403    c		 Num 25:14
+'scepter' + ' ' > U+e404 
+'Shelomi' + ' ' > U+e405    c		 Num 34:27
+'Shepham' + ' ' > U+e406    c		 Num 34:10
+'Shiphtan' + ' ' > U+e407    c		 Num 34:24
+'Shittim' + ' ' > U+e408    c		 Num 25:1
+'Sibmah' + ' ' > U+e3d2    c		 Josh 13:19
+'Tahath' + ' ' > U+e409   c		 Num 33:26
+'Vophsi' + ' ' > U+e40b    c		 Num 13:14
+'Zalmonah' + ' ' > U+e40c    c		 Num 33:41
+'Zedad' + ' ' > U+e40d    c		 Num 34:8
+'Zimri' + ' ' > U+e40e   c		 Num 25:14
+'Ziphron' + ' ' > U+e40f   c		 Num 34:9
+'Zur' + ' ' > U+e410   c		 Num 25:15
+'Elealeh' + ' ' > U+e3ca     c		 Num 32:3
+'Libnah' + ' ' > U+e3f4   c		 Josh 15:42
+'Aroer' + ' ' > U+e3c5   c		 Num 32:34
+'Ataroth' + ' ' > U+e3c6   c		 Num 32:3
+'Baal_Meon' + ' ' > U+e3c8   c		 Num 32:38
+'Beon' + ' ' > U+e3c9   c		 Num 32:3
+'Terah_land' + ' ' > U+e40a   c		 Num 33:28
+'Hebron_man' + ' ' > U+e478
+'Akzib' + ' ' > U+e48e
+'Beth_Ezel' + ' ' > U+e43a
+'Beth_Leaphrah' + ' ' > U+e491
+'Mareshah' + ' ' > U+e493
+'Maroth' + ' ' > U+e3b6
+'Moresheth' + ' ' > U+e4a9
+'Shaphir' + ' ' > U+e4aa
+'Zaanan' + ' ' > U+e4ab
+'Abishag' + ' ' > U+eac
+'Absalom' + ' ' > U+e4ad
+'Adonijah' + ' ' > U+e4ae
+'Bathsheba' + ' ' > U+e4af
+'Benaiah' + ' ' > U+e4b0
+'En_Rogel' + ' ' >U+e4b1
+'Haggith' + ' ' > U+e4b2
+'Jehoiada' + ' ' > U+e4b3
+'Joab' + ' ' > U+e4b4
+'Pelethites' + ' ' > U+e4b5
+'Rei' + ' ' > U+e4b6
+'Shunem' + ' ' > U+e4b7
+'Beth_Arabah' + ' ' > U+c4b8
+'Beth_Dagon' + ' ' > U+e4b9
+'Beth_Hoglah' + ' ' > U+e4ba
+'Beth_Pelet' + ' ' > U+e4bb      
+'Biziothiah' + ' ' > U+e4bc
+'Bohan' + ' ' > U+e4bd
+'Bozkath' + ' ' > U+e4be
+'Dannah' + ' ' > U+e4bf
+'Dilean' + ' ' > U+e4c0
+'Dimonah' + ' ' > U+e4c1
+'Eder' + ' ' > U+e4c2
+'Eltekon' + ' ' > U+e4c3
+'Eltolad' + ' ' > U+e4c4
+'En_Gedi' + ' ' > U+e4c5
+'En_Shemesh' + ' ' > U+e4c6
+'Enam' + ' ' > U+e4c7
+'Eshan' + ' ' > U+e4c8
+'Eshtaol' + ' ' > u+e4c9
+'Eshtemoh' + ' ' > U+e4ca
+'Ether' + ' ' > U+e4cb
+'Achor' + ' ' > U+e4cc
+'Adadah' + ' ' > U+e4c9
+'Addar' + ' ' > U+e4ce
+'Addumim' + ' ' > U+e4cf
+'Adithaim' + ' ' > U+e4d0
+'Aksah' + ' ' > U+e4d1
+'Amam' + ' ' > U+e4d2
+'Anab' + ' ' > U+e4d3
+'Anim' + ' ' > U+e4d4
+'Aphekah' + ' ' > U+e4d5
+'Arab' + ' ' > U+e4d6
+'Ashan' + ' ' > U+e4d7
+'Ashnah' + ' ' > U+e4d8
+'Baalah' + ' ' > U+e4d9
+'Bealoth' + ' ' > U+e4da
+'Ben_Hinnom' + ' ' > U+e4db
+'Beth_Anath' + ' ' > U+e4dc
+'Zeruiah' + ' ' > U+e4dd
+'Zoheleth' + ' ' > U+e4de
+'Telem' + ' ' > U+e4df
+'Kishion' + ' ' > U+e4e0
+'Mephaath' + ' ' > U+e4e1
+'Mishal' + ' ' > U+e4e2
+'Nahalal' + ' ' > U+e4e3
+'Timnath_Serah' + ' ' > U+e4e4
+'Zerathan' + ' ' > U+e4e5
+'Abinadab' + ' ' > U+e4e6
+'Beth_Shan' + ' ' > U+e4e7
+'Dagon' + ' ' > U+e4e8
+'Elihu' + ' ' > U+e4e9
+'Hophni' + ' ' > U+e4ea
+'Jabesh' + ' ' > U+e4eb
+'Jeroham' + ' ' > U+e4ec
+'Malki_Shua' + ' ' > U+e4ed
+'Mount_Gilboa' + ' ' > U+e4ef
+'Peninnah' + ' ' > U+e4f0
+'Ramathaim' + ' ' > U+e4f1
+'Tohu' + ' ' > U+e4f2
+'Zuph' + ' ' > U+e4f3
+'Joshua_village' + ' ' > U+e4f4
+'Achan' + ' ' > U+e4f5
+'Adam_village' +  ' ' > U+e4f6
+'Almon' + ' ' > U+e4f7
+'Anathoth' + ' ' > U+e4f8
+'Beth_Shemesh' + ' ' > U+e4f9
+'Daberath' + ' ' > U+e507
+'Eltekeh' + ' ' > U+e4fa
+'En_Gannim' + ' ' > U+e4fb
+'Eshtemoa' + ' ' > U+e4fc
+'Gaash' + ' ' > U+e4fd
+'Gath_Rimmon' + ' ' > U+e4fe
+'Geba' + ' ' > U+e4ff
+'Gibbethon' + ' ' > U+e500
+'Gibeah' + ' ' > U+e501
+'Hammoth_Dor' + ' ' > U+502
+'Helkath' + ' ' > U+503
+'Holon' + ' ' > U+e504
+'Jattir' + ' ' > U+e505
+'Juttah' + ' ' > U+e506
+'Ezem' + ' ' > U+e508
+'Giloh' + ' ' > U+509
+'Hadashah' + ' ' > U+e50a
+'Halhul' + ' ' > U+e50b
+'Hazar_Gaddah' + ' ' > U+e50c
+'Hazar_Shual' + ' ' > U+e50d
+'Heshmon' + ' ' > U+e50e
+'Humtah' + ' ' > U+e50f
+'Iphtah' + ' ' > U+e510
+'Ithnan' + ' ' > U+e511
+'Jabneel' + ' ' > U+e512
+'Jagur' + ' ' > U+e513
+'Janim' + ' ' > U+e514
+'Jokdeam' + ' ' > U+e515
+'Joktheel' + ' ' > U+516
+'Kabbon' + ' ' > U+517
+'Kabzeel' + ' ' > U+518
+'Kain' + ' ' > U+519
+'Karka' + ' ' > U+e51a
+'Keilah' + ' ' > U+e51b
+'Abdon' + ' ' > U+e51c
+'Dodo' + ' ' > U+e51d
+'Hillel' + ' ' > U+e51e
+'Ibzan' + ' ' > U+51f
+'Kamon' + ' ' > U+e520
+'Maon_village' + ' ' > U+e521
+'Micah' + ' ' > U+e522
+'Pirathon' + ' ' > U+e523
+'Shamir_village' + ' ' > U+524
+'Zaphon' + ' ' > U+e525
+'Amariah' + ' ' > U+e526
+'Elkosh' + ' ' > U+e378
+'Mephibosheth' + ' ' > U+e527
+'Mika' + ' ' > U+528
+'Recab' + ' ' > U+e529
+'Gedaliah' + ' ' > U+52a
+'Rimmon_man' + ' ' > U+e52b
+'Ziba' + ' ' > U+e53c
+'Ziklag' + ' ' > U+e52d
+'Kerethites' + ' ' > U+e52e
+'Kesil' + ' ' > U+e52f
+'Kinah' + ' ' > U+e530
+'Kitlish' + ' ' > U+e531
+'Lahmas' + ' ' > U+e532
+'Lebaoth' + ' ' > U+533
+'Madmannah' + ' ' > U+e534
+'Middin' + ' ' > U+e535
+'Migdalgad' + ' ' > U+e536
+'Moladah' + ' ' > U+e537
+'Naamah' + ' ' > U+e538   c		 Gen 4:22
+'Nephtoah' + ' ' > U+e539
+'Nezib' + ' ' > U+e53a
+'Nibshan' + ' ' > U+e53b
+'Othniel' + ' ' > U+e53c
+'Rimmon_village' + ' ' > U+e53d
+'Sansannah' + ' ' > U+e53e
+'Secacah' + ' ' > U+e53f
+'Shaarim' + ' ' > U+e540
+'Shema' + ' ' > U+e541
+'Shikkeron' + ' ' > U+e542
+'Seba_land' + ' ' > U+e544   c		 Isa 43:3
