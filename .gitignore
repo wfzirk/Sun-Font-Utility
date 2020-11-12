@@ -1,6 +1,6 @@
 
 *.pyc
-config.json
+
 doEnv.bat
 Log/*
 Dist/*
