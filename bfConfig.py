@@ -105,7 +105,9 @@ def readCfg():
                 print(k,'not in rdcfg')
                 dumpit = True
                 break
-
+    else:
+        dumpit = True
+        
     if dumpit:
         #print('dumpit')
         cfg["bfVersion"]=bfVersion
