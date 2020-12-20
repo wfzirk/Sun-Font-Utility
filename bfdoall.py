@@ -8,6 +8,7 @@ import tkinter.font as tkFont
 from tkinter import ttk
 from tkinter import scrolledtext
 import subprocess
+from csv import reader
 from bfConfig import *
 
 root = tk.Tk()
@@ -23,7 +24,7 @@ windowHeight = root.winfo_reqheight()
  
 # Gets both half the screen width/height and window width/height
 positionRight = int(root.winfo_screenwidth()/2 - windowWidth/2)
-positionDown = int(root.winfo_screenheight()/2 - windowHeight/2)
+positionDown = int(root.winfo_screenheight()/5 - windowHeight/2)
  
 # Positions the window in the center of the page.
 root.geometry("+{}+{}".format(positionRight, positionDown))
@@ -37,7 +38,27 @@ cfg = readCfg()
 cfg["eFilter"] = "" 
 #updateVars()
     
-
+lb_entry = {}
+# https://www.loc.gov/standards/iso639-2/php/code_list.php
+'''
+ISO 639-2 Code,	ISO 639-1 Code,	English name of Language,	French name of Language,	German name of Language,	Comment 
+    aar,                	aa,                     	Afar,                                           	afar,                       	Danakil-Sprache	          
+'''
+def get_langlist(lb_entry, csv_file):
+    print('get_langlist')
+    csv_file = cfg["language_codes"]
+    with open(csv_file, 'r') as read_obj:
+        csv_reader = reader(read_obj)
+        x = 0
+        for item in list(csv_reader):
+            lang = item[2]
+            #print(item[1], item[0])
+            if x > 1:
+                #listbox.insert("end", item[1]) 
+                lb_entry[lang] = item[0]
+            x = x+1
+    #print(lb_entry)   
+        return lb_entry
 
 def updateVars():
     print('update vars',cfg["alias"], 'vars updated')
@@ -46,10 +67,12 @@ def updateVars():
     CB.setState()
     e0.delete(0,tk.END)
     e0.insert(0,cfg["version"])
+    
     e1.delete(0,tk.END)
     e1.insert(0,cfg["language"])
-    e2.delete(0,tk.END)
-    e2.insert(0,cfg["alias"])
+    _alias.delete(0,tk.END)
+    _alias.insert(0,cfg["alias"])
+    
     ttfName = os.path.basename(cfg["ttf"])
     ttf.delete(0, tk.END)
     ttf.insert(0, ttfName)
@@ -78,12 +101,28 @@ def bfCancel(e):
     root.destroy()
     quit()
     
-def langClicked(v):
-    sv = v.get()
-    sv = sv.capitalize()
-    cfg["language"] = sv
-    cfg["alias"] = langParms[sv]
-    updateVars()
+def langClicked(event):
+    # https://www.loc.gov/standards/iso639-2/php/code_list.php
+    '''
+   ISO 639-2 Code,	ISO 639-1 Code,	English name of Language,	French name of Language,	German name of Language,	Comment 
+        aar,                	aa,                     	Afar,                                           	afar,                       	Danakil-Sprache	          
+    '''
+    selection = event.widget.curselection()
+    print('langclicked',selection)
+    if selection:
+        index = selection[0]
+        data = event.widget.get(index)
+        print(data)
+        e1.delete(0, tk.END)
+        e1.insert(0, data)
+        #e1.configure(text=data)
+        print(lb_entry[data])
+        cfg["language"] = data
+        cfg["alias"] = lb_entry[data]
+        _alias.delete(0, tk.END)
+        _alias.insert(0, lb_entry[data])
+    else:
+        e1.configure(text="")
     
 def versionClicked(e):
     sv = e0.get()
@@ -92,9 +131,9 @@ def versionClicked(e):
     print('versionclicked',sv, cfg["version"])
     updateVars()
     
-def aliasClicked(v):
+def xaliasClicked(v):
     global cfg
-    a = e2.get().upper()
+    a = _alias.get().upper()
     #lookup = {value: key for key, value in cg.langParms}
     found = False
     #print('ac',a)
@@ -231,11 +270,11 @@ class CB(tk.Frame):
             print('returncode',p.returncode)
   
 
-top_frame = tk.Frame(root, bg='cyan', width=300, height=25, pady=1)
-center = tk.Frame(root, bg='lightblue', width=295, height=150, padx=5, pady=5)
-ctr_btm = tk.Frame(root, bg='lightblue', width=295, height=200, padx=5, pady=5)
+top_frame = tk.Frame(root, bg='cyan', width=400, height=25, pady=1)
+center = tk.Frame(root, bg='lightblue', width=395, height=150, padx=5, pady=5)
+ctr_btm = tk.Frame(root, bg='lightblue', width=395, height=200, padx=5, pady=5)
 #right =  tk.Frame(root, bg='lightgreen', width=100, height=350, padx=5, pady=5)
-btm_frame = tk.Frame(root, bg='white', width=300, height=25, pady=3)
+btm_frame = tk.Frame(root, bg='white', width=400, height=25, pady=3)
 
 
 top_frame.grid(row=0, columnspan=2,sticky="ew")
@@ -260,21 +299,39 @@ e0 = tk.Entry(center, width=10, relief=tk.RIDGE) #, textvariable=bfClass.version
 e0.grid(row=row, column=1, sticky=tk.W)
 e0.bind('<KeyRelease>', versionClicked)
 
-row = 2
+row = row+1
 lbl1 = tk.Label(center, bg='lightgreen', text="Language", width=8, anchor=tk.E, padx=1,pady=1)
 lbl1.grid(row=row, column=0, sticky=tk.W)
-e1 = tk.Entry(center, width=10)  #, textvariable=bfClass.language)
-e1.grid(row=row, column=1, sticky=tk.EW)
-e1.bind('<KeyRelease>', langClicked)
+
+lb_frame = tk.Frame(center)
+lb_frame.grid(row=row, column=1, columnspan=1, sticky=tk.W)
+
+e1 = tk.Entry(lb_frame, width=10)  #, textvariable=bfClass.language)
+e1.grid(row=0, column=1, sticky=tk.EW)
+#e1.bind('<KeyRelease>', langClicked)
+listbox = tk.Listbox(lb_frame, width=20, height=6)
+scrollbar = tk.Scrollbar(lb_frame, orient="vertical", command=listbox.yview)
+listbox.configure(yscrollcommand=scrollbar.set)
+listbox.grid(row=1, column = 1, sticky=tk.W)
+listbox.bind("<<ListboxSelect>>", langClicked)
+scrollbar.grid(row=1, column=2, sticky='ns')
+
+csv_file = ('Language Codes.csv') 
+lb_entry= get_langlist(lb_entry, csv_file)
+print('lbentry',lb_entry)
+for lbe in lb_entry:
+    print(lbe)
+    listbox.insert("end", lbe)
+
 
 lbl2 = tk.Label(center, bg='lightgreen', text="Alias",width=4, anchor=tk.W)
 lbl2.grid(row=row, column=2, sticky=tk.E)
-e2 = tk.Entry(center,bg='lightyellow', width=3)
-e2.grid(row=row, column=3, sticky=tk.W)
-e2.bind('<KeyRelease>', aliasClicked)
+_alias = tk.Entry(center,bg='lightyellow', width=8)
+_alias.grid(row=row, column=3, sticky=tk.W)
+#e2.bind('<KeyRelease>', aliasClicked)
 
 
-row = 3
+row = row+2
 lbl3a = tk.Label(center, bg='lightgreen', text="Font File", width=8, anchor=tk.W)
 lbl3a.grid(column=0, row=row, sticky=tk.W)   #, columnspan=1)
 ttf = tk.Entry(center,width=25,bg='lightyellow')
@@ -282,7 +339,7 @@ ttf.grid(column=1, row=row, sticky=tk.W, columnspan=3)
 #ttf.insert(0, bfClass.ttf)
 ttf.bind("<1>", ttfClicked)
 
-row = 4
+row = row+1
 lbl3 = tk.Label(center, bg='lightblue', text="SFD File")
 lbl3.grid(column=0, row=row, sticky=tk.W, columnspan=1)
 sfd = tk.Entry(center,width=25)
@@ -290,7 +347,7 @@ sfd.grid(column=1, row=row, sticky=tk.W, columnspan=4 )
 #sfd.insert(0, bfClass.sfdFile)
 sfd.bind("<1>", sfdClicked)
 
-row = 5
+row = row+1
 lbl4 = tk.Label(center, bg='lightblue', text="KMN File")
 lbl4.grid(column=0, row=row, sticky=tk.W, columnspan=1)
 kmn = tk.Entry(center,width=25)
@@ -298,7 +355,7 @@ kmn.grid(column=1, row=row, sticky=tk.W, columnspan=4 )
 #kmn.insert(0, bfClass.kmnFile)
 kmn.bind("<1>", kmnClicked)
 
-row = 6
+row = row+1
 lbl6 = tk.Label(center, bg='lightblue', text="TRLang File")
 lbl6.grid(column=0, row=row, sticky=tk.W, columnspan=1)
 trl = tk.Entry(center,width=25)
@@ -319,5 +376,4 @@ if __name__ == "__main__":
     #cfg = readCfg()
     #cfg["eFilter"] = "" 
     updateVars()
-
     root.mainloop()
