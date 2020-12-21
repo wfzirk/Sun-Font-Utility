@@ -44,21 +44,33 @@ lb_entry = {}
 ISO 639-2 Code,	ISO 639-1 Code,	English name of Language,	French name of Language,	German name of Language,	Comment 
     aar,                	aa,                     	Afar,                                           	afar,                       	Danakil-Sprache	          
 '''
+#import sys
 def get_langlist(lb_entry, csv_file):
     print('get_langlist')
     csv_file = cfg["language_codes"]
+    ALIASCOL = 1    # col 0 = 3 letter alias,  col 1 = 2 letter alias
+    if ALIASCOL ==1:
+        ACOLLEN = 2   
+    else:
+        ACOLLEN = 3
+    NAMECOL = 2
     with open(csv_file, 'r') as read_obj:
         csv_reader = reader(read_obj)
         x = 0
         for item in list(csv_reader):
-            lang = item[2]
-            #print(item[1], item[0])
-            if x > 1:
+            lang = item[NAMECOL]
+            #print(item[NAMECOL], item[0], item[1], len(item[ALIASCOL]))
+            if x > 0:
                 #listbox.insert("end", item[1]) 
-                lb_entry[lang] = item[0]
+                if len(item[ALIASCOL]) == ACOLLEN:
+                    lb_entry[lang] = item[ALIASCOL].upper()
             x = x+1
-    #print(lb_entry)   
-        return lb_entry
+    print('lb_entry',type(lb_entry), lb_entry)   
+    #name_sort = sorted(lb_entry.items(), key=lambda kv: kv[NAMECOL].lower()) 
+    key_sort = dict(sorted(lb_entry.items(), key=lambda item: item[0]))
+    print('key sort', key_sort)
+    #sys.exit(1)
+    return key_sort
 
 def updateVars():
     print('update vars',cfg["alias"], 'vars updated')
@@ -108,7 +120,7 @@ def langClicked(event):
         aar,                	aa,                     	Afar,                                           	afar,                       	Danakil-Sprache	          
     '''
     selection = event.widget.curselection()
-    print('langclicked',selection)
+    #print('langclicked',selection)
     if selection:
         index = selection[0]
         data = event.widget.get(index)
@@ -210,9 +222,9 @@ class CB(tk.Frame):
         s = False
         if ste == 'both':
             s = True
-        elif CB.alias == 'EN' and ste == CB.alias:
+        elif CB.alias == 'eng' and ste == CB.alias:
             s = True
-        elif ste != 'EN' and CB.alias != 'EN':
+        elif ste != 'eng' and CB.alias != 'eng':
             s = True
         if s:
             chk.state(['!disabled','!selected','!alternate'])
@@ -295,20 +307,26 @@ center.grid_columnconfigure(4, weight=1)
 row = 1
 lbl0 = tk.Label(center, bg='lightblue', text="Version", width=8, anchor=tk.W)
 lbl0.grid(row=row, column=0, sticky=tk.W)
-e0 = tk.Entry(center, width=10, relief=tk.RIDGE) #, textvariable=bfClass.version)
+e0 = tk.Entry(center, width=22, relief=tk.RIDGE) #, textvariable=bfClass.version)
 e0.grid(row=row, column=1, sticky=tk.W)
 e0.bind('<KeyRelease>', versionClicked)
+tk.Label(center, bg='lightblue', text="i.e. 78_1210", anchor=tk.W).grid(row=row, column=3, columnspan=2, sticky=tk.W)
 
 row = row+1
-lbl1 = tk.Label(center, bg='lightgreen', text="Language", width=8, anchor=tk.E, padx=1,pady=1)
+lbl1 = tk.Label(center, bg='lightblue', text="Language", width=8, anchor=tk.E, padx=1,pady=1)
 lbl1.grid(row=row, column=0, sticky=tk.W)
+#tk.Label(center, bg='lightblue', text="i.e. EN", anchor=tk.W).grid(row=row, column=3, columnspan=2, sticky=tk.W)
 
-lb_frame = tk.Frame(center)
-lb_frame.grid(row=row, column=1, columnspan=1, sticky=tk.W)
 
-e1 = tk.Entry(lb_frame, width=10)  #, textvariable=bfClass.language)
-e1.grid(row=0, column=1, sticky=tk.EW)
+lb_frame = tk.Frame(center, bg='lightgray')
+lb_frame.grid(row=row, column=1, columnspan=1,  sticky=tk.W)
+
+e1 = tk.Entry(lb_frame)   #, width=12)  #, textvariable=bfClass.language)
+e1.grid(row=0, column=1, columnspan=2,sticky="ew")
 #e1.bind('<KeyRelease>', langClicked)
+#tk.Label(center, bg='lightblue', text="i.e. EN", anchor=tk.E).grid(row=row, column=5, columnspan=2, sticky="ew")
+tk.Label(center, bg='lightgreen', text="i.e. EN", anchor=tk.W).grid(row=row, column=2, columnspan=2, sticky=tk.N)
+
 listbox = tk.Listbox(lb_frame, width=20, height=6)
 scrollbar = tk.Scrollbar(lb_frame, orient="vertical", command=listbox.yview)
 listbox.configure(yscrollcommand=scrollbar.set)
@@ -324,44 +342,49 @@ for lbe in lb_entry:
     listbox.insert("end", lbe)
 
 
-lbl2 = tk.Label(center, bg='lightgreen', text="Alias",width=4, anchor=tk.W)
-lbl2.grid(row=row, column=2, sticky=tk.E)
+lbl2 = tk.Label(center, bg='lightblue', text="Alias",width=4, anchor=tk.W)
+lbl2.grid(row=row, column=3, sticky=tk.E)
 _alias = tk.Entry(center,bg='lightyellow', width=8)
-_alias.grid(row=row, column=3, sticky=tk.W)
+_alias.grid(row=row, column=4, sticky=tk.W)
 #e2.bind('<KeyRelease>', aliasClicked)
 
 
 row = row+2
-lbl3a = tk.Label(center, bg='lightgreen', text="Font File", width=8, anchor=tk.W)
+lbl3a = tk.Label(center, bg='lightblue', text="Font File", width=8, anchor=tk.W)
 lbl3a.grid(column=0, row=row, sticky=tk.W)   #, columnspan=1)
-ttf = tk.Entry(center,width=25,bg='lightyellow')
+ttf = tk.Entry(center,width=22,bg='lightyellow')
 ttf.grid(column=1, row=row, sticky=tk.W, columnspan=3)
 #ttf.insert(0, bfClass.ttf)
 ttf.bind("<1>", ttfClicked)
+tk.Label(center, bg='lightblue', text="i.e. times.ttf",  anchor=tk.W).grid(row=row, column=3, columnspan=2, sticky=tk.W)
 
 row = row+1
 lbl3 = tk.Label(center, bg='lightblue', text="SFD File")
 lbl3.grid(column=0, row=row, sticky=tk.W, columnspan=1)
-sfd = tk.Entry(center,width=25)
+sfd = tk.Entry(center,width=22)
 sfd.grid(column=1, row=row, sticky=tk.W, columnspan=4 )
 #sfd.insert(0, bfClass.sfdFile)
 sfd.bind("<1>", sfdClicked)
+tk.Label(center, bg='lightblue', text="i.e. sun7_8_1210.sfd",  anchor=tk.W).grid(row=row, column=3, columnspan=2, sticky=tk.W)
 
 row = row+1
 lbl4 = tk.Label(center, bg='lightblue', text="KMN File")
 lbl4.grid(column=0, row=row, sticky=tk.W, columnspan=1)
-kmn = tk.Entry(center,width=25)
+kmn = tk.Entry(center,width=22)
 kmn.grid(column=1, row=row, sticky=tk.W, columnspan=4 )
 #kmn.insert(0, bfClass.kmnFile)
 kmn.bind("<1>", kmnClicked)
+tk.Label(center, bg='lightblue', text="i.e. sun7_8_1210.kmn",  anchor=tk.W).grid(row=row, column=3, columnspan=2, sticky=tk.W)
 
+#Translators Dictionary Sun 7_22 on 8_9_2019_fixed.ods
 row = row+1
 lbl6 = tk.Label(center, bg='lightblue', text="TRLang File")
 lbl6.grid(column=0, row=row, sticky=tk.W, columnspan=1)
-trl = tk.Entry(center,width=25)
+trl = tk.Entry(center,width=22)
 trl.grid(column=1, row=row, sticky=tk.W, columnspan=4 )
 #trl.insert(0, bfClass.trlangFile)
 trl.bind("<1>", trlClicked)
+tk.Label(center, bg='lightblue', text="Tr...Dict...xxx.ods",  anchor=tk.W).grid(row=row, column=3, columnspan=2, sticky=tk.W)
 
 cncl = tk.Button(btm_frame, text = "Cancel") 
 cncl.pack(side=tk.RIGHT)

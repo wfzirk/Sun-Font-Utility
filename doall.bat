@@ -5,6 +5,8 @@ Setlocal EnableDelayedExpansion
 
 call doEnv.bat
 
+if %alias% == EN set engalias=EN
+if %alias% == eng set engalias=EN
 
 :doit
 
@@ -24,62 +26,82 @@ goto end
 :all
 :backfont
 rem sequence of commands to build backfont file
-
+@echo off
 :kmn2csv
-if %alias% == EN (
+if %engalias% == EN (
+	@echo on
 	cmd /c fontforge -quiet -script kmn2csv.py "%kmn%" dist/kmn%ver%_%alias%.csv
+	@echo off
 	if ERRORLEVEL 1 (goto errorexit)
 )
 if %docmd%  NEQ all (goto end)
 
 :sfd2csv
-if %alias% == EN (
+if %engalias% == EN (
+	@echo on
 	cmd /c fontforge -quiet -script sfd2csv.py "%sfd%" dist/kmn%ver%_%alias%.csv dist/pw%ver%_%alias%.csv
+	@echo off
 	if ERRORLEVEL 1 (goto errorexit)
 )
 :langpri
-if NOT %alias% == EN (
-	cmd /c fontforge -quiet -script langpri.py dist/pw%ver%_EN.csv %langIn% dist/pw%ver%_%alias%.csv 
+if NOT %engalias% == EN (
+	@echo on
+	cmd /c fontforge -quiet -script langpri.py dist/pw%ver%_%alias%.csv %langIn% dist/pw%ver%_%alias%.csv 
+	@echo off
 	if ERRORLEVEL 1 (goto errorexit)
 )
 if %docmd%  NEQ all (goto end)
 
 :csv2kmn
-if NOT %alias% == EN (
+if NOT %engalias% == EN (
+	@echo on
 	cmd /c fontforge -quiet -script csv2kmn.py dist/pw%ver%_%alias%.csv %ver% %alias%  dist\sun%ver%_%alias%.kmn
+	@echo off
 	if ERRORLEVEL 1 (goto errorexit)
 )
 if %docmd%  NEQ all (goto end)
 
 :csv2svg
-cmd /c fontforge -quiet -script csv2svg.py dist/pw%ver%_%alias%.csv %ttffont%
-if ERRORLEVEL 1 (goto errorexit)
+	@echo on
+	cmd /c fontforge -quiet -script csv2svg.py dist/pw%ver%_%alias%.csv %ttffont%
+	@echo off
+	if ERRORLEVEL 1 (goto errorexit)
+	
 if %docmd%  NEQ all (goto end)
 
 :svg2font
-cmd /c fontforge -quiet -script svg2Font.py dist/pw%ver%_%alias%.csv %ttffont% %alias% dist/SUNBF%ver%_%alias%
-if ERRORLEVEL 1 (goto errorexit)
+	@echo on
+	cmd /c fontforge -quiet -script svg2Font.py dist/pw%ver%_%alias%.csv %ttffont% %alias% dist/SUNBF%ver%_%alias%
+	@echo off
+	if ERRORLEVEL 1 (goto errorexit)
 if %docmd%  NEQ all (goto end)
 
 rem following are for documentation and verification
 :back2doc
-cmd /c fontforge -quiet -script back2doc.py dist/pw%ver%_%alias%.csv dist/back%ver%_%alias%.txt 
-if ERRORLEVEL 1 (goto errorexit)
+	@echo on
+	cmd /c fontforge -quiet -script back2doc.py dist/pw%ver%_%alias%.csv dist/back%ver%_%alias%.txt 
+	@echo off
+	if ERRORLEVEL 1 (goto errorexit)
 if %docmd%  NEQ all (goto end)
 
 :compact
-cmd /c fontforge -quiet -script compact4x16.py dist/pw%ver%_%alias%.csv dist/compact%ver%_%alias%.pdf
-if ERRORLEVEL 1 (goto errorexit)
+	@echo on
+	cmd /c fontforge -quiet -script compact4x16.py dist/pw%ver%_%alias%.csv dist/compact%ver%_%alias%.pdf
+	if ERRORLEVEL 1 (goto errorexit)	
+	@echo off
 if %docmd%  NEQ all (goto end)
 
 :bfzip
-cmd /c fontforge -quiet -script bfZip.py
-if ERRORLEVEL 1 (goto errorexit)
+	@echo on
+	cmd /c fontforge -quiet -script bfZip.py
+	@echo off
+	if ERRORLEVEL 1 (goto errorexit)
 if %docmd%  NEQ all (goto end)
 
 goto end
 
 :errorexit
+@echo on
 echo quit because of errors
 echo quit with error = %errorlevel%
 goto end
@@ -88,6 +110,7 @@ rem zipit.bat
 rem start /i /b /wait python -c "import util; util.printhi('someInput')"
 rem cmd /c python -c "import util; util.zipdir("", %ver%)
 :end
+
 echo Done
 
 

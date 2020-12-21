@@ -35,21 +35,21 @@ cfg = {
     "debug": "false",
     "language_codes": "Language Codes.csv"  #https://www.loc.gov/standards/iso639-2/php/code_list.php
     }
-
+'''
 langParms = {\
     "Russian":"RU",\
     "Spanish":"ES",\
     "French":"FR",\
     "Portuguese":"PT",\
-    "English":"EN"}
-
+    "English":"eng"}
+'''
 
 def updateCfg(cfg):
     #print('updatecfg',cfg["alias"], cfg["version"])
-    cfg["pwFile"] = cfg["filePath"]+"pw"+cfg["version"]+"_EN.csv"
+    cfg["pwFile"] = cfg["filePath"]+"pw"+cfg["version"]+"_EN.csv"                      # this file must be the english base file
     cfg["pwLangFile"] = cfg["filePath"]+"pw"+cfg["version"]+"_"+cfg["alias"]+".csv"
     cfg["backFont"] = cfg["filePath"]+"SUNBF"+cfg["version"]+"_"+cfg["alias"]      
-    cfg["kmncsv"] = cfg["filePath"]+"kmn"+cfg["version"]+"_EN.csv"
+    cfg["kmncsv"] = cfg["filePath"]+"kmn"+cfg["version"]+"_EN.csv"                 # this file must be the english base file
     cfg["back2doc"] = cfg["filePath"]+"back"+cfg["version"]+"_"+cfg["alias"]+".txt"
     cfg["compactFile"] = cfg["filePath"]+"compact"+cfg["version"]+"_"+cfg["alias"]+".ods"
     cfg["csv2kmnFile"] = cfg["filePath"]+"sun"+cfg["version"]+"_"+cfg["alias"]+".kmn"
@@ -64,9 +64,9 @@ def updateCfg(cfg):
 
 def bfCmds(cfg, script):
     cmd = {\
-        "sfd2csv": ['EN',['sfd2csv.py', cfg["sfdFile"], cfg["pwFile"]]],   
+        "sfd2csv": ['eng',['sfd2csv.py', cfg["sfdFile"], cfg["pwFile"]]],   
         "langpri": ['lang',['langpri.py', cfg["pwFile"], cfg["trlangFile"], cfg["pwLangFile"]]], 
-        "kmn2csv": ['EN',['kmn2csv.py', cfg["kmnFile"], cfg["kmncsv"]]],
+        "kmn2csv": ['eng',['kmn2csv.py', cfg["kmnFile"], cfg["kmncsv"]]],
         "csv2kmn": ['lang',['csv2kmn.py', cfg["pwLangFile"], cfg["version"], cfg["alias"], cfg["csv2kmnFile"]]],
         "csv2svg": ['both',['csv2svg.py', cfg["pwLangFile"], cfg["ttf"], cfg["eFilter"]]],
         "svg2font": ['both',['svg2Font.py', cfg["pwLangFile"], cfg["ttf"], cfg["alias"],\
