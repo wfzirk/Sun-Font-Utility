@@ -2,11 +2,13 @@ rem must change system language locale to utf-8
 rem https://www.bing.com/search?q=administrative+language+setting+win+10&form=WNSGPH&qs=AS&cvid=7b4667c3e2804c078bbfa20f11d7eb9f&pq=administrative+language+s&cc=US&setlang=en-US&nclid=5DAC70C3F9718B3FD01438C3459AFE25&ts=1581894742795&wsso=Moderate
 
 Setlocal EnableDelayedExpansion
-
+set debugecho=off
 call doEnv.bat
 
+set engalias=%alias%
 if %alias% == EN set engalias=EN
 if %alias% == eng set engalias=EN
+echo set
 
 :doit
 
@@ -15,6 +17,9 @@ if %1.== all (goto dolang)
 set docmd=%1
 echo docmd set
 goto %docmd%
+
+echo on
+echo %debugecho%
 
 
 :dolang
@@ -26,7 +31,7 @@ goto end
 :all
 :backfont
 rem sequence of commands to build backfont file
-@echo off
+@echo %debugecho%
 :kmn2csv
 if %engalias% == EN (
 	@echo on
@@ -46,7 +51,8 @@ if %engalias% == EN (
 :langpri
 if NOT %engalias% == EN (
 	@echo on
-	cmd /c fontforge -quiet -script langpri.py dist/pw%ver%_%alias%.csv %langIn% dist/pw%ver%_%alias%.csv 
+	rem cmd /c fontforge -quiet -script langpri.py dist/pw%ver%_%alias%.csv %langIn% dist/pw%ver%_%alias%.csv 
+				cmd /c fontforge -quiet -script nLangpri.py input/pw%ver%_EN.csv %langIn% dist/pw%ver%_%alias%.csv 
 	@echo off
 	if ERRORLEVEL 1 (goto errorexit)
 )

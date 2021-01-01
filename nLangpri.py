@@ -8,6 +8,11 @@ from array2xlsx import array2xlsx
 from bfConfig import readCfg, bfVersion
 from bfLogger import logger, setLogFile, closeLogFile
 
+unicode_mismatch = 'dist/unicode_mismatch.txt'
+duplicate_names  ='dist/duplicate_names.txt'
+name_not_used = 'dist/name_not_used.txt'
+not_in_primary = 'dist/not_in_primary.txt'
+name_has_spaces = 'dist/name_has_spaces.txt'
 
 cfg = readCfg()  
 pwSym = cfg["enColumns"]["index_font"]
@@ -19,6 +24,21 @@ lUniCol = cfg["langColumns"]["index_unicode"]
 enNameCol =  cfg["langColumns"]["index_name"] 
 lNameCol = cfg["langColumns"]["index_langName"] 
 lRefCol = cfg["langColumns"]["index_ref"]
+
+def searchKeysByVal(dict, byVal, offset):
+    keysList = []
+    itemsList = dict.items()
+    found = '----'
+    for item in itemsList:
+        #logger.info('skbv  %s: %s: %s: %s',byVal, item, item[0], item[1][1])
+        if item[1][offset] == byVal:
+            logger.info('found skbv  %s %s',byVal, item)
+            found = item[0]
+            #sys.exit()
+            break
+    return found
+
+
 
 def readLang(file, priList):
     # due to everyone using their own column order an attempt is
@@ -39,27 +59,30 @@ def readLang(file, priList):
         logger.info("readlang %s",file)
         f = open(file, 'r', encoding="utf-8")
         reader = csv.reader(f, delimiter=',', quotechar='"')
- 
         name_sort = sorted(reader, key=lambda x: x[enNameCol].lower()) 
-        
         langList = {}
-        for n in name_sort:
-            #logger.info('langtodict %s %s',n, n[lencol])
-            #logger.debug('langtodict %s %s', n[lencol], n[lunicol])
-            sym = n[lSymCol].strip()
-            eName = n[enNameCol].strip()
-            lName = n[lNameCol].strip()
-            uec = n[lUniCol].strip().lower()
-            ref = n[lRefCol].strip()
-            if eName in priList:
-                enuec = priList[eName][1].strip().lower()
-                logger.debug('%s %s',priList[eName], pwUec)
-                if enuec != uec:
-                    logger.warning('Uecs not the same %s->%s',enuec, uec)
-                langList[n[enNameCol]] = [sym,eName,lName,uec,ref]  #english word as key
-                logger.debug(langList[n[enNameCol]])
-            else:
-                logger.warning('%s:%s:%s not in primary synonym?',eName,lName,uec)
+        with open(unicode_mismatch, "w") as file_uec, open(not_in_primary, "w") as file_pri:
+                for n in name_sort:
+                    sym = n[lSymCol].strip()
+                    eName = n[enNameCol].strip()
+                    lName = n[lNameCol].strip()
+                    lUec = n[lUniCol].strip().lower()
+                    ref = n[lRefCol].strip()
+                    langList[n[enNameCol]] = [sym,eName,lName,lUec,ref]  #english word as key
+                    logger.debug('%s %s %s % %s',sym,eName,lName, lUec,ref)
+                    if eName in priList:
+                        enUec = priList[eName][1].strip().lower()
+                        logger.info('%s %s', eName,priList[eName])
+                        logger.debug('%s %s',priList[eName], enUec)
+                        if enUec != lUec:
+                            errStr = f"Uecs not the same {eName}, english:{enUec} -> {lUec}."
+                            logger.warning('%s',errStr)
+                            file_uec.write(errStr+'\n')
+                    else:
+                        priKey = searchKeysByVal(priList, lUec, 1)
+                        errStr = f"not in primary \t{eName}: {lName}: {lUec} english {priKey}"
+                        logger.warning('%s',errStr)
+                        file_pri.write(errStr+'\n')
     except Exception as e:
         logger.exception('readLang file  error: %s',e)
 
@@ -69,6 +92,7 @@ def readLang(file, priList):
     
 
 #
+'''
 def fixLangList(langList):
     logger.info('fixlanglist duplicate names')
     #cnt = 0;
@@ -104,40 +128,40 @@ def fixLangList(langList):
         ll[ename] = ln[i]
         
     return(ll)    
-    
-        
+'''     
 
 def mergeLists(enList, langList):
     mList = []
     try:
-        for eName in enList:
-            logger.debug('ename %s %s',eName, enList[eName][1])
-        
-            eUec = enList[eName][1].strip()
-            eSym = enList[eName][0]
+        with open(unicode_mismatch, "a") as file_uec, open(name_has_spaces, "w") as file_spc , open(name_not_used, "w") as file_used:
+            for eName in enList:
+                logger.debug('ename %s %s',eName, enList[eName][1])
             
-            if eName in langList:
-                logger.debug('match %s %s',eName, langList[eName][lNameCol])
-                #print('match %s %s',eName, langList[eName])
-                #logger.info('match '+eName+' '+langList[eName][langNameCol])
-                lName = langList[eName][lNameCol].strip()
-                lUec = langList[eName][lUniCol].strip()
-                lref = langList[eName][lRefCol].strip()
-                if lUec != eUec:
-                    logger.warning(">>>unicode mismatch<<<, use primary unicode., %s %s %s",eName, eUec, lUec)
-                if ' ' in lName:
-                    logger.warning("---Name Error---, name contains spaces replace with '_', %s", lName)
-                    lName = lName.replace(' ','_')
-                #mList.append([eSym, eName, lName, eUec])
-            else:
-                #logger.warning('***Name*** not used  %s for %s ignore row',eName,cfg["language"])
-                logger.warning('***Name*** not used  %s:%s ,  name blank for %s ',eName,eUec,cfg["language"])
-              
-                lName = ""
-            mList.append([eSym, eName, lName, eUec, lref])
-        # sort by language column
-        #name_sort = sorted(mList, key=lambda x: x[langNameCol])  #, reverse=True) 
-        # sort by english column
+                eUec = enList[eName][1].strip()
+                eSym = enList[eName][0]
+                
+                if eName in langList:
+                    logger.debug('match %s %s',eName, langList[eName][lNameCol])
+                    lName = langList[eName][lNameCol].strip()
+                    lUec = langList[eName][lUniCol].strip()
+                    lref = langList[eName][lRefCol].strip()
+                    if lUec != eUec:
+                        errStr = F">>>unicode mismatch<<<, useing primary unicode., \t{eName}: {eUec}: {lUec}"
+                        logger.warning("%s",errStr)
+                        file_uec.write(errStr+'\n')
+                    if ' ' in lName:
+                        errStr = f"---Name Error---, name contains spaces replace with '_', {lName}"
+                        logger.warning("---Name Error---, name contains spaces replace with '_', %s", lName)
+                        file_spc.write(errStr+'\n')
+                        lName = lName.replace(' ','_')
+                    mList.append([eSym, eName, lName, eUec, lref])
+                else:
+                    errStr = f'{eName}: {eUec},  name blank for {cfg["language"]} removed from dictionary'
+                    logger.warning('***Name*** not used  %s:%s ,  name blank for %s ',eName,eUec,cfg["language"])
+                    file_used.write(errStr+'\n')
+                    lName = ""
+                #mList.append([eSym, eName, lName, eUec, lref])
+
         name_sort = sorted(mList, key=lambda x: x[enNameCol].lower())  #, reverse=True) 
     except Exception as e:
         logger.exception(e)
@@ -150,7 +174,8 @@ def readENPri(pwfile):
         with open(pwfile, 'r', encoding="utf-8") as f:
             reader = csv.reader(f, delimiter=',', quotechar='"')
             for row in reader:
-                logger.debug(row)
+                logger.info(row)
+                #logger.info('%s, %s, %s',pwSym, pwName, pwUec)
                 uic = row[pwSym].strip()
                 name = row[pwName].strip().strip('"').strip("'")
                 uec = row[pwUec].strip().strip('"').strip('"').lower()
@@ -173,33 +198,40 @@ def main(*ffargs):
     rc = 0
     
     args = []
+    #logger.debug('args  %s %s',len(ffargs[0]), ffargs[0])
+    logger.debug(*ffargs)
     for a in ffargs[0]:
-        logger.debug( a)
+        #ogger.debug( a)
         args.append(a)
  
     if len(args) > 2: 
         pwFile  = args[1]
-        langFile = args[2]
-        pwLangFile = args[3]
-        
+        langFile = 'input/'+os.path.basename(args[2])
+        pwLangFile = 'dist/'+os.path.basename(args[3])
+        logger.info('pwFile %s',pwFile)
+        logger.info('langFile %s', langFile)
+        logger.info('pwLangFile %s',pwLangFile)
         try:
             lExt = langFile[-3:].strip().lower()   
             logger.debug('ext %s','|'+lExt+'|')
             if lExt == '.csv':
-                csvFile = langFile
+                lcsvFile = langFile
             elif lExt == 'ods':
-                csvFile = convert2csv(langFile)
+                lcsvFile = convert2csv(langFile, 'dist')
             else:
                 logger.exception('Wrong type of File only csv or ods files accepted')
                 rc = 2
             if rc == 0:    
-                logger.info('***')
+                lcsvFile = 'dist/'+os.path.basename(lcsvFile)
+                logger.info('***%s', lcsvFile)
                 enList = readENPri(pwFile)   
+  
                 logger.info('****')            
-                langList = readLang(csvFile, enList)
+                langList = readLang(lcsvFile, enList)
+
                 if langList:
                     #dicFile = cfg["langFile"]
-                    langList = fixLangList(langList)
+                    #langList = fixLangList(langList)
                     if langList:
                         mList = mergeLists(enList, langList)
                         if mList:

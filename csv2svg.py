@@ -91,12 +91,13 @@ def read_list(fontname, csvFile, namelist=""):
     status = 0
     try:
         logger.info('readlist %s %s %s',fontname, csvFile, namelist)
+        logger.info('dict columns ixu %s  ixn  %s',ixu,ixn)
         with open(csvFile, encoding='utf8') as csvDataFile:
             csvReader = csv.reader(csvDataFile, delimiter=',', quotechar ='"')
             for row in csvReader:
                 #logger.info('%s,%d %d',alias,ixn, ixu)
                 logger.info(row)
-                #logger.info('%s %s',row[ixn],row[ixu])
+                logger.debug('%s %s',row[ixn],row[ixu])
                 ncol = len(row)
                 name = row[ixn].strip()
                 unicode = row[ixu].strip().lower()
@@ -108,7 +109,7 @@ def read_list(fontname, csvFile, namelist=""):
                         continue
                 #log_info(name, unicode, ncol)
                 if (len(row) < 3) or (len(row[ixu])) != 4: 
-                    logging.info('wrong length '+len(row)+' '+len(row[ixu]))
+                    logger.info('row wrong length row len %s  unicode len %s',len(row),len(row[ixu]))
                     continue
 
                 if len(unicode) < 4:
